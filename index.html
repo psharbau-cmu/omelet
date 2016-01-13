@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+    <script src="Crucible.js"></script>
+    <script src="SimcoachTransform.js"></script>
+    <script src="SimcoachSquareRenderer.js"></script>
+    <script src="TestGameRotateSlowly.js"></script>
+    <script type="text/javascript">
+        // example initial state
+        var first = {
+            hierarchy:[
+                {
+                    'Simcoach.Transform':{
+                        data:{x:100, y:100}
+                    },
+                    'Simcoach.SquareRenderer':{
+                        data:{color:'#333333', width:200, height:200}
+                    },
+                    children:[]
+                },
+                {
+                    'Simcoach.Transform':{
+                        data:{x:40, y:100}
+                    },
+                    'Simcoach.SquareRenderer':{
+                        data:{color:'#3333ff', width:20, height:50}
+                    },
+                    'TestGame.RotateSlowly':{
+                        data:{speed: -.25}
+                    },
+                    children:[
+                        {
+                            'Simcoach.Transform':{
+                                data:{x:0, y:0}
+                            },
+                            'Simcoach.SquareRenderer':{
+                                data:{color:'#ffffff', width:10, height:10}
+                            },
+                            'TestGame.RotateSlowly':{
+                                data:{speed:2}
+                            },
+                            children:[]
+                        }
+                    ]
+                }
+            ]
+        };
+
+        window.onload = function() {
+            crucible.start(document.getElementById('theGame'), first);
+        };
+    </script>
+</head>
+<body>
+    <div class="gameContainer">
+        <canvas id="theGame" width="960" height="640"></canvas>
+    </div>
+</body>
+</html>
