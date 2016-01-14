@@ -2,12 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test Page</title>
+    <title>Transform tracking tests</title>
     <script src="TransformTracker.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            window.normal = document.getElementById('normal').getContext('2d');
+            window.wrapped = document.getElementById('wrapped').getContext('2d');
+            fixContext(wrapped);
+
+            normal.fillStyle = '#33aa99';
+            normal.fillRect(0, 0, 300, 300);
+
+            wrapped.fillStyle = '#3399aa';
+            wrapped.fillRect(0, 0, 300, 300);
+        };
+
+        window.doTest = function(testTransform) {
+            normal.setTransform(1,0,0,1,0,0);
+            normal.fillStyle = '#33aa99';
+            normal.fillRect(0, 0, 300, 300);
+
+            wrapped.setTransform(1,0,0,1,0,0);
+            wrapped.fillStyle = '#3399aa';
+            wrapped.fillRect(0, 0, 300, 300);
+
+            testTransform(normal);
+            testTransform(wrapped);
+
+            normal.fillStyle = '#22ff66';
+            normal.fillRect(-5, -5, 10, 10);
+
+            wrapped.fillStyle = '#ffffff';
+            wrapped.fillRect(-5, -5, 10, 10);
+
+            wrapped.print();
+        };
+
+        window.testA = function(context) {
+            context.translate(150, 150);
+        };
+
+        window.testB = function(context) {
+            context.translate(40, 40);
+            context.scale(.5, 2);
+        };
+
+        window.testC = function(context) {
+            context.translate(150, 150);
+            context.rotate(Math.PI / 4);
+        };
+
+        window.testD = function(context) {
+            context.save();
+            context.translate(50, 50);
+            context.fillStyle = '#000000';
+            context.fillRect(-5, -5, 10, 10);
+            context.restore();
+            context.translate(70, 70);
+        };
+
+        window.testE = function(context) {
+            context.translate(50, 50);
+            context.rotate(Math.PI / -4);
+            context.fillStyle = '#000000';
+            context.fillRect(-10, -10, 20, 20);
+        };
+
+        window.testF = function(context) {
+            context.translate(150, 150);
+            context.rotate(0);
+        };
+
+        window.testG = function(context) {
+
+        };
+    </script>
 </head>
 <body>
     <div class="gameContainer">
-        <canvas id="theGame" width="960" height="640"></canvas>
+        <canvas id="normal" width="300" height="300"></canvas>
+        <canvas id="wrapped" width="300" height="300"></canvas>
     </div>
 </body>
 </html>
