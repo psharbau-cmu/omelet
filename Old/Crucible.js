@@ -100,7 +100,7 @@
     var start = function(canvas, uninitialzedState) {
         // get 2d context from canvas
         context = canvas.getContext('2d');
-        fixContext(context);
+        fixContext(context); // fix it.  ugh.
 
         // get state object's hierarchy, or create a blank one
         state = uninitialzedState || {};

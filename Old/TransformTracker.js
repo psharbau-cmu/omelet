@@ -88,7 +88,7 @@ window.fixContext = function(context) {
     context.shear = function(x, y) {
         multiplyCurrent([1, y, x, 1, 0, 0]);
         iSetTransform.apply(context, current.matrix);
-    }
+    };
 
     context.transform = function(a, b, c, d, e, f) {
         multiplyCurrent([a, b, c, d, e, f]);
@@ -117,14 +117,5 @@ window.fixContext = function(context) {
         var yPrime = (m[1]*x) + (m[3]*y) + m[5];
 
         return [xPrime, yPrime];
-    };
-
-    context.print = function() {
-        var s = ''
-        s += current.matrix[0] + ' ' + current.matrix[2] + ' ' + current.matrix[4] + '\n';
-        s += current.matrix[1] + ' ' + current.matrix[3] + ' ' + current.matrix[5] + '\n';
-        s += '0 0 1';
-
-        console.log(s);
     };
 };
