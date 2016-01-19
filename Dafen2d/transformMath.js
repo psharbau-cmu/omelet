@@ -96,7 +96,6 @@
             rotate: function (angle) {
                 var cos = Math.cos(angle);
                 var sin = Math.sin(angle);
-
                 multiplyCurrent([cos, sin, -1 * sin, cos, 0, 0]);
             },
 

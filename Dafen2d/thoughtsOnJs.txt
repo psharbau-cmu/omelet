@@ -1,0 +1,33 @@
+If you want to build a large application on a team, you will need to break the application into components.
+
+These components should:
+    a) have a specified way they interact and
+    b) it should not be possible to interact in other ways.
+
+These two properties allow the human brain to be able to reason and predict behavior of:
+    c) individual components
+    d) the system as a whole.
+
+JavaScript has no native way to define components.  So (b) is out from the get go because components are artificial.
+
+In JS, (a) is achieved in framework specific ways, which are all common and all slightly different.
+
+So, lets say your using CoolFrameworkJs to create a dynamic web experience.  CoolFrameworkJs provides a global function
+to call and define a component.  All of your custom js code works fine and you make sure to "follow the rules" so you
+can be sure there is no illegal component-component interaction.  All is fine (despite your newly acquired skill of
+creating CoolFrameworkJs components non-transferable to other frameworks).
+
+BUT THEN, you need a piece of functionality that is not included with CoolFrameworkJs.  You have some choices:
+    e) author the functionality yourself within the constraints of CoolFrameworkJs,
+    f) find someone else who has already done (e),
+    g) find a different framework, say NeatPluginJs, and write a patch to marry the component semantics of the two,
+    h) find someone else who has already done (g).
+
+During the course of a large application, this problem repeats several times.  Unless you always choose the most time-
+consuming choice (e), your knowledge of the state of (a) and (b) begins to disappear.  Further, if you choose (g) or
+(h), the task of the individual developer require more and more knowledge of how different frameworks realize
+components.  They can not be concerned with only (a) and (b), but need to always understand how to implement components
+in the multiple frameworks, but also what philosophies the frameworks were employing during their trade-off decisions
+for authoring the component implementation strategies.
+
+This is just too much.
