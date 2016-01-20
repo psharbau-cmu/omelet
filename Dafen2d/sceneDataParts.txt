@@ -9,14 +9,18 @@ Root:
     - The:          Map of singleton types to instances
     - Hierarchy:    List of Entities in the scene (See below)
     ==== RUN TIME ONLY BELOW ====
-    - addEntity(entity, [parent])
+    - addEntity(raw, [parentEntity])
     - removeEntity(entity)
+    - update()      loop through all updates in some order
 
 Entity:
     - key           Unique string to identify this entity
-    - "CustomType"  Instance of a custom type at runtime, statically, the object that will be passed to create
+    - "CustomType"  Instance of a custom type at runtime, serialized:
+        - refs      Map of keys of other entities to properties of data
+        - data      Map of properties to values, passed to create component function for "CustomType"
     - children      List or child entities
     ==== RUN TIME ONLY BELOW ====
+    - components    List of custom components on the entity
     - onScreenNode  If the entity is on screen
     - screenSort    Array of numbers (most significant first) to sort draw calls low to high
     - transform()   function to call a transform function on component
@@ -24,4 +28,5 @@ Entity:
     - draw()        function to call and draw the element to the screen
     - mouseEnter()
     - mouseExit()
-    - mouseClick()
+    - mouseDown()
+    - mouseUp()
