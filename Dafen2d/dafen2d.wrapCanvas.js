@@ -58,7 +58,8 @@
     };
 
     // get context wrapper to track transform and provide snapshots
-    window.wrapContext = function(context) {
+    window.dafen2d = window.dafen2d || {};
+    window.dafen2d.wrapContext = function(context) {
 
         var current = {
             matrix:[1,0,0,1,0,0],

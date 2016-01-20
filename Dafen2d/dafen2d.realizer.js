@@ -97,7 +97,7 @@
 
         var callReady = function(entity) {
             entity.components.forEach(function(c) {
-                if (entity[c].ready) entity[c].ready();
+                if (entity[c].ready) entity[c].ready(scene, entity);
             });
             if (entity.children) entity.children.forEach(callReady);
         };
