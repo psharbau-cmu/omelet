@@ -1,4 +1,3 @@
-
 // based on: https://en.wikipedia.org/wiki/Red%E2%80%93black_tree
 (function() {
 
@@ -63,11 +62,10 @@
     TreeNode.prototype.insertFix1 = function() {
         if (!this.parent) this.color = false;
         else this.insertFix2();
-    }
+    };
 
     TreeNode.prototype.insertFix2 = function() {
-        if (!this.parent.color) return;
-        else this.insertFix3();
+        if (this.parent.color) this.insertFix3();
     };
 
     TreeNode.prototype.insertFix3 = function() {
@@ -126,6 +124,7 @@
             var n = this.right;
             while (n.left != this.tree.nil) n = n.left;
             this.value = n.value;
+            this.value.onScreenNode = this;
             n.remove();
             return;
         }
@@ -215,8 +214,7 @@
     };
 
     window.dafen2d = window.dafen2d || {};
-    window.dafen2d.createTree = function(compareFunc) {
-
+    window.dafen2d.createOnScreenTree = function() {
         var tree = { };
 
         var nil = new TreeNode(tree);
@@ -225,9 +223,23 @@
         tree.nil = nil;
         tree.root = nil;
 
+        var compare = function(entityA, entityB) {
+            var a = entityA.screenSort || [];
+            var b = entityB.screenSort || [];
+            var i = 0;
+            while (i < a.length || i < b.length) {
+                var ai = i < a.length ? a[i] : 0;
+                var bi = i < b.length ? b[i] : 0;
+                if (ai < bi) return true;
+                else if (ai > bi) return false;
+                else i += 1;
+            }
+        };
+
         var insert = function(v) {
-            var n = new TreeNode();
+            var n = new TreeNode(tree);
             n.value = v;
+            v.onScreenNode = n;
             n.left = nil;
             n.right = nil;
 
@@ -239,11 +251,11 @@
 
             var c = tree.root;
             while (true) {
-                if (compareFunc(c.value, v)) {
+                if (compare(c.value, v)) {
                     if (c.right == nil) {
                         c.right = n;
                         n.parent = c;
-                        n.insertFix2(tree);
+                        n.insertFix2();
                         return n;
                     } else {
                         c = c.right;
@@ -252,7 +264,7 @@
                     if (c.left == nil) {
                         c.left = n;
                         n.parent = c;
-                        n.insertFix2(tree);
+                        n.insertFix2();
                         return n;
                     } else {
                         c = c.left;
@@ -264,13 +276,13 @@
         var traverse = function(n) {
             if (n == nil) return;
             traverse(n.left);
-            console.log(n.value);
+            n.draw();
             traverse(n.right);
         };
 
         return {
             insert:insert,
-            traverse:function() { traverse(tree.root); }
+            draw:function() { traverse(tree.root); }
         };
     };
 })();

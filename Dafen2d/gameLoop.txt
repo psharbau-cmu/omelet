@@ -10,7 +10,7 @@
 			c.  get snapShot
 			d.  call any preDraw methods with: snapShot, it will return a bounding polygon in global space
 			e.  test return polygon points for existing within camera viewport
-			f.  if polygon intersects with viewport: add draw to drawObj at layer
+			f.  if polygon intersects with viewport: add draw to onScreenTree at layer (if not, remove onScreenNode from entity)
 			g.  if children exist:
 					wrapper.save();
 					loop through children same way

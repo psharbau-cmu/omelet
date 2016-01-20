@@ -1,0 +1,27 @@
+Root:
+    - Context:      2d context of a canvas
+    - Camera:       Stats of 2d camera settings
+        - x:        x position
+        - y:        y position
+        - angle:    rotation
+        - zoom:     Multiple of normal sizes
+    - Layers:       Map of draw layer names to numeric order from back to front -> Low to High
+    - The:          Map of singleton types to instances
+    - Hierarchy:    List of Entities in the scene (See below)
+    ==== RUN TIME ONLY BELOW ====
+    - addEntity(entity, [parent])
+    - removeEntity(entity)
+
+Entity:
+    - key           Unique string to identify this entity
+    - "CustomType"  Instance of a custom type at runtime, statically, the object that will be passed to create
+    - children      List or child entities
+    ==== RUN TIME ONLY BELOW ====
+    - onScreenNode  If the entity is on screen
+    - screenSort    Array of numbers (most significant first) to sort draw calls low to high
+    - transform()   function to call a transform function on component
+    - preDraw(snapShot) function to call preDraw and get bounds
+    - draw()        function to call and draw the element to the screen
+    - mouseEnter()
+    - mouseExit()
+    - mouseClick()
