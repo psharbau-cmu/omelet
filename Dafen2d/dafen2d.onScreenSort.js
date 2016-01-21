@@ -273,16 +273,21 @@
             }
         };
 
-        var traverse = function(n) {
+        var traverse = function(n, results) {
             if (n == nil) return;
             traverse(n.left);
-            n.draw();
+            var result = n.draw();
+            if (result) results.push({box:result, entity: n.value});
             traverse(n.right);
         };
 
         return {
             insert:insert,
-            draw:function() { traverse(tree.root); }
+            draw:function() {
+                var boxes = [];
+                traverse(tree.root, boxes);
+                return boxes;
+            }
         };
     };
 })();
