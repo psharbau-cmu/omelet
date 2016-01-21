@@ -9,13 +9,18 @@
             var component = {
                 color:data.color || '#000000',
                 width:data.width || 15,
-                height:data.height || 15
+                height:data.height || 15,
+                layer:data.layer || 'default'
             };
 
             var halfWidth = 0;
             var halfHeight = 0;
             var lastSnap = null;
             var lastPoly = null;
+
+            component.ready = function(scene, entity) {
+                entity.screenSort = [scene.Layers[component.layer] || 0];
+            };
 
             component.preDraw = function(snapShot) {
                 lastSnap = snapShot;

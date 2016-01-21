@@ -105,7 +105,7 @@
         addToUpdateList(scene.The);
         scene.Hierarchy.forEach(addToUpdateList);
 
-        scene.update = function() { updateList.forEach(function(f) {f();}); };
+        scene.update = function(delta) { updateList.forEach(function(f) {f(delta);}); };
         scene.addEntity = function(rawEntity, parent) {
             findComponents(rawEntity);
             initialize(rawEntity);

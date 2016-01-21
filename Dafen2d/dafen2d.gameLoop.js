@@ -10,6 +10,7 @@
         var onScreenTree = dafen2d.createOnScreenTree();
         var mouseEntity = null;
         var started = false;
+        var lastTime = 0;
 
         dafen2d.realizeScene(sceneObj);
         sceneObj.Context = context;
@@ -40,6 +41,8 @@
             });
 
             return onScreen;
+
+            // TODO: if the polygon completely surrounds the canvas, this will say false, but it's true
         };
 
 
@@ -79,24 +82,31 @@
 
         var gameLoop = function() {
             // check size
-            width = context.width;
-            height = context.height;
+            width = canvasElement.width;
+            height = canvasElement.height;
 
             // update
-            sceneObj.update();
+            var now = new Date().getTime();
+            var deltaTime = (now - (lastTime || now)) / 1000;
+            lastTime = now;
+            sceneObj.update(deltaTime);
 
             // move to center
             wrapper.save();
-            wrapper.translate(context.width / 2, context.height / 2);
+            wrapper.translate(width / 2, height / 2);
 
             // camera changes
             var cam = sceneObj.Camera;
             wrapper.translate(-1 * cam.x, -1 * cam.y);
             if (cam.angle != 0) wrapper.rotate(-1 * cam.angle);
-            wrapper.scale(cam.scale, cam.scale);
+            wrapper.scale(cam.zoom, cam.zoom);
 
             // transform and preDraw steps
             sceneObj.Hierarchy.forEach(transformAndPreDraw);
+
+            // clear the whole screen, in future, just clear what is needed
+            context.setTransform(1, 0, 0, 1, 0, 0);
+            context.clearRect(0, 0, width, height);
 
             // do draw, get back stack of global polygons for mouse events
             var boxes = onScreenTree.draw();

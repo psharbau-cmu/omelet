@@ -9,8 +9,14 @@
     <script src="dafen2d.gameLoop.js"></script>
     <script src="./Components/dafen2d.transform.js"></script>
     <script src="./Components/dafen2d.squareRenderer.js"></script>
+    <script src="./TestGame/testGame.rotateSlowly.js"></script>
+    <script src="./TestGame/testGame.shootAcross.js"></script>
     <script type="text/javascript">
         var testScene = {
+            Layers:{
+                "A":-1,
+                "B":-2
+            },
             Hierarchy:[
                 {
                     'dafen2d.transform': {
@@ -23,9 +29,38 @@
                         data:{
                             width:30,
                             height:60,
-                            color:'#66ff33'
+                            color:'#66ff33',
+                            layer:"A"
                         }
-                    }
+                    },
+                    children:[
+                        {
+                            'dafen2d.transform': {
+                                data:{
+                                    x:0,
+                                    y:0
+                                }
+                            },
+                            'dafen2d.squareRenderer':{
+                                data:{
+                                    width:60,
+                                    height:30,
+                                    color:'#6633ff',
+                                    layer:"B"
+                                }
+                            },
+                            'testGame.rotateSlowly':{
+                                data:{
+                                    speed:1
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    'dafen2d.transform':{},
+                    'testGame.shootAcross':{},
+                    'dafen2d.squareRenderer':{}
                 }
             ]
         };

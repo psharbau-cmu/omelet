@@ -275,10 +275,10 @@
 
         var traverse = function(n, results) {
             if (n == nil) return;
-            traverse(n.left);
+            traverse(n.left, results);
             var result = n.value.draw();
             if (result) results.push({box:result, entity: n.value});
-            traverse(n.right);
+            traverse(n.right, results);
         };
 
         return {
