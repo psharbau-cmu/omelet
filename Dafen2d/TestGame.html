@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transform Tests</title>
+    <script src="dafen2d.wrapCanvas.js"></script>
+    <script src="dafen2d.onScreenSort.js"></script>
+    <script src="dafen2d.realizer.js"></script>
+    <script src="dafen2d.gameLoop.js"></script>
+    <script src="./Components/dafen2d.transform.js"></script>
+    <script src="./Components/dafen2d.squareRenderer.js"></script>
+    <script type="text/javascript">
+        var testScene = {
+            Hierarchy:[
+                {
+                    'dafen2d.transform': {
+                        data:{
+                            x:0,
+                            y:0
+                        }
+                    },
+                    'dafen2d.squareRenderer':{
+                        data:{
+                            width:30,
+                            height:60,
+                            color:'#66ff33'
+                        }
+                    }
+                }
+            ]
+        };
+
+        window.onload = function() {
+            var c = document.getElementById('testCanvas');
+            var g = dafen2d.makeGame(c, testScene);
+            g.start();
+        };
+    </script>
+</head>
+<body>
+    <canvas id="testCanvas" width="640" height="480"></canvas>
+</body>
+</html>

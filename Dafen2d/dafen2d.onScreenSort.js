@@ -276,7 +276,7 @@
         var traverse = function(n, results) {
             if (n == nil) return;
             traverse(n.left);
-            var result = n.draw();
+            var result = n.value.draw();
             if (result) results.push({box:result, entity: n.value});
             traverse(n.right);
         };

@@ -10,7 +10,7 @@
     var initialize = function(entity) {
         // replace stubs with created components
         entity.components.forEach(function(prop) {
-            entity[prop] = dafen2d.componentTypes[prop].createComponent(entity, entity[prop].data);
+            entity[prop] = dafen2d.componentTypes[prop].createComponent(entity[prop].data);
         });
 
         // recurse through children
