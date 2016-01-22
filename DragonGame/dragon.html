@@ -9,6 +9,7 @@
         canvas { display:block; }
     </style>
     <script src="dafen2d.min.js"></script>
+    <script src="dragonGame.tailWag.js"></script>
     <script type="text/javascript">
         var sceneSource = {
             Camera:{
@@ -176,8 +177,14 @@
                                             spriteName:'Tail'
                                         }
                                     },
+                                    'dragonGame.tailWag':{
+                                        refs:{
+                                            'tailTip':'tip'
+                                        }
+                                    },
                                     children:[
                                         {
+                                            key:'tailTip',
                                             'dafen2d.transform':{
                                                 data:{x:85,y:-110, angle:0}
                                             },
