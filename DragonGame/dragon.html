@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dragon Game</title>
+    <style type="text/css">
+        * { margin:0; padding:0; }
+        html, body { width:100%; height:100%; }
+        canvas { display:block; }
+    </style>
+    <script src="dafen2d.min.js"></script>
+    <script type="text/javascript">
+        var sceneSource = {
+            Camera:{
+                x:0,
+                y:0,
+                angle:0,
+                zoom:1
+            },
+
+            Layers: {
+                'Back':0,
+                'Dragon':1
+            },
+
+            The: {},
+
+            Assets: {
+                'DragonSheet':{
+                    type:'dafen2d.spriteSheet',
+                    data:{
+                        src:'dragon.png',
+                        sprites:{
+                            'Head':{
+                                x:0,
+                                y:0,
+                                width:210,
+                                height:205,
+                                pivotX:145,
+                                pivotY:150
+                            },
+                            'Body':{
+                                x:212,
+                                y:2,
+                                width:121,
+                                height:175,
+                                pivotX:73,
+                                pivotY:145
+                            },
+                            'Tail':{
+                                x:333,
+                                y:5,
+                                width:109,
+                                height:141,
+                                pivotX:23,
+                                pivotY:116
+                            },
+                            'TailTip':{
+                                x:442,
+                                y:8,
+                                width:58,
+                                height:104,
+                                pivotX:25,
+                                pivotY:100
+                            },
+                            'LeftLeg':{
+                                x:330,
+                                y:146,
+                                width:94,
+                                height:117,
+                                pivotX:44,
+                                pivotY:20
+                            },
+                            'RightLeg':{
+                                x:214,
+                                y:181,
+                                width:103,
+                                height:91,
+                                pivotX:88,
+                                pivotY:36
+                            },
+                            'LeftUpperArm':{
+                                x:444,
+                                y:114,
+                                width:57,
+                                height:41,
+                                pivotX:43,
+                                pivotY:16
+                            },
+                            'LeftArm':{
+                                x:102,
+                                y:205,
+                                width:25,
+                                height:40,
+                                pivotX:15,
+                                pivotY:29
+                            },
+                            'RightUpperArm':{
+                                x:425,
+                                y:158,
+                                width:81,
+                                height:46,
+                                pivotX:16,
+                                pivotY:28
+                            },
+                            'RightArm':{
+                                x:132,
+                                y:204,
+                                width:19,
+                                height:39,
+                                pivotX:11,
+                                pivotY:10
+                            },
+                            'LeftHand':{
+                                x:52,
+                                y:205,
+                                width:49,
+                                height:27,
+                                pivotX:25,
+                                pivotY:8
+                            },
+                            'RightHand':{
+                                x:2,
+                                y:204,
+                                width:50,
+                                height:41,
+                                pivotX:43,
+                                pivotY:32
+                            }
+                        }
+                    }
+                }
+            },
+
+            Hierarchy: [
+                {
+                    'dafen2d.transform':{
+                        data:{x:0,y:-75}
+                    },
+                    children:[
+                        {
+                            'dafen2d.transform':{
+                                data:{x:0,y:0, angle:0}
+                            },
+                            'dafen2d.spriteRenderer':{
+                                data:{
+                                    layer:'Dragon',
+                                    orderInLayer:3,
+                                    sheetName:'DragonSheet',
+                                    spriteName:'Body'
+                                }
+                            },
+                            children:[
+                                {
+                                    'dafen2d.transform':{
+                                        data:{x:-20,y:-150, angle:0}
+                                    },
+                                    'dafen2d.spriteRenderer':{
+                                        data:{
+                                            layer:'Dragon',
+                                            orderInLayer:4,
+                                            sheetName:'DragonSheet',
+                                            spriteName:'Head'
+                                        }
+                                    }
+                                },
+                                {
+                                    'dafen2d.transform':{
+                                        data:{x:40,y:3, angle:0}
+                                    },
+                                    'dafen2d.spriteRenderer':{
+                                        data:{
+                                            layer:'Dragon',
+                                            orderInLayer:4,
+                                            sheetName:'DragonSheet',
+                                            spriteName:'Tail'
+                                        }
+                                    },
+                                    children:[
+                                        {
+                                            'dafen2d.transform':{
+                                                data:{x:85,y:-110, angle:0}
+                                            },
+                                            'dafen2d.spriteRenderer':{
+                                                data:{
+                                                    layer:'Dragon',
+                                                    orderInLayer:5,
+                                                    sheetName:'DragonSheet',
+                                                    spriteName:'TailTip'
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    'dafen2d.transform':{
+                                        data:{x:0,y:0, angle:0}
+                                    },
+                                    'dafen2d.spriteRenderer':{
+                                        data:{
+                                            layer:'Dragon',
+                                            orderInLayer:5,
+                                            sheetName:'DragonSheet',
+                                            spriteName:'LeftLeg'
+                                        }
+                                    }
+                                },
+                                {
+                                    'dafen2d.transform':{
+                                        data:{x:-30,y:15, angle:0}
+                                    },
+                                    'dafen2d.spriteRenderer':{
+                                        data:{
+                                            layer:'Dragon',
+                                            orderInLayer:2,
+                                            sheetName:'DragonSheet',
+                                            spriteName:'RightLeg'
+                                        }
+                                    }
+                                },
+                                {
+                                    'dafen2d.transform':{
+                                        data:{x:-15,y:-75, angle:0}
+                                    },
+                                    'dafen2d.spriteRenderer':{
+                                        data:{
+                                            layer:'Dragon',
+                                            orderInLayer:5,
+                                            sheetName:'DragonSheet',
+                                            spriteName:'LeftUpperArm'
+                                        }
+                                    },
+                                    children:[
+                                        {
+                                            'dafen2d.transform': {
+                                                data: {x:-35, y:14, angle: -.5}
+                                            },
+                                            'dafen2d.spriteRenderer': {
+                                                data: {
+                                                    layer: 'Dragon',
+                                                    orderInLayer: 6,
+                                                    sheetName: 'DragonSheet',
+                                                    spriteName: 'LeftArm'
+                                                }
+                                            },
+                                            children:[
+                                                {
+                                                    'dafen2d.transform': {
+                                                        data: {x:-3, y:-20, angle:.1}
+                                                    },
+                                                    'dafen2d.spriteRenderer': {
+                                                        data: {
+                                                            layer: 'Dragon',
+                                                            orderInLayer: 7,
+                                                            sheetName: 'DragonSheet',
+                                                            spriteName: 'RightHand'
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    'dafen2d.transform':{
+                                        data:{x:-45,y:-85, angle:3}
+                                    },
+                                    'dafen2d.spriteRenderer':{
+                                        data:{
+                                            layer:'Dragon',
+                                            orderInLayer:1,
+                                            sheetName:'DragonSheet',
+                                            spriteName:'RightUpperArm'
+                                        }
+                                    },
+                                    children:[
+                                        {
+                                            'dafen2d.transform': {
+                                                data: {x:60, y:-19, angle: -1.5}
+                                            },
+                                            'dafen2d.spriteRenderer': {
+                                                data: {
+                                                    layer: 'Dragon',
+                                                    orderInLayer: 2,
+                                                    sheetName: 'DragonSheet',
+                                                    spriteName: 'RightArm'
+                                                }
+                                            },
+                                            children:[
+                                                {
+                                                    'dafen2d.transform': {
+                                                        data: {x:0, y:20, angle:2.3}
+                                                    },
+                                                    'dafen2d.spriteRenderer': {
+                                                        data: {
+                                                            layer: 'Dragon',
+                                                            orderInLayer: 3,
+                                                            sheetName: 'DragonSheet',
+                                                            spriteName: 'LeftHand'
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    'dafen2d.transform':{ data: {x:0, y:20}},
+                    'dafen2d.squareRenderer':{
+                        data: {
+                            width: 700,
+                            height: 20,
+                            color: '#00ff88',
+                            layer:'Back'
+                        }
+                    }
+                },
+                {
+                    'dafen2d.transform':{ data:{x:0, y:-205}},
+                    'dafen2d.squareRenderer':{
+                        data: {
+                            width: 700,
+                            height: 450,
+                            color: '#0088ff',
+                            layer:'Back'
+                        }
+                    }
+                }
+
+            ]
+        };
+
+        window.onload = function() {
+            var c = document.getElementById('dragonCanvas');
+
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+
+            window.addEventListener('resize', function() {
+                c.width = window.innerWidth;
+                c.height = window.innerHeight;
+            }, false);
+
+            var g = dafen2d.makeGame(c, sceneSource);
+            g.start();
+        };
+    </script>
+</head>
+<body>
+    <canvas id="dragonCanvas"></canvas>
+</body>
+</html>

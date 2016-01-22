@@ -1,5 +1,4 @@
 Root:
-    - Context:      2d context of a canvas
     - Camera:       Stats of 2d camera settings
         - x:        x position
         - y:        y position
@@ -8,7 +7,9 @@ Root:
     - Layers:       Map of draw layer names to numeric order from back to front -> Low to High
     - The:          Map of singleton types to instances
     - Hierarchy:    List of Entities in the scene (See below)
+    - Assets:       Map of name to Asset (See below)
     ==== RUN TIME ONLY BELOW ====
+    - Context:      2d context of a canvas
     - addEntity(raw, [parentEntity])
     - removeEntity(entity)
     - update()      loop through all updates in some order
@@ -30,3 +31,10 @@ Entity:
     - mouseExit()
     - mouseDown()
     - mouseUp()
+
+Asset:
+    - type          The asset type to load
+    - data          The data needed to load the asset
+    ==== RUN TIME ONLY BELOW ====
+    - loaded        Boolean value if asset is loaded or not
+    - TODO: load stats

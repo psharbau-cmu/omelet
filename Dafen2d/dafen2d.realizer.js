@@ -47,6 +47,8 @@
     };
 
     window.dafen2d = window.dafen2d || {};
+    window.dafen2d.assetTypes = window.dafen2d.assetTypes || [];
+    window.dafen2d.componentTypes = window.dafen2d.componentTypes || [];
 
     window.dafen2d.realizeScene = function(scene) {
         scene = scene || {};
@@ -65,6 +67,7 @@
         initialize(scene.The);
 
         scene.Hierarchy = scene.Hierarchy || [];
+        scene.Assets = scene.Assets || [];
 
         var refs = {};
         var addRefs = function(entity) {
@@ -124,6 +127,13 @@
         scene.removeEntity = function(entity) {
             // ToDo: make it work
         };
+
+        for (var a in scene.Assets) {
+            var obj = scene.Assets[a];
+            if (obj && dafen2d.assetTypes[obj.type]) {
+                scene.Assets[a] = dafen2d.assetTypes[obj.type].createAsset(obj.data);
+            }
+        }
 
         callReady(scene.The);
         scene.Hierarchy.forEach(callReady);
