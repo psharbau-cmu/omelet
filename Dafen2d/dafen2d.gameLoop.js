@@ -9,9 +9,20 @@
         var screenPoly = [];
         var wrapper = dafen2d.wrapContext(context);
         var onScreenTree = dafen2d.createOnScreenTree();
+        var mousePosition = [-10, -10];
+        var mouseDown = false;
+        var mouseDownSent = false;
         var mouseEntity = null;
         var started = false;
         var lastTime = 0;
+
+        // listen to mouse
+        canvasElement.addEventListener('mousedown', function(evt) { mouseDown = true; });
+        canvasElement.addEventListener('mouseup', function(evt) { mouseDown = false; });
+        canvasElement.addEventListener('mousemove', function(evt) {
+            var rect = canvasElement.getBoundingClientRect();
+            mousePosition = [evt.clientX - rect.left, evt.clientY - rect.top];
+        });
 
         dafen2d.realizeScene(sceneObj);
         sceneObj.Context = context;
@@ -44,10 +55,31 @@
         };
 
         var processMouseBoxes = function(boxes) {
-            while (boxes.lengh > 0) {
+            // loop through boxes top to bottom to find one the mouse is over
+            while (boxes.length > 0) {
                 var boxSet = boxes.pop();
-                // todo: test mouse stuff
+                var x = mousePosition[0];
+                var y = mousePosition[1];
+                if (dafen2d.testPointInPolygon(x, y, boxSet.box)) {
+                    if (mouseEntity != boxSet.entity) {
+                        if (mouseEntity && mouseEntity.mouseExit) mouseEntity.mouseExit();
+                        mouseEntity = boxSet.entity;
+                        if (mouseEntity.mouseEnter) mouseEntity.mouseEnter();
+                    }
+
+                    if (mouseDownSent != mouseDown) {
+                        if (mouseDown && mouseEntity.mouseDown) mouseEntity.mouseDown();
+                        else if (!mouseDown && mouseEntity.mouseUp) mouseEntity.mouseUp();
+                        mouseDownSent = mouseDown;
+                    }
+
+                    return;
+                }
             }
+
+            if (mouseEntity && mouseEntity.mouseExit) mouseEntity.mouseExit();
+            mouseEntity = null;
+            mouseDownSent = mouseDown;
         };
 
         var gameLoop = function() {
