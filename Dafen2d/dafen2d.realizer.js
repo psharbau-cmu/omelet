@@ -89,8 +89,6 @@
         scene.Hierarchy.forEach(initialize);
         scene.Hierarchy.forEach(addEntityMethods);
 
-        var updateList = [];
-
         var addToUpdateList = function(entity) {
             entity.components.forEach(function(c) {
                 if (entity[c].update) updateList.push(entity[c].update);
@@ -105,6 +103,25 @@
             if (entity.children) entity.children.forEach(callReady);
         };
 
+        var removeFromScreenTree = function(entity) {
+            if (entity.onScreenNode) entity.onScreenNode.remove();
+            entity.onScreenNode = null;
+            if (entity.children) entity.children.forEach(removeFromScreenTree);
+        };
+
+        var removeFromList = function(list, entity) {
+            for (var i = 0; i < list.length; i++) {
+                if (list[i] === entity) {
+                    list.splice(i, 1);
+                    return true;
+                } else if (list[i].children) {
+                    if (removeFromList(list[i].children, entity)) return true;
+                }
+            }
+            return false;
+        };
+
+        var updateList = [];
         addToUpdateList(scene.The);
         scene.Hierarchy.forEach(addToUpdateList);
 
@@ -125,7 +142,11 @@
             callReady(rawEntity);
         };
         scene.removeEntity = function(entity) {
-            // ToDo: make it work
+            removeFromList(scene.Hierarchy, entity);
+            removeFromScreenTree(entity);
+            updateList = [];
+            addToUpdateList(scene.The);
+            scene.Hierarchy.forEach(addToUpdateList);
         };
 
         for (var a in scene.Assets) {

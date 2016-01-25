@@ -12,9 +12,12 @@
                 normal:data.normal || ''
             };
 
+            var thisScene, thisEntity;
             var spriteRenderer;
 
             component.ready = function(scene, entity) {
+                thisScene = scene;
+                thisEntity = entity;
                 spriteRenderer = entity['dafen2d.spriteRenderer'] || {spriteName:''};
             };
 
@@ -24,6 +27,10 @@
 
             component.mouseExit = function() {
                 spriteRenderer.spriteName = component.normal;
+            };
+
+            component.mouseDown = function() {
+                thisScene.removeEntity(thisEntity);
             };
 
             return component;
