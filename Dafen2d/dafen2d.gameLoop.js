@@ -6,6 +6,7 @@
         var context = canvasElement.getContext('2d');
         var width = context.width;
         var height = context.height;
+        var screenPoly = [];
         var wrapper = dafen2d.wrapContext(context);
         var onScreenTree = dafen2d.createOnScreenTree();
         var mouseEntity = null;
@@ -14,37 +15,6 @@
 
         dafen2d.realizeScene(sceneObj);
         sceneObj.Context = context;
-
-        var testForOnScreen = function(points) {
-            var onScreen = false;
-            points.forEach(function(point) {
-                if (onScreen) return;
-
-                // (0,0) -> (width, 0)
-                var sign = width * point[0];
-
-                // (width, 0) -> (width, height)
-                var dot2 = height * point[1];
-                if (sign == 0) sign = dot2;
-                else if (sign * dot2 < 0) return;
-
-                // (width, height) -> (0, height)
-                var dot3 = -1 * width * (point[0] - width);
-                if (sign == 0) sign = dot3;
-                else if (sign * dot3 < 0) return;
-
-                //(0, height) -> (0, 0)
-                var dot4 = -1 * height * (point[1] - height);
-                if (sign * dot4 < 0) return;
-
-                onScreen = true;
-            });
-
-            return onScreen;
-
-            // TODO: if the polygon completely surrounds the canvas, this will say false, but it's true
-        };
-
 
         var transformAndPreDraw = function(entity) {
             // save transform
@@ -58,7 +28,7 @@
                 var poly = entity.preDraw(wrapper.getSnapshot());
 
                 // test if bounding box is on the screen or not, add or remove from tree accordingly
-                if (testForOnScreen(poly)) {
+                if (dafen2d.testIntersection(screenPoly, poly)) {
                     if (!entity.onScreenNode) onScreenTree.insert(entity);
                 } else {
                     if (entity.onScreenNode) entity.onScreenNode.remove();
@@ -81,9 +51,10 @@
         };
 
         var gameLoop = function() {
-            // check size
+            // check size, update poly
             width = canvasElement.width;
             height = canvasElement.height;
+            screenPoly = [[0, 0], [width, 0], [width, height], [0, height]];
 
             // update
             var now = new Date().getTime();
