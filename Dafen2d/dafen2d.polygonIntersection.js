@@ -1,6 +1,6 @@
 (function() {
     // this function tests if two convex polygons intersect by projecting the points to lines perpendicular to the edges of the polys.
-    // iff an edge is found where the projected points from each polygon lie in distinct line segments, the shapes do not intersect.
+    // iff an edge exists where the projected points from each polygon lie in distinct line segments, the shapes do not intersect.
     // based on this web page: http://content.gpwiki.org/index.php/Polygon_Collision
 
     // the polygons that are passed in need to be arrays of 2 element arrays like this: [[x1, y1], [x2, y2], [x3, y3]]
