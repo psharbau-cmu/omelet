@@ -26,7 +26,7 @@
             };
 
             component.setGlobalPosition = function(x, y) {
-                var point = component.snapShot ? component.snapShot.inverseTransformPoint(x, y) : [x, y];
+                var point = component.snapShot ? component.snapShot.inverseTransformInParentSpace(x, y) : [x, y];
                 component.x = point[0];
                 component.y = point[1];
             };

@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df50e6ed-e5cd-44f2-85d9-d9c17f47b78b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BallGame/Ball.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BallGame/BallGame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BallGame/ballGame.followCursor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BallGame/dafen2d.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BallGame/ballGame.followCursor.js" afterPath="$PROJECT_DIR$/BallGame/ballGame.followCursor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BallGame/dafen2d.min.js" afterPath="$PROJECT_DIR$/BallGame/dafen2d.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dafen2d/Components/dafen2d.transform.js" afterPath="$PROJECT_DIR$/Dafen2d/Components/dafen2d.transform.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dafen2d/Out/dafen2d.min.js" afterPath="$PROJECT_DIR$/Dafen2d/Out/dafen2d.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dafen2d/dafen2d.gameLoop.js" afterPath="$PROJECT_DIR$/Dafen2d/dafen2d.gameLoop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dafen2d/dafen2d.realizer.js" afterPath="$PROJECT_DIR$/Dafen2d/dafen2d.realizer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dafen2d/sceneDataParts.txt" afterPath="$PROJECT_DIR$/Dafen2d/sceneDataParts.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dafen2d/dafen2d.wrapCanvas.js" afterPath="$PROJECT_DIR$/Dafen2d/dafen2d.wrapCanvas.js" />
     </list>
     <ignored path="Transforms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ballGame.followCursor.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ballGame.followCursor.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BallGame/ballGame.followCursor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="88" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
+            <state vertical-scroll-proportion="0.55926543">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -66,17 +61,17 @@
         <entry file="file://$PROJECT_DIR$/Dafen2d/dafen2d.wrapCanvas.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dafen2d.transform.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dafen2d.transform.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dafen2d/Components/dafen2d.transform.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6327212">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="113" selection-start-line="28" selection-start-column="113" selection-end-line="28" selection-end-column="113" />
               <folding />
             </state>
           </provider>
@@ -133,9 +128,9 @@
         <option value="$PROJECT_DIR$/Dafen2d/dafen2d.realizer.js" />
         <option value="$PROJECT_DIR$/Dafen2d/sceneDataParts.txt" />
         <option value="$PROJECT_DIR$/Dafen2d/dafen2d.gameLoop.js" />
+        <option value="$PROJECT_DIR$/BallGame/BallGame.html" />
         <option value="$PROJECT_DIR$/Dafen2d/dafen2d.wrapCanvas.js" />
         <option value="$PROJECT_DIR$/Dafen2d/Components/dafen2d.transform.js" />
-        <option value="$PROJECT_DIR$/BallGame/BallGame.html" />
         <option value="$PROJECT_DIR$/BallGame/ballGame.followCursor.js" />
       </list>
     </option>
@@ -803,7 +798,15 @@
     <entry file="file://$PROJECT_DIR$/Dafen2d/dafen2d.wrapCanvas.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dafen2d/Components/dafen2d.transform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="113" selection-start-line="28" selection-start-column="113" selection-end-line="28" selection-end-column="113" />
           <folding />
         </state>
       </provider>
@@ -818,16 +821,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BallGame/ballGame.followCursor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="88" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/Components/dafen2d.transform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6327212">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.55926543">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding />
         </state>
       </provider>

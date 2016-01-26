@@ -14,10 +14,6 @@
             };
 
             component.update = function(deltaTime) {
-                transform.setGlobalPosition(thisScene.MousePosition[0], thisScene.MousePosition[1]);
-                console.log(thisScene.MousePosition + '\t\t' + transform.getGlobalPosition());
-                return;
-
                 var globalPosition = transform.getGlobalPosition();
 
                 var toMouseX = thisScene.MousePosition[0] - globalPosition[0];
@@ -26,8 +22,7 @@
                 var magnitude = Math.sqrt(Math.pow(toMouseX, 2) + Math.pow(toMouseY, 2));
                 if (magnitude < 1) {
                     return;
-                } else if (magnitude < 5) {
-                    console.log('Tada!');
+                } else if (magnitude < 15) {
                     transform.setGlobalPosition(thisScene.MousePosition[0], thisScene.MousePosition[1]);
                 } else {
                     var newX = globalPosition[0] + (3 * toMouseX * deltaTime);

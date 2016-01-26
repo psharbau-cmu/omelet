@@ -39,9 +39,10 @@
 
 
     // SnapShot constructor and methods
-    var SnapShot = function(m, c) {
+    var SnapShot = function(m, c, p) {
         this.currentMatrix = m.slice();
         this.context2d = c;
+        this.parent = p ? p.slice() : null;
     };
 
     SnapShot.prototype.getContext = function() {
@@ -55,6 +56,11 @@
 
     SnapShot.prototype.inverseTransformPoint = function(x, y) {
         return calcInverseTransformPoint(x, y, this.currentMatrix);
+    };
+
+    SnapShot.prototype.inverseTransformInParentSpace = function(x, y) {
+        if (!this.parent) return [x, y];
+        else return calcInverseTransformPoint(x, y, this.parent);
     };
 
     // get context wrapper to track transform and provide snapshots
@@ -132,7 +138,7 @@
             },
 
             getSnapshot: function() {
-                return new SnapShot(current.matrix, context);
+                return new SnapShot(current.matrix, context, current.last ? current.last.matrix : null);
             }
         };
     };
