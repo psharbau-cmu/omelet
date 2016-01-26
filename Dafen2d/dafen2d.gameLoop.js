@@ -95,7 +95,7 @@
             // update
             var now = new Date().getTime();
             var deltaTime = (now - (lastTime || now)) / 1000;
-            if (deltaTime > 1) deltaTime = 1;
+            if (deltaTime > 1) deltaTime = 0.016;
             lastTime = now;
             sceneObj.update(deltaTime);
 
