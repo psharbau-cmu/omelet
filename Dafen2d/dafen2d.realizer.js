@@ -60,6 +60,9 @@
                 zoom:1
             };
 
+        scene.MousePosition = [0, 0];
+        scene.MouseDown = false;
+
         scene.Layers = scene.Layers || {};
 
         scene.The = scene.The || {};

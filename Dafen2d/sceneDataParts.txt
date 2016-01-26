@@ -10,6 +10,8 @@ Root:
     - Assets:       Map of name to Asset (See below)
     ==== RUN TIME ONLY BELOW ====
     - Context:      2d context of a canvas
+    - MousePosition 2 element array of x and y mouse coords
+    - MouseDown     Boolean value if mouse is down or up
     - addEntity(raw, [parentEntity])
     - removeEntity(entity)
     - update()      loop through all updates in some order
@@ -24,7 +26,7 @@ Entity:
     - components    List of custom components on the entity
     - onScreenNode  If the entity is on screen
     - screenSort    Array of numbers (most significant first) to sort draw calls low to high
-    - transform()   function to call a transform function on component
+    - transform()   function to call a transform function on component, can return a snapshot
     - preDraw(snapShot) function to call preDraw and get bounds
     - draw()        function to call and draw the element to the screen
     - mouseEnter()

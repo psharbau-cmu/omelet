@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ball Game</title>
+    <style type="text/css">
+        * { margin:0; padding:0; }
+        html, body { width:100%; height:100%; }
+        canvas { display:block; }
+    </style>
+    <script src="dafen2d.min.js"></script>
+    <script src="ballGame.followCursor.js"></script>
+    <script type="text/javascript">
+        var sceneSource = {
+            Camera:{
+                x:0,
+                y:0,
+                angle:0,
+                zoom:1
+            },
+
+            Layers: {
+                'Back':0,
+                'Ball':1
+            },
+
+            The: {},
+
+            Assets: {
+                'BallSheet':{
+                    type:'dafen2d.spriteSheet',
+                    data:{
+                        src:'Ball.png',
+                        sprites:{
+                            'Ball':{
+                                x:0,
+                                y:0,
+                                width:34,
+                                height:34,
+                                pivotX:17,
+                                pivotY:18
+                            }
+                        }
+                    }
+                }
+            },
+
+            Hierarchy: [
+                {
+                    'dafen2d.transform':{
+                        data:{x:0,y:0}
+                    },
+                    'dafen2d.spriteRenderer':{
+                        data:{
+                            layer:'Ball',
+                            orderInLayer:0,
+                            sheetName:'BallSheet',
+                            spriteName:'Ball'
+                        }
+                    },
+                    'ballGame.followCursor':{}
+                }
+            ]
+        };
+
+        window.onload = function() {
+            var c = document.getElementById('theCanvas');
+
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+
+            window.addEventListener('resize', function() {
+                c.width = window.innerWidth;
+                c.height = window.innerHeight;
+            }, false);
+
+            var g = dafen2d.makeGame(c, sceneSource);
+            g.start();
+        };
+    </script>
+</head>
+<body>
+    <canvas id="theCanvas"></canvas>
+</body>
+</html>

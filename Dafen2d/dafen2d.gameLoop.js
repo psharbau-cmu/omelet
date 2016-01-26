@@ -32,11 +32,11 @@
             wrapper.save();
 
             // change the transform locally
-            if (entity.transform) entity.transform(wrapper);
+            if (entity.transform) var snap = entity.transform(wrapper);
 
             // send a snapshot of the transform to predraw to cache for drawing later
             if (entity.preDraw) {
-                var poly = entity.preDraw(wrapper.getSnapshot());
+                var poly = entity.preDraw(snap || wrapper.getSnapshot());
 
                 // test if bounding box is on the screen or not, add or remove from tree accordingly
                 if (dafen2d.testIntersection(screenPoly, poly)) {
@@ -55,6 +55,10 @@
         };
 
         var processMouseBoxes = function(boxes) {
+            // set global state
+            sceneObj.MousePosition = mousePosition;
+            sceneObj.MouseDown = mouseDown;
+
             // loop through boxes top to bottom to find one the mouse is over
             while (boxes.length > 0) {
                 var boxSet = boxes.pop();
