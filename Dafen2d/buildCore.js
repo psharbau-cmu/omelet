@@ -3,7 +3,7 @@ var uglifyjs = require('uglify-js');
 
 (function() {
     var files = [];
-    var regex = new RegExp('(dafen2d.)[^.]*(.js)');
+    var regex = new RegExp('(dafen2d.)(ui.)?[^.]*(.js)');
 
     var ifMatchAdd = function(dir, file) {
         if (file && file.match && file.match(regex)) files.push(dir + file);
