@@ -76,7 +76,7 @@
     "ArenaSheet":{
       "type":"dafen2d.spriteSheet",
       "data":{
-        "src":"./RawArt/Arena.png",
+        "src":"./RawArt/ArenaBase.png",
         "sprites":{
           "Arena":{
             "x":0,
@@ -118,6 +118,39 @@
           "orderInLayer":0,
           "sheetName":"BackgroundSheet",
           "spriteName":"Background"
+        }
+      }
+    },
+    {
+      "children":[
+        {"dafen2d.transform":{"data":{"x":-370,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeA"}}},
+        {"dafen2d.transform":{"data":{"x":-260,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeB"}}},
+        {"dafen2d.transform":{"data":{"x":-150,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeC"}}},
+        {"dafen2d.transform":{"data":{"x":-40,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeD"}}},
+        {"dafen2d.transform":{"data":{"x":70,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeE"}}},
+        {"dafen2d.transform":{"data":{"x":180,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeF"}}},
+        {"dafen2d.transform":{"data":{"x":290,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeG"}}},
+        {"dafen2d.transform":{"data":{"x":400,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeH"}}}
+      ]
+    },
+    {
+      "children":[
+        {"dafen2d.transform":{"data":{"x":-370,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowA"}}},
+        {"dafen2d.transform":{"data":{"x":-150,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowB"}}},
+        {"dafen2d.transform":{"data":{"x":70,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowC"}}},
+        {"dafen2d.transform":{"data":{"x":400,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowD"}}}
+      ]
+    },
+    {
+      "dafen2d.transform":{
+        "data":{"x":0,"y":0}
+      },
+      "dafen2d.spriteRenderer":{
+        "data":{
+          "layer":"Arena",
+          "orderInLayer":0,
+          "sheetName":"ArenaSheet",
+          "spriteName":"Arena"
         }
       }
     }
