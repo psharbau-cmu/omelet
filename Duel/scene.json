@@ -123,22 +123,22 @@
     },
     {
       "children":[
-        {"dafen2d.transform":{"data":{"x":-370,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeA"}}},
-        {"dafen2d.transform":{"data":{"x":-260,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeB"}}},
-        {"dafen2d.transform":{"data":{"x":-150,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeC"}}},
-        {"dafen2d.transform":{"data":{"x":-40,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeD"}}},
-        {"dafen2d.transform":{"data":{"x":70,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeE"}}},
-        {"dafen2d.transform":{"data":{"x":180,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeF"}}},
-        {"dafen2d.transform":{"data":{"x":290,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeG"}}},
-        {"dafen2d.transform":{"data":{"x":400,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeH"}}}
+        {"dafen2d.transform":{"data":{"x":-370,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeA"}}, "duel.randomShift":{"data":{"distance":180, "period":4}}},
+        {"dafen2d.transform":{"data":{"x":-260,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeB"}}, "duel.randomShift":{"data":{"distance":200, "period":5}}},
+        {"dafen2d.transform":{"data":{"x":-150,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeC"}}, "duel.randomShift":{"data":{"distance":180, "period":3}}},
+        {"dafen2d.transform":{"data":{"x":-40,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeD"}}, "duel.randomShift":{"data":{"distance":150, "period":4}}},
+        {"dafen2d.transform":{"data":{"x":70,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeE"}}, "duel.randomShift":{"data":{"distance":210, "period":5}}},
+        {"dafen2d.transform":{"data":{"x":180,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeF"}}, "duel.randomShift":{"data":{"distance":190, "period":3}}},
+        {"dafen2d.transform":{"data":{"x":290,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeG"}}, "duel.randomShift":{"data":{"distance":175, "period":4}}},
+        {"dafen2d.transform":{"data":{"x":400,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"ShadowTrees","sheetName":"ShadowTrees","spriteName":"TreeH"}}, "duel.randomShift":{"data":{"distance":188, "period":5}}}
       ]
     },
     {
       "children":[
-        {"dafen2d.transform":{"data":{"x":-370,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowA"}}},
-        {"dafen2d.transform":{"data":{"x":-150,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowB"}}},
-        {"dafen2d.transform":{"data":{"x":70,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowC"}}},
-        {"dafen2d.transform":{"data":{"x":400,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowD"}}}
+        {"dafen2d.transform":{"data":{"x":-370,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowA"}}, "duel.randomShift":{"data":{"distance":300, "period":7}}},
+        {"dafen2d.transform":{"data":{"x":-150,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowB"}}, "duel.randomShift":{"data":{"distance":360, "period":8}}},
+        {"dafen2d.transform":{"data":{"x":70,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowC"}}, "duel.randomShift":{"data":{"distance":350, "period":9}}},
+        {"dafen2d.transform":{"data":{"x":400,"y":-320}},"dafen2d.spriteRenderer":{"data":{"layer":"BigShadows","sheetName":"BackShadows","spriteName":"ShadowD"}}, "duel.randomShift":{"data":{"distance":318, "period":10}}}
       ]
     },
     {
