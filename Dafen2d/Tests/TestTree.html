@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script src="../dafen2d.onScreenSort.js"></script>
+    <script type="text/javascript">
+
+        var tree = dafen2d.createOnScreenTree();
+        var makeThing = function() {
+            this.screenSort = [(Math.random() * 200) | 0];
+        };
+
+        var lastValue = 0;
+
+        makeThing.prototype.draw = function() {
+            lastValue += 1;
+        };
+
+        var test = function() {
+            var things = [];
+
+            for (var i = 0; i < 100; i += 1) {
+                var thing = new makeThing();
+                things.push(thing);
+                tree.insert(thing);
+            }
+
+            return things;
+            //while (things.count > 0) {
+            //    thing = things.pop();
+            //    thing.onSceenNode.remove();
+            //    thing.onSceenNode = null;
+            //}
+
+            //console.log("Good!");
+            //window.requestAnimationFrame(test);
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

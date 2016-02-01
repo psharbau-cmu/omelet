@@ -120,6 +120,7 @@
     };
 
     TreeNode.prototype.remove = function() {
+        console.log("HERE!");
         if (this.left != this.tree.nil && this.right != this.tree.nil) {
             var n = this.right;
             while (n.left != this.tree.nil) n = n.left;
