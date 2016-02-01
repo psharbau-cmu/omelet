@@ -10,7 +10,7 @@
         var makeThing = function() {
             this.screenSort = [];
             var a = 0;
-            var i = Math.random() * 2;
+            var i = Math.random() * 4;
             while (a < i) {
                 this.screenSort.push(((Math.random() * 200) - 100) | 0);
                 a += 1;
@@ -21,20 +21,34 @@
 
         makeThing.prototype.draw = function() {
             lastValue += 1;
-            console.log(lastValue);
         };
 
+        var time = 0;
+        var times = [];
+
         var test = function() {
+            var now = new Date().getTime();
+            var delta = now - (time || now);
+            time = now;
+            times.push(delta);
+            if (times.length == 100) {
+                var sum = 0;
+                times.forEach(function(delta) {
+                    sum += delta;
+                });
+                console.log(sum / 100);
+                times = [];
+            }
+
+
             var things = [];
 
-            for (var i = 0; i < 100; i += 1) {
+
+            for (var i = 0; i < 1000; i += 1) {
                 var thing = new makeThing();
                 things.push(thing);
                 tree.insert(thing);
             }
-
-            lastValue = 0;
-            tree.draw();
 
             while (things.length > 0) {
                 thing = things.pop();

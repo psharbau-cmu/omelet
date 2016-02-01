@@ -12,7 +12,9 @@
         this.parent.removeNode(this);
     };
 
-    var Trie = function() {
+    var Trie = function(key, parent) {
+        this.key = key;
+        this.parent = parent;
         this.keys = [];
         this.children = {};
         this.nodes = [];
@@ -40,7 +42,7 @@
                     position += 1;
                 }
                 if (!addedKey) this.keys.push(key);
-                this.children[key] = new Trie();
+                this.children[key] = new Trie(key, this);
             }
 
             this.children[key].insert(entity, keyPart);
@@ -53,6 +55,22 @@
 
             if (this.nodes[position] === node) {
                 this.nodes.splice(position, 1);
+                if (this.keys.length < 1 && this.nodes.length < 1 && this.parent) this.parent.removeTrie(this.key);
+                return;
+            }
+
+            position += 1;
+        }
+    };
+
+    Trie.prototype.removeTrie = function(trieKey) {
+        delete this.children[trieKey];
+
+        var position = 0;
+        while (position < this.keys.length) {
+            if (this.keys[position] == trieKey) {
+                this.keys.splice(position, 1);
+                if (this.keys.length < 1 && this.nodes.length < 1 && this.parent) this.parent.removeTrie(this.key);
                 return;
             }
 
