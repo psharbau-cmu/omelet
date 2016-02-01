@@ -8,13 +8,20 @@
 
         var tree = dafen2d.createOnScreenTree();
         var makeThing = function() {
-            this.screenSort = [(Math.random() * 200) | 0];
+            this.screenSort = [];
+            var a = 0;
+            var i = Math.random() * 2;
+            while (a < i) {
+                this.screenSort.push(((Math.random() * 200) - 100) | 0);
+                a += 1;
+            }
         };
 
         var lastValue = 0;
 
         makeThing.prototype.draw = function() {
             lastValue += 1;
+            console.log(lastValue);
         };
 
         var test = function() {
@@ -26,15 +33,15 @@
                 tree.insert(thing);
             }
 
-            return things;
-            //while (things.count > 0) {
-            //    thing = things.pop();
-            //    thing.onSceenNode.remove();
-            //    thing.onSceenNode = null;
-            //}
+            lastValue = 0;
+            tree.draw();
 
-            //console.log("Good!");
-            //window.requestAnimationFrame(test);
+            while (things.length > 0) {
+                thing = things.pop();
+                thing.onScreenNode.remove();
+            }
+
+            window.requestAnimationFrame(test);
         };
     </script>
 </head>

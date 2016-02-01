@@ -43,7 +43,6 @@
                     if (!entity.onScreenNode) onScreenTree.insert(entity);
                 } else {
                     if (entity.onScreenNode) entity.onScreenNode.remove();
-                    entity.onScreenNode = null;
                 }
             }
 

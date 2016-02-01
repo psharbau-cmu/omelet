@@ -1,292 +1,103 @@
 // based on: https://en.wikipedia.org/wiki/Red%E2%80%93black_tree
 (function() {
 
-    var TreeNode = function(tree) {
-        this.value = null;
-        this.color = true;
-        this.left = null;
-        this.right = null;
-        this.parent = null;
-        this.tree = tree;
+    var TrieNode = function(entity, trie) {
+        entity.onScreenNode = this;
+        this.entity = entity;
+        this.parent = trie;
     };
 
-    TreeNode.prototype.grandparent = function() {
-        if (!this.parent) return null;
-        else return this.parent.parent;
+    TrieNode.prototype.remove = function() {
+        this.entity.onScreenNode = null;
+        this.parent.removeNode(this);
     };
 
-    TreeNode.prototype.sibling = function() {
-        if (!this.parent) return null;
-
-        if (this == this.parent.left) return this.parent.right;
-        else return this.parent.left;
+    var Trie = function() {
+        this.keys = [];
+        this.children = {};
+        this.nodes = [];
     };
 
-    TreeNode.prototype.uncle = function() {
-        if (!this.parent) return null;
-        else return this.parent.sibling();
-    };
-
-    TreeNode.prototype.rotateRight = function() {
-        var p = this.parent;
-        var l = this.left;
-        var nl = l.right;
-
-        if (!p) this.tree.root = l;
-        else if (this == p.left) p.left = l;
-        else p.right = l;
-
-        l.parent = p;
-        this.left = nl;
-        nl.parent = this;
-        l.right = this;
-        this.parent = l;
-    };
-
-    TreeNode.prototype.rotateLeft = function() {
-        var p = this.parent;
-        var r = this.right;
-        var nr = r.left;
-
-        if (!p) this.tree.root = r;
-        else if (this == p.left) p.left = r;
-        else p.right = r;
-
-        r.parent = p;
-        this.right = nr;
-        nr.parent = this;
-        r.left = this;
-        this.parent = r;
-    };
-
-    TreeNode.prototype.insertFix1 = function() {
-        if (!this.parent) this.color = false;
-        else this.insertFix2();
-    };
-
-    TreeNode.prototype.insertFix2 = function() {
-        if (this.parent.color) this.insertFix3();
-    };
-
-    TreeNode.prototype.insertFix3 = function() {
-        var u = this.uncle();
-        var g = this.grandparent();
-
-        if (u && u.color) {
-            this.parent.color = false;
-            u.color = false;
-            g.color = true;
-            g.insertFix1();
+    Trie.prototype.insert = function(entity, keyPart) {
+        if (!entity) return;
+        if (keyPart === undefined) keyPart = entity.screenSort ? entity.screenSort.slice() : [0];
+        if (keyPart.length < 1) {
+            this.nodes.push(new TrieNode(entity, this));
         } else {
-            this.insertFix4(g);
+            var key = keyPart.shift();
+
+            if (!this.children[key]) {
+                var oldKeys = this.keys;
+                this.keys = [];
+                var position = 0;
+                var addedKey = false;
+                while (position < oldKeys.length) {
+                    if (!addedKey && oldKeys[position] > key) {
+                        this.keys.push(key);
+                        addedKey = true;
+                    }
+                    this.keys.push(oldKeys[position]);
+                    position += 1;
+                }
+                if (!addedKey) this.keys.push(key);
+                this.children[key] = new Trie();
+            }
+
+            this.children[key].insert(entity, keyPart);
         }
     };
 
-    TreeNode.prototype.insertFix4 = function(g) {
-        var p = this.parent;
-        if (this == p.right && p == g.left) {
-            var l = this.left;
-            g.left = this;
-            this.parent = g;
-            this.left = p;
-            p.parent = this;
-            p.right = l;
-            l.parent = p;
-            p.insertFix5();
-        } else if (this == p.left && p == g.right) {
-            var r = this.right;
-            g.right = this;
-            this.parent = g;
-            this.right = p;
-            p.parent = this;
-            p.left = r;
-            r.parent = p;
-            p.insertFix5();
-        } else {
-            this.insertFix5();
+    Trie.prototype.removeNode = function(node) {
+        var position = 0;
+        while (position < this.nodes.length) {
+
+            if (this.nodes[position] === node) {
+                this.nodes.splice(position, 1);
+                return;
+            }
+
+            position += 1;
         }
     };
 
-    TreeNode.prototype.insertFix5 = function() {
-        var g = this.grandparent();
-        var p = this.parent;
-        p.color = false;
-        g.color = true;
-        if (this == p.left) {
-            g.rotateRight();
-        } else {
-            g.rotateLeft();
-        }
+    Trie.prototype.drawNodes = function(results) {
+        this.nodes.forEach(function(node) {
+            var result = node.entity.draw();
+            if (result) results.push({box:result, entity: node.entity});
+        });
     };
 
-    TreeNode.prototype.remove = function() {
-        console.log("HERE!");
-        if (this.left != this.tree.nil && this.right != this.tree.nil) {
-            var n = this.right;
-            while (n.left != this.tree.nil) n = n.left;
-            this.value = n.value;
-            this.value.onScreenNode = this;
-            n.remove();
-            return;
+    Trie.prototype.draw = function(results) {
+        var position = 0;
+        var drewNodes = false;
+        while (position < this.keys.length) {
+            var key = this.keys[position];
+
+            if (!drewNodes && key > 0) {
+                drewNodes = true;
+                this.drawNodes(results);
+            }
+
+            this.children[key].draw(results);
+            position += 1;
         }
 
-        var c = this.right == this.tree.nil ? this.left : this.right;
-        var p = this.parent;
-        c.parent = p;
-        if (!p) this.tree.root = c;
-        else if (this == p.left) p.left = c;
-        else p.right = c;
-
-        if (this.color) return;
-
-        if (c.color) c.color = false;
-        else c.removeFix1();
-    };
-
-    TreeNode.prototype.removeFix1 = function() {
-        if (this.parent) this.removeFix2();
-    };
-
-    TreeNode.prototype.removeFix2 = function() {
-        var s = this.sibling();
-
-        if (s.color) {
-            var p = this.parent;
-            p.color = true;
-            s.color = false;
-            if (this == p.left) p.rotateLeft();
-            else p.rotateRight();
-        }
-
-        this.removeFix3();
-    };
-
-    TreeNode.prototype.removeFix3 = function() {
-        var s = this.sibling();
-        var p = this.parent;
-        if (!p.color && !s.color && !s.left.color && !s.right.color) {
-            s.color = true;
-            p.removeFix1();
-        } else {
-            this.removeFix4();
-        }
-    };
-
-    TreeNode.prototype.removeFix4 = function() {
-        var s = this.sibling();
-        var p = this.parent;
-        if (p.color && !s.color && !s.left.color && !s.right.color) {
-            s.color = true;
-            p.color = false;
-        } else {
-            this.removeFix5();
-        }
-    };
-
-    TreeNode.prototype.removeFix5 = function() {
-        var s = this.sibling();
-
-        if (this == this.parent.left && !s.right.color) {
-            s.color = true;
-            s.left.color = false;
-            s.rotateRight();
-        } else if (this == this.parent.right && !s.left.color) {
-            s.color = true;
-            s.right.color = false;
-            s.rotateLeft();
-        }
-
-        this.removeFix6();
-    };
-
-    TreeNode.prototype.removeFix6 = function() {
-        var s = this.sibling();
-
-        s.color = this.parent.color;
-        this.parent.color = false;
-
-        if (this == this.parent.left) {
-            s.right.color = false;
-            this.parent.rotateLeft();
-        } else {
-            s.left.color = false;
-            this.parent.rotateRight();
-        }
+        if (!drewNodes) this.drawNodes(results);
     };
 
     window.dafen2d = window.dafen2d || {};
     window.dafen2d.createOnScreenTree = function() {
-        var tree = { };
-
-        var nil = new TreeNode(tree);
-        nil.color = false;
-
-        tree.nil = nil;
-        tree.root = nil;
-
-        var compare = function(entityA, entityB) {
-            var a = entityA.screenSort || [];
-            var b = entityB.screenSort || [];
-            var i = 0;
-            while (i < a.length || i < b.length) {
-                var ai = i < a.length ? a[i] : 0;
-                var bi = i < b.length ? b[i] : 0;
-                if (ai < bi) return true;
-                else if (ai > bi) return false;
-                else i += 1;
-            }
-        };
-
-        var insert = function(v) {
-            var n = new TreeNode(tree);
-            n.value = v;
-            v.onScreenNode = n;
-            n.left = nil;
-            n.right = nil;
-
-            if (tree.root == nil) { // first insertion
-                tree.root = n;
-                n.color = false;
-                return n;
-            }
-
-            var c = tree.root;
-            while (true) {
-                if (compare(c.value, v)) {
-                    if (c.right == nil) {
-                        c.right = n;
-                        n.parent = c;
-                        n.insertFix2();
-                        return n;
-                    } else {
-                        c = c.right;
-                    }
-                } else {
-                    if (c.left == nil) {
-                        c.left = n;
-                        n.parent = c;
-                        n.insertFix2();
-                        return n;
-                    } else {
-                        c = c.left;
-                    }
-                }
-            }
-        };
-
-        var traverse = function(n, results) {
-            if (n == nil) return;
-            traverse(n.left, results);
-            var result = n.value.draw();
-            if (result) results.push({box:result, entity: n.value});
-            traverse(n.right, results);
-        };
+        var root = new Trie();
 
         return {
-            insert:insert,
+            root:root,
+
+            insert:function(entity) {
+                root.insert(entity);
+            },
             draw:function() {
                 var boxes = [];
-                traverse(tree.root, boxes);
+                root.draw(boxes);
                 return boxes;
             }
         };
