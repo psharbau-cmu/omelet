@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <title>Text Placement</title>
     <script type="text/javascript">
+        var draw = function(context, width, height) {
+            console.log(width + ' ' + height);
+        };
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            var c = document.getElementById('theCanvas');
 
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+
+            window.addEventListener('resize', function () {
+                c.width = window.innerWidth;
+                c.height = window.innerHeight;
+            }, false);
+
+            var context = c.getContext('2d');
+
+            var animate = function() {
+                context.fillStyle = '#ccff33';
+                context.fillRect(0, 0, c.width, c.height);
+                draw(context, c.width, c.height);
+                window.requestAnimationFrame(animate);
+            };
+
+            window.requestAnimationFrame(animate);
+        };
     </script>
 </head>
 <body>
-    <canvas class="theCanvas"></canvas>
+    <canvas id="theCanvas"></canvas>
 </body>
 </html>
