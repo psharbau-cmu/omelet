@@ -98,6 +98,9 @@
             lastTime = now;
             sceneObj.update(deltaTime);
 
+            // set screen rect
+            wrapper.setRect([0, 0, width, height]);
+
             // move to center
             wrapper.save();
             wrapper.translate(width / 2, height / 2);

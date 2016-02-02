@@ -153,6 +153,27 @@
           "spriteName":"Arena"
         }
       }
+    },
+    {
+      "dafen2d.rectTransform":{
+        "data":{
+          "left":0,
+          "right":0,
+          "top":0,
+          "bottom":0,
+          "leftOffset":10,
+          "rightOffset":10,
+          "topOffset":10,
+          "bottomOffset":-60
+        }
+      },
+      "dafen2d.ui.roundedRect":{
+        "data":{
+          "layer":"UI",
+          "cornerRadius":5,
+          "color":"#ffffff"
+        }
+      }
     }
   ]
 }

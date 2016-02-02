@@ -8,6 +8,10 @@
     // |A C E|
     // |B D F|   =   [A, B, C, D, E, F]
     // |0 0 Y|
+    //
+    // there is also a rectangle that is updateable in the same way as a transform
+    // it looks like: [x, y, width, height]
+    //
     var computeInverse = function(m) {
         var i = [];
 
@@ -37,18 +41,23 @@
         return [xPrime, yPrime];
     };
 
-
     // SnapShot constructor and methods
-    var SnapShot = function(m, c, p) {
+    var SnapShot = function(m, c, p, r) {
         this.currentMatrix = m.slice();
         this.context2d = c;
         this.parent = p ? p.slice() : null;
+        this.rect = r;
     };
 
     SnapShot.prototype.getContext = function() {
         this.context2d.setTransform.apply(this.context2d, this.currentMatrix);
         return this.context2d;
     };
+
+    SnapShot.prototype.getIdentityContext = function() {
+        this.context2d.setTransform(1, 0, 0, 1, 0, 0);
+        return this.context2d;
+    }
 
     SnapShot.prototype.transformPoint = function(x, y) {
         return calcTransformPoint(x, y, this.currentMatrix);
@@ -63,13 +72,18 @@
         else return calcInverseTransformPoint(x, y, this.parent);
     };
 
+    SnapShot.prototype.getRect = function() {
+        return this.rect || [0, 0, 0, 0];
+    };
+
     // get context wrapper to track transform and provide snapshots
     window.dafen2d = window.dafen2d || {};
     window.dafen2d.wrapContext = function(context) {
 
         var current = {
             matrix:[1,0,0,1,0,0],
-            last: null
+            last: null,
+            rect: null
         };
 
         var multiplyCurrent = function(right) {
@@ -86,9 +100,11 @@
         return {
             save: function () {
                 var copyMatrix = current.matrix.slice();
+                var copyRect = current.rect ? current.rect.slice() : null;
                 current = {
                     matrix: copyMatrix,
-                    last: current
+                    last: current,
+                    rect: copyRect
                 };
             },
 
@@ -138,7 +154,15 @@
             },
 
             getSnapshot: function() {
-                return new SnapShot(current.matrix, context, current.last ? current.last.matrix : null);
+                return new SnapShot(current.matrix, context, current.last ? current.last.matrix : null, current.rect);
+            },
+
+            setRect: function(rect) {
+                current.rect = rect;
+            },
+
+            getRect: function(rect) {
+                return current.rect || [0, 0, 0, 0];
             }
         };
     };

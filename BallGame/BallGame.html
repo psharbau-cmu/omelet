@@ -10,6 +10,7 @@
     </style>
     <script src="dafen2d.min.js"></script>
     <script src="ballGame.physicsCursor.js"></script>
+    <script src="ballGame.hover.js"></script>
     <script type="text/javascript">
         var sceneSource = {
             Camera:{
@@ -21,7 +22,8 @@
 
             Layers: {
                 'Back':0,
-                'Ball':1
+                'Ball':1,
+                'UI':4
             },
 
             The: {},
@@ -59,6 +61,56 @@
                         }
                     },
                     'ballGame.physicsCursor':{}
+                },
+                {
+                    "dafen2d.rectTransform" :{
+                        "data":{
+                            "left":0,
+                            "right":1,
+                            "top":.5,
+                            "bottom":.5,
+                            "offsetLeft":50,
+                            "offsetRight":50,
+                            "offsetTop":10,
+                            "offsetBottom":-120
+                        }
+                    },
+                    "dafen2d.ui.roundedRect":{
+                        "data":{
+                            "layer":"UI",
+                            "cornerRadius":20,
+                            "color":"rgba(0, 0, 0, .2)"
+                        }
+                    },
+                    "children":[
+                        {
+                            "dafen2d.rectTransform" :{
+                                "data":{
+                                    "left":0,
+                                    "right":1,
+                                    "top":0,
+                                    "bottom":1,
+                                    "offsetLeft":10,
+                                    "offsetRight":10,
+                                    "offsetTop":10,
+                                    "offsetBottom":10
+                                }
+                            },
+                            "dafen2d.ui.roundedRect":{
+                                "data":{
+                                    "layer":"UI",
+                                    "cornerRadius":10,
+                                    "color":"rgba(0, 0, 0, .2)"
+                                }
+                            },
+                            "ballGame.hover":{
+                                "data":{
+                                    "normalColor":"rgba(0, 0, 0, .2)",
+                                    "hoverColor":"rgba(0, .5, .2, .2)"
+                                }
+                            }
+                        }
+                    ]
                 }
             ]
         };

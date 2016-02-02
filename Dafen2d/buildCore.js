@@ -17,13 +17,14 @@ var uglifyjs = require('uglify-js');
         });
     };
 
-    var directories = ['.\\', '.\\Assets\\', '.\\Components\\'];
+    var directories = ['.\\', '.\\Assets\\', '.\\Components\\', '.\\Components\\UI\\'];
 
     var buildList = function() {
         console.log(files);
         var result = uglifyjs.minify(files);
         fs.writeFile('.\\Out\\dafen2d.min.js', result.code, 'utf8', function(err) {
             if (err) console.log(err);
+            else console.log('Minified file written.');
         });
     };
 

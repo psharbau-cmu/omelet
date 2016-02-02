@@ -18,16 +18,17 @@
             component.update = function(deltaTime) {
                 var globalPosition = transform.getGlobalPosition();
 
-                var toMouseX = thisScene.MousePosition[0] - globalPosition[0];
-                var toMouseY = thisScene.MousePosition[1] - globalPosition[1];
-
                 // dampen
-                velocity[0] *= (1 - deltaTime);
-                velocity[1] *= (1 - deltaTime);
+                velocity[0] *= (1 - (8 * deltaTime));
+                velocity[1] *= (1 - (8 * deltaTime));
 
                 // accelerate
-                velocity[0] += 2* deltaTime * toMouseX;
-                velocity[1] += 2 * deltaTime * toMouseY;
+                if (thisScene.MouseDown) {
+                    var toMouseX = thisScene.MousePosition[0] - globalPosition[0];
+                    var toMouseY = thisScene.MousePosition[1] - globalPosition[1];
+                    velocity[0] += 8 * deltaTime * toMouseX;
+                    velocity[1] += 8 * deltaTime * toMouseY;
+                }
 
                 // move
                 var newX = globalPosition[0] + (3 * deltaTime * velocity[0]);
