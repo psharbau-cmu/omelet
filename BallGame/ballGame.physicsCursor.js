@@ -19,8 +19,8 @@
                 var globalPosition = transform.getGlobalPosition();
 
                 // dampen
-                velocity[0] *= (1 - (8 * deltaTime));
-                velocity[1] *= (1 - (8 * deltaTime));
+                velocity[0] *= (1 - (4 * deltaTime));
+                velocity[1] *= (1 - (4 * deltaTime));
 
                 // accelerate
                 if (thisScene.MouseDown) {

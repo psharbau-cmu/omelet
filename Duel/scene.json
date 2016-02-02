@@ -158,13 +158,13 @@
       "dafen2d.rectTransform":{
         "data":{
           "left":0,
-          "right":0,
+          "right":1,
           "top":0,
           "bottom":0,
-          "leftOffset":10,
-          "rightOffset":10,
-          "topOffset":10,
-          "bottomOffset":-60
+          "offsetLeft":10,
+          "offsetRight":10,
+          "offsetTop":10,
+          "offsetBottom":-60
         }
       },
       "dafen2d.ui.roundedRect":{

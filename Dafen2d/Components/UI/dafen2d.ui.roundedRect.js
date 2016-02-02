@@ -53,7 +53,6 @@
                 context.quadraticCurveTo(lastL, lastT, lastL + radius, lastT);
                 context.closePath();
 
-
                 context.fillStyle = component.color;
                 context.fill();
 

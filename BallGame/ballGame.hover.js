@@ -18,12 +18,10 @@
             };
 
             component.mouseEnter = function() {
-                console.log('enter');
                 roundedRect.color = component.hoverColor;
             };
 
             component.mouseExit = function() {
-                console.log('exit');
                 roundedRect.color = component.normalColor;
             };
 
