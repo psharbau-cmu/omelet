@@ -122,9 +122,7 @@
             var boxes = onScreenTree.draw();
 
             // process mouse events
-            if (boxes && boxes.length > 0) {
-                processMouseBoxes(boxes);
-            }
+            if (boxes && boxes.length > 0) processMouseBoxes(boxes);
 
             // restore wrapper to how it started
             wrapper.restore();

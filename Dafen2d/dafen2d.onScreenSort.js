@@ -1,4 +1,3 @@
-// based on: https://en.wikipedia.org/wiki/Red%E2%80%93black_tree
 (function() {
 
     var TrieNode = function(entity, trie) {
@@ -108,11 +107,10 @@
         var root = new Trie();
 
         return {
-            root:root,
-
             insert:function(entity) {
                 root.insert(entity);
             },
+
             draw:function() {
                 var boxes = [];
                 root.draw(boxes);
