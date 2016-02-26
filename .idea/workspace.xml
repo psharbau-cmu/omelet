@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df50e6ed-e5cd-44f2-85d9-d9c17f47b78b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/omelet-2d/flipIt.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dafen2d/Tests/publicPrivate.js" afterPath="$PROJECT_DIR$/Dafen2d/Tests/publicPrivate.js" />
     </list>
     <ignored path="Transforms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,13 +23,114 @@
     <favorites_list name="Transforms" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="publicPrivate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Tests/publicPrivate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flipIt.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/omelet-2d/flipIt.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.03672788">
+              <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buildCore.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Old/Dafen2d/buildCore.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dafen2d.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Old/BallGame/dafen2d.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ballGame.hover.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Old/BallGame/ballGame.hover.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ballGame.followCursor.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Old/BallGame/ballGame.followCursor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ballGame.physicsCursor.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Old/BallGame/ballGame.physicsCursor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dafen2d.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Out/dafen2d.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestTree.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Tests/TestTree.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Prototypes.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Tests/Prototypes.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -39,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SimcoachTransform.js" />
         <option value="$PROJECT_DIR$/TestGameRotateSlowly.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Crucible.js" />
@@ -90,6 +190,7 @@
         <option value="$PROJECT_DIR$/Dafen2d/dafen2d.wrapCanvas.js" />
         <option value="$PROJECT_DIR$/Dafen2d/Tests/publicPrivate.js" />
         <option value="$PROJECT_DIR$/Dafen2d/Tests/TextPlacement.html" />
+        <option value="$PROJECT_DIR$/omelet-2d/flipIt.js" />
       </list>
     </option>
   </component>
@@ -166,6 +267,10 @@
               <option name="myItemId" value="Transforms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omelet-2d" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -174,6 +279,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Transforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Old" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Transforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Transforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Old" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -198,6 +321,13 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/psharbaugh/WebstormProjects/Transforms/Dafen2d/TestGame/testGame.rotateSlowly.js" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\Old" />
+      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\Duel" />
+      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\Dafen2d\TestGame" />
+      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\DragonGame" />
+      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\Duel" />
       <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\DragonGame" />
@@ -205,28 +335,21 @@
       <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms" />
       <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\Dafen2d" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\Duel" />
-      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\Dafen2d\TestGame" />
-      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\DragonGame" />
-      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\Old" />
-      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms" />
-    </key>
   </component>
-  <component name="RunManager" selected="Node.js.publicPrivate.js">
-    <configuration default="false" name="buildCore.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="buildCore.js" working-dir="$PROJECT_DIR$/Dafen2d">
-      <method />
-    </configuration>
-    <configuration default="false" name="golf.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="golf.js" working-dir="C:/Dev">
+  <component name="RunManager" selected="Node.js.flipIt.js">
+    <configuration default="false" name="buildCore.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="$PROJECT_DIR$/Old/Dafen2d/buildCore.js" working-dir="$PROJECT_DIR$/Old/Dafen2d">
       <method />
     </configuration>
     <configuration default="false" name="golf.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="golf.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
-    <configuration default="false" name="redBlackTests.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="redBlackTests.js" working-dir="$PROJECT_DIR$/Dafen2d/Tests">
+    <configuration default="false" name="redBlackTests.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="redBlackTests.js" working-dir="$PROJECT_DIR$/Old/Dafen2d/Tests">
       <method />
     </configuration>
-    <configuration default="false" name="publicPrivate.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="publicPrivate.js" working-dir="$PROJECT_DIR$/Dafen2d/Tests">
+    <configuration default="false" name="publicPrivate.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="$PROJECT_DIR$/Old/Dafen2d/Tests/publicPrivate.js" working-dir="$PROJECT_DIR$/Old/Dafen2d/Tests">
+      <method />
+    </configuration>
+    <configuration default="false" name="flipIt.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="flipIt.js" working-dir="$PROJECT_DIR$/omelet-2d">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -279,18 +402,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Node.js.buildCore.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.golf.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.golf.js (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.redBlackTests.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.publicPrivate.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.golf.js (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.redBlackTests.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.publicPrivate.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.flipIt.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.publicPrivate.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.buildCore.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.redBlackTests.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.golf.js (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.golf.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.flipIt.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.publicPrivate.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.buildCore.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.redBlackTests.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.golf.js (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -309,15 +432,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21510416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3301486" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301486" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39915073" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -359,34 +482,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Documents/GitHub/iu-business-ethics/Assets/Resources/Cutscenes and Conversations/Episode3/Act 1/Victor.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/GitHub/iu-business-ethics/Assets/Resources/Cutscenes and Conversations/Episode3/Act 1/MeiKe.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/GitHub/iu-business-ethics/Assets/Resources/Cutscenes and Conversations/Episode3/Act 1/Mei Ke and Victor.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/GitHub/iu-business-ethics/Assets/Resources/Cutscenes and Conversations/Episode3/Act 3/Antonio and Jones.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/GitHub/iu-business-ethics/Assets/Resources/Cutscenes and Conversations/Episode3/Act 2/Shane2.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -506,7 +601,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Duel/RawArt/ShadowsBack.png">
+    <entry file="file://$PROJECT_DIR$/Old/Duel/RawArt/ShadowsBack.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -525,131 +620,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/Tests/Prototypes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8769932">
-          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Duel/Scripts/duel.randomShift.js">
+    <entry file="file://$PROJECT_DIR$/Old/Duel/Scripts/duel.randomShift.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12871288">
           <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/Components/dafen2d.transform.js">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Components/dafen2d.transform.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26622662">
           <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/gameLoop.txt">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/gameLoop.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.88981634">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BallGame/Ball.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/sceneDataParts.txt">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/sceneDataParts.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.59599334">
           <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BallGame/ballGame.hover.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BallGame/ballGame.physicsCursor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Duel/Duel.html">
+    <entry file="file://$PROJECT_DIR$/Old/Duel/Duel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3875">
           <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/Components/UI/dafen2d.ui.roundedRect.js">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Components/UI/dafen2d.ui.roundedRect.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/buildCore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2284263">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/dafen2d.gameLoop.js">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/dafen2d.gameLoop.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5211506">
           <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/Tests/TestTree.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1392857">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/dafen2d.realizer.js">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/dafen2d.realizer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18104906">
           <caret line="148" column="41" selection-start-line="148" selection-start-column="41" selection-end-line="148" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/dafen2d.polygonIntersection.js">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/dafen2d.polygonIntersection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.89847714">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/thoughtsOnJs.txt">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/thoughtsOnJs.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DragonGame/dragon.html">
+    <entry file="file://$PROJECT_DIR$/Old/DragonGame/dragon.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="348" column="10" selection-start-line="348" selection-start-column="10" selection-end-line="348" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/dafen2d.wrapCanvas.js">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/dafen2d.wrapCanvas.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16941693">
           <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/dafen2d.onScreenSort.js">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/dafen2d.onScreenSort.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.66220737">
           <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
@@ -657,7 +712,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Duel/scene.json">
+    <entry file="file://$PROJECT_DIR$/Old/Duel/scene.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.0740743">
           <caret line="105" column="7" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
@@ -665,15 +720,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BallGame/BallGame.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8536155">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/Components/dafen2d.spriteRenderer.js">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Components/dafen2d.spriteRenderer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -681,7 +728,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/Components/dafen2d.squareRenderer.js">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Components/dafen2d.squareRenderer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5451505">
           <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
@@ -689,7 +736,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/Components/dafen2d.rectTransform.js">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Components/dafen2d.rectTransform.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5234114">
           <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
@@ -697,15 +744,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/Tests/publicPrivate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1404682">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/Tests/TextPlacement.html">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Tests/TextPlacement.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.612904">
           <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
@@ -713,10 +752,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dafen2d/dafen2d.pointInPolygon.js">
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/dafen2d.pointInPolygon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14715719">
           <caret line="4" column="93" selection-start-line="4" selection-start-column="93" selection-end-line="4" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old/BallGame/Ball.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old/BallGame/BallGame.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old/BallGame/dafen2d.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old/BallGame/ballGame.hover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old/BallGame/ballGame.followCursor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old/BallGame/ballGame.physicsCursor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Out/dafen2d.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Tests/TestTree.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Tests/Prototypes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/Tests/publicPrivate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old/Dafen2d/buildCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet-2d/flipIt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03672788">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
           <folding />
         </state>
       </provider>
