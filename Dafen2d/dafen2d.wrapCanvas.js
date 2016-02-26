@@ -11,7 +11,6 @@
     //
     // there is also a rectangle that is updateable in the same way as a transform
     // it looks like: [x, y, width, height]
-    //
     var computeInverse = function(m) {
         var i = [];
 
