@@ -22,7 +22,7 @@
 
             if (referenceNeeds) {
                 for (var p in referenceNeeds) {
-                    if (!refs.hasOwnProperty(p)) {
+                    if (!refs.hasOwnProperty(p) || !refs[p]) {
                         console.log('Entity missing needed reference: ' + name + ' references an entity for ' + p + ' needing a ' + referenceNeeds[p]);
                         return;
                     } else if (!refs[p][referenceNeeds[p]]) {
