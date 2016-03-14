@@ -2,7 +2,7 @@ var fs = require('fs');
 var uglifyjs = require('uglify-js');
 
 var files = ['.\\src\\omelet.js', '.\\src\\eggs.js'];
-var directories = ['.\\src\\components\\']
+var directories = ['.\\src\\components\\'];
 
 var regex = new RegExp('(omelet.)(ui.)?[^.]*(.js)');
 
@@ -14,6 +14,7 @@ var checkdir = function(dir, callback) {
     fs.readdir(dir, function(err, results) {
         if (err) console.log(err);
         else results.forEach(function(f) {ifMatchAdd(dir, f); });
+        callback();
     });
 };
 
@@ -26,3 +27,14 @@ var finish = function() {
         else console.log('Minified file written.');
     });
 };
+
+var buildProcess = finish;
+
+directories.forEach(function(dir) {
+    var oldBuild = buildProcess;
+    buildProcess = function() {
+        checkdir(dir, oldBuild);
+    };
+});
+
+buildProcess();
