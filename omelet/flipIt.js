@@ -1,7 +1,16 @@
 var fs = require('fs');
 var uglifyjs = require('uglify-js');
 
-var files = ['.\\src\\omelet.js', '.\\src\\eggs.js'];
+var files = [
+    '.\\src\\omelet.js',
+    '.\\src\\eggs.js',
+    '.\\src\\onion.js',
+    '.\\src\\oregano.js',
+    '.\\src\\pepperJack.js',
+    '.\\src\\swiss.js',
+    '.\\src\\butter.js',
+    '.\\src\\bacon.js'];
+
 var directories = ['.\\src\\components\\'];
 
 var regex = new RegExp('(omelet.)(ui.)?[^.]*(.js)');
