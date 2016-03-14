@@ -2,16 +2,19 @@ var fs = require('fs');
 var uglifyjs = require('uglify-js');
 
 var files = [
-    '.\\src\\omelet.js',
-    '.\\src\\eggs.js',
-    '.\\src\\onion.js',
-    '.\\src\\oregano.js',
-    '.\\src\\pepperJack.js',
-    '.\\src\\swiss.js',
-    '.\\src\\butter.js',
-    '.\\src\\bacon.js'];
-
-var directories = ['.\\src\\components\\'];
+    '.\\src\\omelet.js',        // An omelet is salted with
+    '.\\src\\eggs.js',          //  eggs,
+    '.\\src\\onion.js',         //   onion,
+    '.\\src\\oregano.js',       //    oregano,
+    '.\\src\\pepperJack.js',    //     pepperJack,
+    '.\\src\\swiss.js',         //    swiss,
+    '.\\src\\butter.js',        //   butter,
+    '.\\src\\love.js',          //  love, and
+    '.\\src\\bacon.js'];        // bacon.
+var directories = [             // ...and also all this other stuff you might want.
+    '.\\src\\components\\',
+    '.\\src\\components\\ui',
+    '.\\src\\components\\shapes'];
 
 var regex = new RegExp('(omelet.)(ui.)?[^.]*(.js)');
 
@@ -37,13 +40,13 @@ var finish = function() {
     });
 };
 
-var buildProcess = finish;
+var build = finish;
 
 directories.forEach(function(dir) {
-    var oldBuild = buildProcess;
-    buildProcess = function() {
+    var oldBuild = build;
+    build = function() {
         checkdir(dir, oldBuild);
     };
 });
 
-buildProcess();
+build();

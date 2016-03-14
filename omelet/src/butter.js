@@ -178,7 +178,7 @@
             if (createdEgg.mouseClick && createdEgg.mouseClick.constructor === Function) mouseClickList.push(createdEgg);
         });
 
-        // build shortcut functions
+        // build shortcut functions if "abstractions" are present
         if (transform) this.transform = function(wrappedContext) { return transform.transform(wrappedContext); };
         if (preDraw) this.preDraw = function(snapShot) { return preDraw.preDraw(snapShot); };
         if (draw) this.draw = function() { return draw.draw(); };
@@ -216,6 +216,10 @@
             }
         };
     });
-})();
 
-// not too bad for the complexity and error checking of this part
+    window.omelet.salt(null, function(state) {
+        state.checkIsEntity = function(maybeEntity) {
+            return maybeEntity && maybeEntity.constructor === OmeletEntity;
+        };
+    });
+})();

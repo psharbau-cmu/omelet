@@ -1,4 +1,3 @@
-// wraps the canvas transform like an onion
 (function() {
 // using the following transform matrix:
     // |a c e|
@@ -78,6 +77,10 @@
 
     window.omelet.salt(null, function(state) {
         state.wrapContext = function(context) {
+            if (!context || context.constructor !== CanvasRenderingContext2D) {
+                console.log("Error wrapping context.  Passed context must be of type CanvasRenderingContext2D");
+                return;
+            }
 
             var current = {
                 matrix:[1,0,0,1,0,0],
