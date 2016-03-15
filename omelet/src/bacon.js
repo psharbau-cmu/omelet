@@ -1,7 +1,13 @@
 (function() {
     window.omelet.salt('makeGame', function(state) {
         return function (canvasElement, sceneObj) {
-            if (!canvasElement || !sceneObj) return;
+            if (!canvasElement || canvasElement.constructor != HTMLCanvasElement) {
+                console.log("Error making game.  Canvas Element must be non-null object of type HTMLCanvasElement.");
+                return;
+            } else if (!state.checkIsScene(sceneObj)) {
+                console.log("Error making game. Scene object must be non-null object of type Scene.");
+                return;
+            }
 
             var context = canvasElement.getContext('2d');
             var width = context.width;
@@ -15,6 +21,10 @@
             var mouseEntity = null;
             var started = false;
             var lastTime = 0;
+            // get these references so that assigning the properties directly on the scene will break the game
+            var assets = sceneObj.assets;
+            var the = sceneObj.the;
+            var heirarchy = sceneObj.hierarchy;
 
             // listen to mouse
             canvasElement.addEventListener('mousedown', function (evt) {
@@ -28,7 +38,6 @@
                 mousePosition = [evt.clientX - rect.left, evt.clientY - rect.top];
             });
 
-            state.realizeScene(sceneObj);
             sceneObj.Context = context;
 
             var transformAndPreDraw = function (entity) {
@@ -51,7 +60,7 @@
                 }
 
                 // loop through children
-                if (entity.children) entity.children.forEach(transformAndPreDraw);
+                if (entity.hasChildren) entity.children.forEach(transformAndPreDraw);
 
                 // restore transform as if this never happened
                 wrapper.restore();
@@ -118,7 +127,7 @@
                 // transform and preDraw steps
                 sceneObj.Hierarchy.forEach(transformAndPreDraw);
 
-                // clear the whole screen, in future, just clear what is needed
+                // clear the whole screen. In future, just clear what is needed
                 context.setTransform(1, 0, 0, 1, 0, 0);
                 context.clearRect(0, 0, width, height);
 

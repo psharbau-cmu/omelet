@@ -1,7 +1,6 @@
 (function() {
     var Scene = function(state) {
         var nextRandomKey = 42;
-        var onScreenSort = state.createOnScreenTree();
 
         this.camera = {
             x:0,
@@ -69,7 +68,7 @@
 
             checkForOnScreenNodeAndRemove(entity);
             if (!removeFromList(this.hierarchy, entity)) {
-                console.log("Error removing entity from hierarcy.  Entity could not be found in this scene.");
+                console.log("Error removing entity from hierarchy.  Entity could not be found in this scene.");
                 return;
             }
         };
@@ -77,6 +76,17 @@
         this.clearHeirarchy = function() {
             this.hierarchy.forEach(checkForOnScreenNodeAndRemove);
             while (this.hierarchy.count > 0) this.hierarchy.pop();
+        };
+
+        this.update = function(deltaTime) {
+            for (var entityKey in this.the) {
+                var entity = this.the[entityKey];
+                callUpdate(entity, deltaTime);
+            }
+
+            this.hierarchy.forEach(function(entity) {
+                callUpdate(entitiy, deltaTime);
+            });
         };
 
         var removeFromList = function(listOfEntities, entity) {
@@ -96,6 +106,13 @@
             if (entity.hasChildren) {
                 entity.children.forEach(checkForOnScreenNodeAndRemove);
             }
+        };
+
+        var callUpdate = function(entity, deltaTime) {
+            if (entity.update) entity.update(deltaTime);
+            if (entity.hasChildren) entity.children.forEach(function(child) {
+                callUpdate(child, deltaTime);
+            });
         };
     };
 
