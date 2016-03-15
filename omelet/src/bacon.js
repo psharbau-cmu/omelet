@@ -22,9 +22,10 @@
             var started = false;
             var lastTime = 0;
             // get these references so that assigning the properties directly on the scene will break the game
+            var camera = sceneObj.camera;
             var assets = sceneObj.assets;
             var the = sceneObj.the;
-            var heirarchy = sceneObj.hierarchy;
+            var hierarchy = sceneObj.hierarchy;
 
             // listen to mouse
             canvasElement.addEventListener('mousedown', function (evt) {
@@ -119,13 +120,12 @@
                 wrapper.translate(width / 2, height / 2);
 
                 // camera changes
-                var cam = sceneObj.Camera;
-                wrapper.translate(-1 * cam.x, -1 * cam.y);
-                if (cam.angle != 0) wrapper.rotate(-1 * cam.angle);
-                wrapper.scale(cam.zoom, cam.zoom);
+                wrapper.translate(-1 * camera.x, -1 * camera.y);
+                if (camera.angle != 0) wrapper.rotate(-1 * camera.angle);
+                wrapper.scale(camera.zoom, camera.zoom);
 
                 // transform and preDraw steps
-                sceneObj.Hierarchy.forEach(transformAndPreDraw);
+                hierarchy.forEach(transformAndPreDraw);
 
                 // clear the whole screen. In future, just clear what is needed
                 context.setTransform(1, 0, 0, 1, 0, 0);
@@ -143,6 +143,9 @@
                 // call next frame
                 if (started) window.requestAnimationFrame(gameLoop);
             };
+
+            // initialize everything so they know the refs are good
+            sceneObj.initialize();
 
             // game obj
             return {

@@ -13,10 +13,11 @@ var files = [
     '.\\src\\bacon.js'];        // bacon.
 var directories = [             // ...and also all this other stuff you might want.
     '.\\src\\components\\',
-    '.\\src\\components\\ui',
-    '.\\src\\components\\shapes'];
+    '.\\src\\components\\ui\\',
+    '.\\src\\components\\shapes\\',
+    '.\\src\\components\\sprites\\'];
 
-var regex = new RegExp('(omelet.)(ui.)?[^.]*(.js)');
+var regex = new RegExp('(omelet.)(ui.|shapes.|sprites.)?[^.]*(.js)');
 
 var ifMatchAdd = function(dir, file) {
     if (file && file.match && file.match(regex)) files.push(dir + file);

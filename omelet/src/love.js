@@ -1,6 +1,7 @@
 (function() {
     var Scene = function(state) {
         var nextRandomKey = 42;
+        var initialized = false;
 
         this.camera = {
             x:0,
@@ -37,6 +38,10 @@
                 }
                 this.assets[place] = entity;
             });
+
+            if (initialized) realized.forEach(function(entity) {
+                callReady(entity, this);
+            });
         };
 
         this.addToThe = function(theList) {
@@ -50,6 +55,10 @@
                 }
                 this.the[place] = entity;
             });
+
+            if (initialized) realized.forEach(function(entity) {
+                callReady(entity, this);
+            });
         };
 
         this.addToHierarchy = function(hierarchyList) {
@@ -57,6 +66,10 @@
             if (!realized) return;
             realized.forEach(function(entity) {
                 this.hierarchy.push(entity);
+            });
+
+            if (initialized) realized.forEach(function(entity) {
+                callReady(entity, this);
             });
         };
 
@@ -78,6 +91,20 @@
             while (this.hierarchy.count > 0) this.hierarchy.pop();
         };
 
+        this.initialize = function() {
+            if (initialized) return;
+            initialized = true;
+            for (var p in this.assets) {
+                callReady(this.assets[p], this);
+            }
+            for (var p in this.the) {
+                callReady(this.the[p], this);
+            }
+            this.hierarchy.forEach(function(entity) {
+                callReady(entity, this);
+            });
+        };
+
         this.update = function(deltaTime) {
             for (var entityKey in this.the) {
                 var entity = this.the[entityKey];
@@ -85,7 +112,7 @@
             }
 
             this.hierarchy.forEach(function(entity) {
-                callUpdate(entitiy, deltaTime);
+                callUpdate(entity, deltaTime);
             });
         };
 
@@ -112,6 +139,17 @@
             if (entity.update) entity.update(deltaTime);
             if (entity.hasChildren) entity.children.forEach(function(child) {
                 callUpdate(child, deltaTime);
+            });
+        };
+
+        var callReady = function(entity, scene) {
+            entity.components.forEach(function(component) {
+                if (component.ready && component.ready.constructor === Function) {
+                    component.ready(scene, entity);
+                }
+            });
+            if (entity.hasChildren) entity.children.forEach(function(child) {
+                callReady(child, scene);
             });
         };
     };

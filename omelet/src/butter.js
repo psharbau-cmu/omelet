@@ -180,8 +180,12 @@
 
         // build shortcut functions if "abstractions" are present
         if (transform) this.transform = function(wrappedContext) { return transform.transform(wrappedContext); };
-        if (preDraw) this.preDraw = function(snapShot) { return preDraw.preDraw(snapShot); };
-        if (draw) this.draw = function() { return draw.draw(); };
+        if (preDraw && draw) {
+            this.preDraw = function(snapShot) { return preDraw.preDraw(snapShot); };
+            this.draw = function() { return draw.draw(); };
+        } else if (preDraw || draw) {
+            console.log("Error realizing component.  Component must define both preDraw and draw, or neither.");
+        }
         if (updateList.length > 0) this.update = function(deltaTime) { updateList.forEach(function(thing) { thing.update(deltaTime); }); };
         if (mouseEnterList.length > 0) this.mouseEnter = function() { mouseEnterList.forEach(function(thing) { thing.mouseEnter(); }); };
         if (mouseExitList.length > 0) this.mouseExit = function() { mouseExitList.forEach(function(thing) { thing.mouseExit(); }); };
