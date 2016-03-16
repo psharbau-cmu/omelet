@@ -33,11 +33,17 @@ var checkdir = function(dir, callback) {
 
 var finish = function() {
     console.log(files);
-    var result = uglifyjs.minify(files);
+    var result = uglifyjs.minify(files, {outSourceMap:'omelet.min.js.map'});
 
     fs.writeFile('.\\out\\omelet.min.js', result.code, 'utf8', function (err) {
         if (err) console.log(err);
-        else console.log('Minified file written.');
+        else {
+            console.log('Minified file written.');
+            fs.writeFile('.\\out\\omelet.min.js.map', result.map, 'utf8', function(err) {
+                if (err) console.log(err);
+                else console.log('Map file written.');
+            });
+        }
     });
 };
 

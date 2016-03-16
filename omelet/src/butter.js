@@ -1,6 +1,6 @@
 (function() {
 
-    var processThings = function(arrayOfThings, eggs) {
+    var processThings = function(arrayOfThings, eggs, scene) {
         var topLevelEntities = [];
         var keyToEntityMap = {};
 
@@ -12,7 +12,11 @@
         });
 
         topLevelEntities.forEach(function(entity) {
-           entity.realize(keyToEntityMap, eggs);
+            if (scene) {
+                entity.realize(keyToEntityMap, eggs, scene.assets, scene.the);
+            } else {
+                entity.realize(keyToEntityMap, eggs);
+            }
         });
 
         return topLevelEntities;
@@ -75,11 +79,12 @@
         // process children
         if (data.children) {
             if (data.children.constructor === Array) {
+                var entity = this;
                 data.children.forEach(function(childData) {
                     var child = new OmeletEntity();
                     if (child.matchData(childData, keyMap)) {
-                        this.hasChildren = true;
-                        this.children.push(child);
+                        entity.hasChildren = true;
+                        entity.children.push(child);
                     }
                 });
             } else {
@@ -99,13 +104,13 @@
                     this.components.push(property);
                     this[property] = data[property];
                 }
-            };
-        };
+            }
+        }
 
         return true;
     };
 
-    OmeletEntity.prototype.realize = function(keyMap, eggs) {
+    OmeletEntity.prototype.realize = function(keyMap, eggs, assets, the) {
         if (!keyMap || !eggs || keyMap.constructor !== Object || eggs.constructor !== Object) {
             console.log('Error realizing entity.  Key map or egg carton is falsy or not an Object.');
             return;
@@ -122,31 +127,37 @@
             mouseClickList  = [];
 
         // loop through component types
+        var entity = this;
         this.components.forEach(function(component) {
             if (!eggs[component]) {
                 console.log('Error realizing component.  No egg registered for type: ' + component);
                 return;
             }
 
-            var dataObj = this[component];
+            var dataObj = entity[component];
             var data = dataObj != null ? dataObj.data : null;
             var refs = dataObj != null ? dataObj.refs : null;
 
             if (refs != null && refs.constructor === Object) {
                 for (var ref in refs) {
-                    if (refs[ref] && refs[ref].constructor === String) {
-                        if (!keyMap[refs[ref]]) {
-                            console.log("Error realizing component.  An entity with name: " + this.name + " references an entity for: " + ref + " with missing key: " + refs[ref]);
-                        } else {
-                            refs[ref] = keyMap[refs[ref]];
-                        }
+                    var refedKey = refs[ref];
+                    if (refedKey && refedKey.constructor !== String) {
+                        console.log("Error realizing component.  Referenced value is not a string.");
+                    } else if (keyMap[refedKey]) {
+                        refs[ref] = keyMap[refedKey];
+                    } else if (assets && assets[refedKey]) {
+                        refs[ref] = assets[refedKey];
+                    } else if (the && the[refedKey]) {
+                        refs[ref] = the[refedKey];
+                    } else {
+                        console.log("Error realizing component.  An entity with name: " + this.name + " references an entity for: " + ref + " with missing key: " + refedKey);
                     }
                 };
             }
 
             // create runtime egg
-            var createdEgg = eggs[component].create(data, refs, this);
-            this[component] = createdEgg;
+            var createdEgg = eggs[component].create(data, refs, entity) || {};
+            entity[component] = createdEgg;
 
             // check egg for "abstractions"
             if (createdEgg.transform && createdEgg.transform.constructor === Function) {
@@ -195,13 +206,13 @@
 
         if (this.hasChildren) {
             this.children.forEach(function(child) {
-                child.realize(keyMap, eggs);
+                child.realize(keyMap, eggs, assets, the);
             });
         }
     };
 
     window.omelet.salt(null, function(state) {
-        state.realize = function(toBeRealized) {
+        state.realize = function(toBeRealized, scene) {
             if (!toBeRealized) {
                 console.log("Error realizing data.  Falsy input cannot be realized.");
             } else if (toBeRealized.constructor === String) {
@@ -210,7 +221,7 @@
                     if (parsed.constructor !== Array) {
                         console.log("Error realizing data, input must be JSON representation of array.");
                     } else {
-                        return processThings(toBeRealized, state.eggs);
+                        return processThings(parsed, state.eggs, scene);
                     }
                 } catch (err) {
                     console.log("Error realizing data.  JSON parse failed: " + err);

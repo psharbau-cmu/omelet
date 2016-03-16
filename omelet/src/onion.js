@@ -56,7 +56,7 @@
     SnapShot.prototype.getIdentityContext = function() {
         this.context2d.setTransform(1, 0, 0, 1, 0, 0);
         return this.context2d;
-    }
+    };
 
     SnapShot.prototype.transformPoint = function(x, y) {
         return calcTransformPoint(x, y, this.currentMatrix);

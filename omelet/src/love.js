@@ -28,15 +28,16 @@
         };
 
         this.addAssets = function(assetList) {
-            var realized = state.realize(assetList);
+            var realized = state.realize(assetList, this);
             if (!realized) return;
+            var scene = this;
             realized.forEach(function(entity) {
-                var place = entity.name || entity.key;
-                if (!place || this.assets[place]) {
+                var place = entity.key || entity.name;
+                if (!place || scene.assets[place]) {
                     place = nextRandomKey.toString();
                     nextRandomKey += 1; // pretty evenly distributed over time
                 }
-                this.assets[place] = entity;
+                scene.assets[place] = entity;
             });
 
             if (initialized) realized.forEach(function(entity) {
@@ -45,15 +46,16 @@
         };
 
         this.addToThe = function(theList) {
-            var realized = state.realize(theList);
+            var realized = state.realize(theList, this);
             if (!realized) return;
+            var scene = this;
             realized.forEach(function(entity) {
-                var place = entity.name || entity.key;
-                if (!place || this.the[place]) {
+                var place = entity.key || entity.name;
+                if (!place || scene.the[place]) {
                     place = nextRandomKey.toString();
                     nextRandomKey += 1; // pretty evenly distributed over time
                 }
-                this.the[place] = entity;
+                scene.the[place] = entity;
             });
 
             if (initialized) realized.forEach(function(entity) {
@@ -62,10 +64,11 @@
         };
 
         this.addToHierarchy = function(hierarchyList) {
-            var realized = state.realize(hierarchyList);
+            var realized = state.realize(hierarchyList, this);
             if (!realized) return;
+            var scene = this;
             realized.forEach(function(entity) {
-                this.hierarchy.push(entity);
+                scene.hierarchy.push(entity);
             });
 
             if (initialized) realized.forEach(function(entity) {
