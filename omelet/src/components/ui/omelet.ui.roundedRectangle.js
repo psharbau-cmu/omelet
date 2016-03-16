@@ -36,13 +36,13 @@ omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
         context.beginPath();
         context.moveTo(lastL + radius, lastT);
         context.lineTo(lastR - radius, lastT);
-        context.quadraticCurveTo(lastR, lastT, lastR, lastT + radius);
+        context.arcTo(lastR, lastT, lastR, lastT + radius, radius);
         context.lineTo(lastR, lastB - radius);
-        context.quadraticCurveTo(lastR, lastB, lastR - radius, lastB);
+        context.arcTo(lastR, lastB, lastR - radius, lastB, radius);
         context.lineTo(lastL + radius, lastB);
-        context.quadraticCurveTo(lastL, lastB, lastL, lastB - radius);
+        context.arcTo(lastL, lastB, lastL, lastB - radius, radius);
         context.lineTo(lastL, lastT + radius);
-        context.quadraticCurveTo(lastL, lastT, lastL + radius, lastT);
+        context.arcTo(lastL, lastT, lastL + radius, lastT, radius);
         context.closePath();
 
         if (this.fillStyle) {

@@ -13,5 +13,51 @@
         "spriteSheet": "OmeletLogo"
       }
     }
+  },
+  {
+    "omelet.rectTransform":"default",
+    "omelet.ui.roundedRectangle":{
+      "data": {
+        "fillStyle":"black",
+        "orderInLayer":-1
+      }
+    },
+    "children":[
+      {
+        "omelet.rectTransform":{
+          "data":{
+            "left":0.2,
+            "right":0.8,
+            "top":0.8,
+            "bottom":0.8,
+            "offsetLeft":0,
+            "offsetRight":0,
+            "offsetTop":-50,
+            "offsetBottom":-50
+          }
+        },
+        "omelet.ui.pillRectangle":{
+          "data":{
+            "fillStyle":"red",
+            "orderInLayer":8
+          }
+        }
+      }
+    ]
+  },
+  {
+    "omelet.transform":{
+      "data":{
+        "x": 450,
+        "y": -20,
+        "angle": 45
+      }
+    },
+    "omelet.shapes.rectangle":{
+      "data":{
+        "fillStyle":"cyan",
+        "orderInLayer":10
+      }
+    }
   }
 ]

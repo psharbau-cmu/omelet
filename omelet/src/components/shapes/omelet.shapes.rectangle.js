@@ -10,7 +10,7 @@ omelet.egg('omelet.shapes.rectangle', function(data, refs) {
     var lastPoly = null;
 
     this.ready = function(scene, entity) {
-        entity.screenSort = [scene.Layers[data.layer] || 0, data.orderInLayer];
+        entity.screenSort = [scene.layers[data.layer] || 0, data.orderInLayer];
     };
 
     this.preDraw = function(snapShot) {
