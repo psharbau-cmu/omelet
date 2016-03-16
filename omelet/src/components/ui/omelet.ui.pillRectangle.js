@@ -30,7 +30,7 @@ omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
             lastR = centerX;
             lastPoly = [[centerX, lastT], [centerX + lastRadius, centerY], [centerX, lastB], [centerX - lastRadius, centerY]];
         } else {
-            lastL = rect[0] + lastH;
+            lastL = rect[0] + lastRadius;
             lastR = lastL + lastW;
             lastPoly = [[lastL, lastT], [lastR, lastT], [lastR + lastRadius, centerY], [lastR, lastB], [lastL, lastB], [lastL - lastRadius, centerY]];
         }
@@ -54,7 +54,14 @@ omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
         context.closePath();
 
         if (this.fillStyle) {
-            context.fillStyle = this.fillStyle;
+            if (this.fillStyle.constructor === String) {
+                context.fillStyle = this.fillStyle;
+            } else {
+                var gradient = context.createLinearGradient(0, lastT, 0, lastB);
+                gradient.addColorStop(0, this.fillStyle.top);
+                gradient.addColorStop(1, this.fillStyle.bottom);
+                context.fillStyle = gradient;
+            }
             context.fill();
         }
         if (this.strokeStyle) {

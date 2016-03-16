@@ -38,7 +38,8 @@
         },
         "omelet.ui.pillRectangle":{
           "data":{
-            "fillStyle":"red",
+            "fillStyle":{"top":"#4e4e4e", "bottom":"#181818"},
+            "strokeStyle":"#ffffff",
             "orderInLayer":8
           }
         }
