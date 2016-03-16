@@ -72,7 +72,11 @@
     };
 
     SnapShot.prototype.getRect = function() {
-        return this.rect || [0, 0, 0, 0];
+        var rect = this.rect;
+        if (!rect) return [0, 0, 0, 0];
+        var topLeft = this.inverseTransformPoint(rect[0], rect[1]);
+        var bottomRight = this.inverseTransformPoint(rect[0] + rect[2], rect[1] + rect[3]);
+        return [topLeft[0], topLeft[1], bottomRight[0] - topLeft[0], bottomRight[1] - topLeft[1]];
     };
 
     // get context wrapper to track transform and provide snapshots

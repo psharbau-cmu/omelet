@@ -1,23 +1,26 @@
 (function() {
     // this function tests if a point is in a convex polygon
-    // iff the point is in the polygon, then the angle between all the edges and the point to the origin of the edge will be less than 90
+    var getSide = function(point, sideStart, sideEnd) {
+        var toEnd = [sideEnd[0] - sideStart[0], sideEnd[1] - sideStart[1]];
+        var toPoint = [point[0] - sideStart[0], point[1] - sideStart[1]];
+        var cross = (toEnd[0] * toPoint[1]) - (toEnd[1] * toPoint[0]);
+        return cross < 0 ? 'L' : cross > 0 ? 'R' : 'N';
+    };
 
     // the polygons that are passed in need to be arrays of 2 element arrays like this: [[x1, y1], [x2, y2], [x3, y3]]
     window.omelet.salt(null, function(state) {
         state.testPointInPolygon = function(x, y, poly) {
+            var point = [x, y];
+            var side = null;
             for (var i = 0; i < poly.length; i += 1) {
                 var next = poly[(i + 1) % poly.length];
                 var here = poly[i];
 
-                var edgeX = next[0] - here[0];
-                var edgeY = next[1] - here[1];
+                var newSide = getSide(point, here, next);
 
-                var toPointX = x - here[0];
-                var toPointy = y - here[1];
-
-                var dot = (edgeX * toPointX) + (edgeY * toPointy);
-
-                if (dot < 0) return false;
+                if (newSide == 'N') return false;
+                else if (!side) side = newSide;
+                else if (side != newSide) return false;
             }
 
             return true;

@@ -42,7 +42,8 @@
             "strokeStyle":"#ffffff",
             "orderInLayer":8
           }
-        }
+        },
+        "test.mouseEvents":"default"
       }
     ]
   },
@@ -59,6 +60,7 @@
         "fillStyle":"cyan",
         "orderInLayer":10
       }
-    }
+    },
+    "test.mouseEvents":"default"
   }
 ]
