@@ -109,18 +109,20 @@
                 mouseDownSent = mouseDown;
             };
 
-            var gameLoop = function () {
+            var gameLoop = function (skipUpdate) {
                 // check size, update poly
                 width = canvasElement.width;
                 height = canvasElement.height;
                 screenPoly = [[0, 0], [width, 0], [width, height], [0, height]];
 
                 // update
-                var now = new Date().getTime();
-                var deltaTime = (now - (lastTime || now)) / 1000;
-                if (deltaTime > 1) deltaTime = 0.016;
-                lastTime = now;
-                sceneObj.update(deltaTime);
+                if (!skipUpdate) {
+                    var now = new Date().getTime();
+                    var deltaTime = (now - (lastTime || now)) / 1000;
+                    if (deltaTime > 1) deltaTime = 0.016;
+                    lastTime = now;
+                    sceneObj.update(deltaTime);
+                }
 
                 // set screen rect
                 wrapper.setRect([0, 0, width, height]);
@@ -166,6 +168,10 @@
                 },
                 stop: function () {
                     started = false;
+                },
+                doFrameSkipUpdate: function() {
+                    started = false;
+                    gameLoop(true);
                 }
             };
         };
