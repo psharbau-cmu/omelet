@@ -5,11 +5,39 @@
     <title>Index</title>
     <script type="text/javascript" src="..\\omelet\\out\\omelet.min.js"></script>
     <script type="text/javascript">
+        var loadString = function(path, callback)
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function()
+            {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        if (callback)
+                            callback(null, xhr.responseText);
+                    } else {
+                        if (callback)
+                            callback(xhr, null);
+                    }
+                }
+            };
+            xhr.open("GET", path, true);
+            xhr.send();
+        };
+    </script>
+    <script type="text/javascript">
         var scene = omelet.createEmptyScene();
-        var sheetString = '[{"key":"theFirstAsset","omelet.sprites.spriteSheet":{}}]';
-        var spriteString = '[{"omelet.sprites.spriteRenderer":{"refs":{"spriteSheet":"theFirstAsset"}}}]';
-        scene.addAssets(sheetString);
-        scene.addToHierarchy(spriteString);
+
+        loadString('./assets.json', function(err, data) {
+            if (err) {
+                console.log("Error loading assets from the web: " + err);
+            } else {
+                scene.addAssets(data)
+                loadString('./hierarchy.json', function(err, data) {
+                    if (err) console.log("Error loading hierarchy from the web: " + err);
+                    else scene.addToHierarchy(data);
+                });
+            }
+        });
 
         window.onload = function() {
             var c = document.getElementById('theGame');
@@ -22,8 +50,8 @@
                 c.height = window.innerHeight;
             }, false);
 
-            var g = omelet.makeGame(c, scene);
-            g.start();
+            window.game = omelet.makeGame(c, scene);
+            game.start();
         };
     </script>
 </head>

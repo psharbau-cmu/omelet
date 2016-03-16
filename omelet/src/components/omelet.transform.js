@@ -6,8 +6,8 @@ omelet.egg('omelet.transform', function(data, refs) {
     var snapShot = null;
 
     this.transform = function(wrapper) {
-        wrapper.translate(component.x, component.y);
-        wrapper.rotate(component.angle);
+        wrapper.translate(this.x, this.y);
+        wrapper.rotate(this.angle);
         snapShot = wrapper.getSnapshot();
         return snapShot;
     };

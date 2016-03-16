@@ -40,8 +40,9 @@
                 scene.assets[place] = entity;
             });
 
+            var scene = this;
             if (initialized) realized.forEach(function(entity) {
-                callReady(entity, this);
+                callReady(entity, scene);
             });
         };
 
@@ -58,8 +59,9 @@
                 scene.the[place] = entity;
             });
 
+            var scene = this;
             if (initialized) realized.forEach(function(entity) {
-                callReady(entity, this);
+                callReady(entity, scene);
             });
         };
 
@@ -71,8 +73,9 @@
                 scene.hierarchy.push(entity);
             });
 
+            var scene = this;
             if (initialized) realized.forEach(function(entity) {
-                callReady(entity, this);
+                callReady(entity, scene);
             });
         };
 
@@ -103,8 +106,9 @@
             for (var p in this.the) {
                 callReady(this.the[p], this);
             }
+            var scene = this;
             this.hierarchy.forEach(function(entity) {
-                callReady(entity, this);
+                callReady(entity, scene);
             });
         };
 
@@ -146,7 +150,8 @@
         };
 
         var callReady = function(entity, scene) {
-            entity.components.forEach(function(component) {
+            entity.components.forEach(function(componentKey) {
+                var component = entity[componentKey];
                 if (component.ready && component.ready.constructor === Function) {
                     component.ready(scene, entity);
                 }

@@ -4,9 +4,9 @@ omelet.egg('omelet.sprites.spriteSheet', function(data, refs) {
     this.loaded = false;
 
     var sheet = this;
-    this.image.onload = function() {
+    this.image.addEventListener('load', function() {
         sheet.loaded = true;
-    };
+    });
 
     this.image.src = data.src;
 }).defaults({

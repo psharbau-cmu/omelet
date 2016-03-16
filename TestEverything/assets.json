@@ -1,0 +1,15 @@
+[
+  {
+    "key":"OmeletLogo",
+    "omelet.sprites.spriteSheet": {
+      "data": {
+        "src":"./Omelet.png",
+        "sprites":{
+          "Logo":{
+            "x":0, "y":0, "width":400, "height":400, "pivotX":200, "pivotY":200
+          }
+        }
+      }
+      }
+  }
+]

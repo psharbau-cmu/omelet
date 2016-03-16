@@ -1,0 +1,17 @@
+[
+  {
+    "omelet.transform":{
+      "data": {
+        "x":0, "y":0, "angle": 0
+      }
+    },
+    "omelet.sprites.spriteRenderer":{
+      "data": {
+        "spriteName":"Logo"
+      },
+      "refs":  {
+        "spriteSheet": "OmeletLogo"
+      }
+    }
+  }
+]

@@ -8,7 +8,7 @@ omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
     var lastL, lastT, lastR, lastB, lastW, lastH;
 
     this.ready = function(scene, entity) {
-        entity.screenSort = [scene.layers[data.layer], data.orderInLayer];
+        entity.screenSort = [scene.layers[data.layer] || 0, data.orderInLayer];
     };
 
     this.preDraw = function(snapShot) {
