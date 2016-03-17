@@ -8,6 +8,7 @@ omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
     var lastSnap = null;
     var lastPoly = null;
     var lastL, lastT, lastR, lastB, lastW, lastH;
+    var gradientCache;
 
     this.ready = function(scene, entity) {
         entity.screenSort = [scene.layers[data.layer] || 0, data.orderInLayer];
@@ -48,7 +49,30 @@ omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
         context.closePath();
 
         if (this.fillStyle) {
-            context.fillStyle = this.fillStyle;
+            if (this.fillStyle.constructor === String) {
+                context.fillStyle = this.fillStyle;
+            } else if (!gradientCache ||
+                gradientCache.startPoint != lastT ||
+                gradientCache.endPoint != lastB ||
+                gradientCache.topColor != this.fillStyle.top ||
+                gradientCache.bottomColor != this.fillStyle.bottom){
+                var gradient = context.createLinearGradient(0, lastT, 0, lastB);
+                gradient.addColorStop(0, this.fillStyle.top);
+                gradient.addColorStop(1, this.fillStyle.bottom);
+
+                gradientCache = {
+                    gradient:gradient,
+                    startPoint:lastT,
+                    endPoint:lastB,
+                    topColor:this.fillStyle.top,
+                    bottomColor:this.fillStyle.bottom
+                };
+
+                context.fillStyle = gradient;
+            } else {
+                context.fillStyle = gradientCache.gradient;
+            }
+
             context.fill();
         }
         if (this.strokeStyle) {
