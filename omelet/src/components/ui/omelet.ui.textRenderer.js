@@ -9,6 +9,7 @@
         this.font = data.font;
         this.lineHeight = data.lineHeight;
         this.align = data.align;
+        this.wrapText = data.wrapText;
 
         var lastSnap = null;
         var left = 0;
@@ -45,7 +46,8 @@
                 lastCache.color != this.color ||
                 lastCache.font != this.font ||
                 lastCache.lineHeight != this.lineHeight ||
-                lastCache.align != this.align) {
+                lastCache.align != this.align ||
+                lastCache.wrapText != this.wrapText) {
 
                 lastCache = {
                     width: width,
@@ -54,7 +56,8 @@
                     color: this.color,
                     font: this.font,
                     lineHeight: this.lineHeight,
-                    align: this.align
+                    align: this.align,
+                    wrapText: this.wrapText
                 };
 
                 buildImage(lastCache);
@@ -82,27 +85,31 @@
             workContext.textAlign = cacheData.align;
             workContext.fillStyle = cacheData.color;
 
-            var text = cacheData.text || '';
-            var words = text.split(' ');
             var lines = [];
-            var line = '';
-            var wordPosition = 0;
-            while (wordPosition < words.length) {
-                var testLine = line + ' ' + words[wordPosition];
-                var measuredLength = workContext.measureText(testLine);
-                if (measuredLength.width > textWidth) {
-                    if (line != '') lines.push(line);
-                    line = words[wordPosition];
-                } else {
-                    line = testLine;
-                }
 
-                wordPosition += 1;
+            if (cacheData.wrapText) {
+                var text = cacheData.text || '';
+                var words = text.split(' ');
+                var line = '';
+                var wordPosition = 0;
+                while (wordPosition < words.length) {
+                    var testLine = line + ' ' + words[wordPosition];
+                    var measuredLength = workContext.measureText(testLine);
+                    if (measuredLength.width > textWidth) {
+                        if (line != '') lines.push(line);
+                        line = words[wordPosition];
+                    } else {
+                        line = testLine;
+                    }
+
+                    wordPosition += 1;
+                }
+                lines.push(line);
+            } else {
+                lines.push(cacheData.text || '');
             }
-            lines.push(line);
 
             var measuredHeight = lines.length * cacheData.lineHeight;
-
 
             if (measuredHeight > textHeight && textHeight != 0) {
                 var fraction = 0.5 * scaleFraction;
@@ -130,6 +137,7 @@
         lineHeight: 35,
         align: 'center',
         layer: 'default',
-        orderInLayer: 0
+        orderInLayer: 0,
+        wrapText: true
     });
 })();
