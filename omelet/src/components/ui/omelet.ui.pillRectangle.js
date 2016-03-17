@@ -1,6 +1,8 @@
 omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
     this.fillStyle = data.fillStyle;
     this.strokeStyle = data.strokeStyle;
+    this.strokeWidth = data.strokeWidth;
+    this.hitTarget = data.hitTarget;
 
     var lastSnap = null;
     var lastPoly = null;
@@ -65,15 +67,18 @@ omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
             context.fill();
         }
         if (this.strokeStyle) {
+            context.lineWidth = this.strokeWidth;
             context.strokeStyle = this.strokeStyle;
             context.stroke();
         }
 
-        return lastPoly;
+        if (this.hitTarget) return lastPoly;
     };
 }).defaults({
     fillStyle:null,
     strokeStyle:null,
+    strokeWidth:1,
     layer:'default',
-    orderInLayer:0
+    orderInLayer:0,
+    hitTarget:true
 });

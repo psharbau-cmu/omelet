@@ -6,10 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df50e6ed-e5cd-44f2-85d9-d9c17f47b78b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestEverything/assets.json" afterPath="$PROJECT_DIR$/TestEverything/assets.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestEverything/hierarchy.json" afterPath="$PROJECT_DIR$/TestEverything/hierarchy.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/out/omelet.min.js" afterPath="$PROJECT_DIR$/omelet/out/omelet.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/out/omelet.min.js.map" afterPath="$PROJECT_DIR$/omelet/out/omelet.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js" />
     </list>
     <ignored path="Transforms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,41 +34,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="omelet.ui.textRenderer.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2372881">
-              <caret line="77" column="62" selection-start-line="77" selection-start-column="62" selection-end-line="77" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flipIt.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omelet/flipIt.js">
+      <file leaf-file-name="omelet.ui.roundedRectangle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hierarchy.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="omelet.ui.spriteRenderer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assets.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestEverything/assets.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.5161295">
+              <caret line="21" column="80" selection-start-line="21" selection-start-column="80" selection-end-line="21" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="omelet.ui.pillRectangle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hierarchy.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TestEverything/hierarchy.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.064516">
-              <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestEverything/Index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.806452">
-              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.60644007">
+              <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -86,7 +100,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Duel/scene.json" />
         <option value="$PROJECT_DIR$/BallGame/BallGame.html" />
         <option value="$PROJECT_DIR$/Dafen2d/Components/UI/dafen2d.ui.roundedRect.js" />
         <option value="$PROJECT_DIR$/Dafen2d/dafen2d.gameLoop.js" />
@@ -122,21 +135,22 @@
         <option value="$PROJECT_DIR$/omelet/src/eggs.js" />
         <option value="$PROJECT_DIR$/omelet/src/butter.js" />
         <option value="$PROJECT_DIR$/omelet/src/onion.js" />
-        <option value="$PROJECT_DIR$/TestEverything/assets.json" />
         <option value="$PROJECT_DIR$/omelet/src/components/omelet.transform.js" />
         <option value="$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteSheet.js" />
         <option value="$PROJECT_DIR$/omelet/src/love.js" />
-        <option value="$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteRenderer.js" />
         <option value="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.rectangle.js" />
         <option value="$PROJECT_DIR$/Old/Dafen2d/dafen2d.wrapCanvas.js" />
         <option value="$PROJECT_DIR$/TestEverything/test.mouseEvents.js" />
-        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js" />
-        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js" />
         <option value="$PROJECT_DIR$/omelet/src/swiss.js" />
         <option value="$PROJECT_DIR$/TestEverything/Index.html" />
         <option value="$PROJECT_DIR$/omelet/src/bacon.js" />
-        <option value="$PROJECT_DIR$/TestEverything/hierarchy.json" />
         <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js" />
+        <option value="$PROJECT_DIR$/TestEverything/assets.json" />
+        <option value="$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteRenderer.js" />
+        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js" />
+        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js" />
+        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js" />
+        <option value="$PROJECT_DIR$/TestEverything/hierarchy.json" />
       </list>
     </option>
   </component>
@@ -310,6 +324,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Transforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Transforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omelet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -451,7 +491,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3386412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3386412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3237792" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -495,20 +535,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Old/DragonGame/dragonGame.tailWag.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91973245">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Old/DragonGame/dragonGame.spriteSwap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Old/DragonGame/dragon.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -630,6 +656,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8547855">
           <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -700,13 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestEverything/assets.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.387097">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/omelet/src/components/omelet.transform.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -726,13 +746,6 @@
         <state vertical-scroll-proportion="0.07457627">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22372882">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -783,6 +796,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55932206">
           <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -800,25 +814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/omelet/src/swiss.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5525424">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,9 +829,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7897351">
+          <caret line="77" column="62" selection-start-line="77" selection-start-column="62" selection-end-line="77" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/omelet/flipIt.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.8129139">
           <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
           <folding />
         </state>
@@ -840,24 +847,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TestEverything/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.806452">
+        <state vertical-scroll-proportion="0.5008726">
           <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestEverything/Icon_Zapp.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestEverything/assets.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.5161295">
+          <caret line="21" column="80" selection-start-line="21" selection-start-column="80" selection-end-line="21" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestEverything/hierarchy.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.064516">
-          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2372881">
-          <caret line="77" column="62" selection-start-line="77" selection-start-column="62" selection-end-line="77" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.60644007">
+          <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
           <folding />
         </state>
       </provider>

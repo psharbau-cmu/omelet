@@ -10,6 +10,19 @@
           }
         }
       }
+    }
+  },
+  {
+    "key":"ZappIcon",
+    "omelet.sprites.spriteSheet": {
+      "data":{
+        "src":"./Icon_Zapp.png",
+        "sprites":{
+          "Zapp":{
+            "x":0, "y":0, "width":157, "height":163, "pivotX":78.5, "pivotY":81.5
+          }
+        }
       }
+    }
   }
 ]
