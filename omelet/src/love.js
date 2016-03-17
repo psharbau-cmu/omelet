@@ -94,7 +94,7 @@
 
         this.clearHeirarchy = function() {
             this.hierarchy.forEach(checkForOnScreenNodeAndRemove);
-            while (this.hierarchy.count > 0) this.hierarchy.pop();
+            while (this.hierarchy.length > 0) this.hierarchy.pop();
         };
 
         this.initialize = function() {
