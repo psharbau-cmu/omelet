@@ -1,44 +1,135 @@
-omelet.egg('omelet.ui.textRenderer', function(data, refs) {
-    this.text = data.text;
-    this.color = data.color;
-    this.font = data.font;
+(function() {
+    // shared workspace for all text renderers
+    var workCanvas = document.createElement('canvas');
+    var workContext = workCanvas.getContext('2d');
 
-    var lastSnap = null;
-    var centerX = 0;
-    var centerY = 0;
-    var width = 0;
+    omelet.egg('omelet.ui.textRenderer', function (data, refs) {
+        this.text = data.text;
+        this.color = data.color;
+        this.font = data.font;
+        this.lineHeight = data.lineHeight;
+        this.align = data.align;
 
-    this.ready = function(scene, entity) {
-        entity.screenSort = [scene.layers[data.layer] || 0, data.orderInLayer];
-    };
+        var lastSnap = null;
+        var left = 0;
+        var top = 0;
+        var width = 0;
+        var height = 0;
 
-    this.preDraw = function(snapShot) {
-        lastSnap = snapShot;
-        var rect = snapShot.getRect();
-        var left = rect[0];
-        var top = rect[1];
-        width = rect[2];
-        var right = left + width;
-        var bottom = top + rect[3];
-        centerX = left + (.5 * width);
-        centerY = top + (.5 * rect[3]);
+        var workImage = new Image();
+        var lastCache = null;
 
-        return [[left, top], [right, top], [right, bottom], [left, bottom]];
-    };
+        this.ready = function (scene, entity) {
+            entity.screenSort = [scene.layers[data.layer] || 0, data.orderInLayer];
+        };
 
-    this.draw = function() {
-        var context = lastSnap.getIdentityContext();
+        this.preDraw = function (snapShot) {
+            lastSnap = snapShot;
+            var rect = snapShot.getRect();
+            left = rect[0];
+            top = rect[1];
+            width = rect[2];
+            height = rect[3];
+            var right = left + width;
+            var bottom = top + height;
 
-        context.font = this.font;
-        context.fillStyle = this.color;
-        context.textBaseline = 'middle';
-        context.textAlign = 'center';
-        context.fillText(this.text, centerX, centerY, width);
-    };
-}).defaults({
-    text:'New Text',
-    color:'black',
-    font:'30px sans-serif',
-    layer:'default',
-    orderInLayer:0
-});
+            return [[left, top], [right, top], [right, bottom], [left, bottom]];
+        };
+
+        this.draw = function () {
+
+            if (!lastCache ||
+                lastCache.width != width ||
+                lastCache.height != height ||
+                lastCache.text != this.text ||
+                lastCache.color != this.color ||
+                lastCache.font != this.font ||
+                lastCache.lineHeight != this.lineHeight ||
+                lastCache.align != this.align) {
+
+                lastCache = {
+                    width: width,
+                    height: height,
+                    text: this.text,
+                    color: this.color,
+                    font: this.font,
+                    lineHeight: this.lineHeight,
+                    align: this.align
+                };
+
+                buildImage(lastCache);
+            }
+
+
+            var context = lastSnap.getIdentityContext();
+            context.drawImage(workImage, left, top);
+        };
+
+
+        var buildImage = function (cacheData, scaleFraction) {
+            workCanvas.width = cacheData.width;
+            workCanvas.height = cacheData.height;
+
+            workContext.setTransform(1, 0, 0, 1, 0, 0);
+            workContext.clearRect(0, 0, width, height);
+            if (scaleFraction) workContext.scale(scaleFraction, scaleFraction);
+            else scaleFraction = 1;
+            var textWidth = cacheData.width / scaleFraction;
+            var textHeight = cacheData.height / scaleFraction;
+
+            workContext.font = cacheData.font;
+            workContext.textBaseline = 'middle';
+            workContext.textAlign = cacheData.align;
+            workContext.fillStyle = cacheData.color;
+
+            var text = cacheData.text || '';
+            var words = text.split(' ');
+            var lines = [];
+            var line = '';
+            var wordPosition = 0;
+            while (wordPosition < words.length) {
+                var testLine = line + ' ' + words[wordPosition];
+                var measuredLength = workContext.measureText(testLine);
+                if (measuredLength.width > textWidth) {
+                    if (line != '') lines.push(line);
+                    line = words[wordPosition];
+                } else {
+                    line = testLine;
+                }
+
+                wordPosition += 1;
+            }
+            lines.push(line);
+
+            var measuredHeight = lines.length * cacheData.lineHeight;
+
+
+            if (measuredHeight > textHeight && textHeight != 0) {
+                var fraction = 0.5 * scaleFraction;
+                var measuredFraction = textHeight / measuredHeight;
+                if (measuredFraction > .5) fraction = measuredFraction * scaleFraction;
+                buildImage(cacheData, fraction);
+                return;
+            }
+
+            var y = (textHeight - measuredHeight + cacheData.lineHeight) / 2;
+            var x = cacheData.align == 'left' ? 0 : cacheData.align == 'right' ? cacheData.width : textWidth / 2;
+            lines.forEach(function (line) {
+                workContext.fillText(line, x, y, textWidth);
+                y += cacheData.lineHeight;
+            });
+
+            workImage.width = cacheData.width;
+            workImage.height = cacheData.height;
+            workImage.src = workCanvas.toDataURL();
+        };
+    }).defaults({
+        text: 'New Text',
+        color: 'black',
+        font: '30px sans-serif',
+        lineHeight: 35,
+        align: 'center',
+        layer: 'default',
+        orderInLayer: 0
+    });
+})();
