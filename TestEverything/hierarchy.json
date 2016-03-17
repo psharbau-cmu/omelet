@@ -1,5 +1,26 @@
 [
   {
+    "omelet.rectTransform":{
+      "data":{
+        "left":1,
+        "top":0,
+        "right":1,
+        "bottom":0,
+        "offsetLeft":-90,
+        "offsetTop":20,
+        "offsetRight":20,
+        "offsetBottom":-90
+      }
+    },
+    "omelet.ui.circle":{
+      "data": {
+        "orderInLayer": 10,
+        "fillStyle": "#9c132d",
+        "strokeStyle": "#ffffff"
+      }
+    }
+  },
+  {
     "omelet.transform":{
       "data": {
         "x":0, "y":0, "angle": 0
@@ -18,7 +39,7 @@
     "omelet.rectTransform":"default",
     "omelet.ui.roundedRectangle":{
       "data": {
-        "fillStyle":"black",
+        "fillStyle":"#cccccc",
         "orderInLayer":-1
       }
     },
