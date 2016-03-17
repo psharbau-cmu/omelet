@@ -4,6 +4,8 @@ omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
     this.strokeWidth = data.strokeWidth;
     this.cornerRadius = data.cornerRadius;
     this.hitTarget = data.hitTarget;
+    this.shadowDistance = data.shadowDistance;
+    this.shadowColor = data.shadowColor;
 
     var lastSnap = null;
     var lastPoly = null;
@@ -27,14 +29,17 @@ omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
         return lastPoly;
     };
 
-    this.draw = function() {
+    this.draw = function(shadowDraw) {
         if (!lastSnap) return;
+
+        if (!shadowDraw && this.shadowDistance != 0) this.draw(true);
 
         var radius = this.cornerRadius;
         if (radius > .5 * lastW) radius = .5 * lastW;
         if (radius > .5 * lastH) radius = .5 * lastH;
 
         var context = lastSnap.getIdentityContext();
+        if (shadowDraw) context.translate(this.shadowDistance, this.shadowDistance);
 
         context.beginPath();
         context.moveTo(lastL + radius, lastT);
@@ -48,7 +53,10 @@ omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
         context.arcTo(lastL, lastT, lastL + radius, lastT, radius);
         context.closePath();
 
-        if (this.fillStyle) {
+        if (shadowDraw) {
+            context.fillStyle = this.shadowColor;
+            context.fill();
+        } else if (this.fillStyle) {
             if (this.fillStyle.constructor === String) {
                 context.fillStyle = this.fillStyle;
             } else if (!gradientCache ||
@@ -91,5 +99,7 @@ omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
     cornerRadius:10,
     layer:'default',
     orderInLayer:0,
-    hitTarget:true
+    hitTarget:true,
+    shadowDistance:0,
+    shadowColor:"rgba(0, 0, 0, .3)"
 });

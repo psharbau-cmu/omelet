@@ -16,9 +16,12 @@
       "data": {
         "orderInLayer": 10,
         "fillStyle": "#9c132d",
-        "strokeStyle": "#ffffff"
+        "strokeStyle": "#ffffff",
+        "strokeWidth":2,
+        "shadowDistance":3
       }
-    }
+    },
+    "test.mouseEvents":"default"
   },
   {
     "omelet.transform":{
@@ -40,7 +43,8 @@
     "omelet.ui.roundedRectangle":{
       "data": {
         "fillStyle":"#cccccc",
-        "orderInLayer":-1
+        "orderInLayer":-1,
+        "shadowDistance":1
       }
     },
     "children":[
@@ -61,7 +65,8 @@
           "data":{
             "fillStyle":{"top":"#4e4e4e", "bottom":"#181818"},
             "strokeStyle":"#ffffff",
-            "orderInLayer":8
+            "orderInLayer":8,
+            "shadowDistance":3
           }
         },
         "test.mouseEvents":"default",

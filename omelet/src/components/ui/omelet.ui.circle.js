@@ -3,11 +3,12 @@ omelet.egg('omelet.ui.circle', function(data, refs) {
     this.strokeStyle = data.strokeStyle;
     this.strokeWidth = data.strokeWidth;
     this.hitTarget = data.hitTarget;
+    this.shadowDistance = data.shadowDistance;
+    this.shadowColor = data.shadowColor;
 
     var lastSnap = null;
     var lastPoly = null;
     var centerX, centerY, lastRadius;
-    var gradientCache = null;
 
     this.ready = function(scene, entity) {
         entity.screenSort = [scene.layers[data.layer] || 0, data.orderInLayer];
@@ -42,43 +43,27 @@ omelet.egg('omelet.ui.circle', function(data, refs) {
         return lastPoly;
     };
 
-    this.draw = function() {
+    this.draw = function(shadowDraw) {
         if (!lastSnap) return;
+
+        if (!shadowDraw && this.shadowDistance != 0) this.draw(true);
 
         var context = lastSnap.getIdentityContext();
 
+        var x = shadowDraw ? centerX + this.shadowDistance : centerX;
+        var y = shadowDraw ? centerY + this.shadowDistance : centerY;
+
         context.beginPath();
-        context.arc(centerX, centerY, lastRadius, 0, 2 * Math.PI);
+        context.arc(x, y, lastRadius, 0, 2 * Math.PI);
         context.closePath();
 
-        if (this.fillStyle) {
-            if (this.fillStyle.constructor === String) {
-                context.fillStyle = this.fillStyle;
-            } else if (!gradientCache ||
-                    gradientCache.startPoint != lastT ||
-                    gradientCache.endPoint != lastB ||
-                    gradientCache.topColor != this.fillStyle.top ||
-                    gradientCache.bottomColor != this.fillStyle.bottom){
-                var gradient = context.createLinearGradient(0, lastT, 0, lastB);
-                gradient.addColorStop(0, this.fillStyle.top);
-                gradient.addColorStop(1, this.fillStyle.bottom);
+        var fill = shadowDraw ? this.shadowColor : this.fillStyle;
 
-                gradientCache = {
-                    gradient:gradient,
-                    startPoint:lastT,
-                    endPoint:lastB,
-                    topColor:this.fillStyle.top,
-                    bottomColor:this.fillStyle.bottom
-                };
-
-                context.fillStyle = gradient;
-            } else {
-                context.fillStyle = gradientCache.gradient;
-            }
-
+        if (fill) {
+            context.fillStyle = fill;
             context.fill();
         }
-        if (this.strokeStyle) {
+        if (!shadowDraw && this.strokeStyle) {
             context.lineWidth = this.strokeWidth;
             context.strokeStyle = this.strokeStyle;
             context.stroke();
@@ -92,5 +77,7 @@ omelet.egg('omelet.ui.circle', function(data, refs) {
     strokeWidth:1,
     layer:'default',
     orderInLayer:0,
-    hitTarget:true
+    hitTarget:true,
+    shadowDistance:0,
+    shadowColor:"rgba(0, 0, 0, .3)"
 });
