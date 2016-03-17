@@ -51,6 +51,20 @@
       {
         "omelet.rectTransform":{
           "data":{
+            "left":0, "top":0.6, "right":1, "bottom":0.65,
+            "offsetLeft":0, "offsetRight":0, "offsetTop":0, "offsetBottom":0
+          }
+        },
+        "omelet.ui.rectangle":{
+          "data":{
+            "fillStyle":"#33aaff",
+            "orderInLayer":15
+          }
+        }
+      },
+      {
+        "omelet.rectTransform":{
+          "data":{
             "left":0.2,
             "right":0.8,
             "top":0.8,
