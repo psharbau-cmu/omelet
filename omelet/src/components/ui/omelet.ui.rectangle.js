@@ -75,7 +75,7 @@ omelet.egg('omelet.ui.rectangle', function(data, refs) {
 
             context.fill();
         }
-        if (this.strokeStyle) {
+        if (!shadowDraw && this.strokeStyle) {
             context.lineWidth = this.strokeWidth;
             context.strokeStyle = this.strokeStyle;
             context.stroke();
