@@ -63,7 +63,7 @@ omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
 }).defaults({
     spriteName:'Default',
     maintainAspect:false,
-    hitTarget:true,
+    hitTarget:false,
     layer:'default',
     orderInLayer:0
 }).references({

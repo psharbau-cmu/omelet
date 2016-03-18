@@ -99,7 +99,7 @@ omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
     cornerRadius:10,
     layer:'default',
     orderInLayer:0,
-    hitTarget:true,
+    hitTarget:false,
     shadowDistance:0,
     shadowColor:"rgba(0, 0, 0, .3)"
 });
