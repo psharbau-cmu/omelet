@@ -9,6 +9,7 @@
         this.font = data.font;
         this.lineHeight = data.lineHeight;
         this.align = data.align;
+        this.verticalAlign = data.verticalAlign;
         this.wrapText = data.wrapText;
 
         var lastSnap = null;
@@ -47,6 +48,7 @@
                 lastCache.font != this.font ||
                 lastCache.lineHeight != this.lineHeight ||
                 lastCache.align != this.align ||
+                lastCache.verticalAlign != this.verticalAlign ||
                 lastCache.wrapText != this.wrapText) {
 
                 lastCache = {
@@ -57,6 +59,7 @@
                     font: this.font,
                     lineHeight: this.lineHeight,
                     align: this.align,
+                    verticalAlign: this.verticalAlign,
                     wrapText: this.wrapText
                 };
 
@@ -119,8 +122,10 @@
                 return;
             }
 
-            var y = (textHeight - measuredHeight + cacheData.lineHeight) / 2;
             var x = cacheData.align == 'left' ? 0 : cacheData.align == 'right' ? textWidth : textWidth / 2;
+            var y = cacheData.verticalAlign == 'top' ? cacheData.lineHeight / 2 :
+                        cacheData.verticalAlign == 'bottom' ? textHeight - measuredHeight + (cacheData.lineHeight / 2) :
+                        (textHeight - measuredHeight + cacheData.lineHeight) / 2;
             lines.forEach(function (line) {
                 workContext.fillText(line, x, y, textWidth);
                 y += cacheData.lineHeight;
@@ -136,6 +141,7 @@
         font: '30px sans-serif',
         lineHeight: 35,
         align: 'center',
+        verticalAlign: 'center',
         layer: 'default',
         orderInLayer: 0,
         wrapText: true
