@@ -9,7 +9,7 @@ omelet.egg('omelet.ui.rectangle', function(data, refs) {
 
     var lastSnap = null;
     var lastPoly = null;
-    var lastL, lastT, lastR, lastB, lastW, lastH;
+    var lastL, lastT, lastW, lastH;
     var gradientCache;
 
     this.ready = function(scene, entity) {
@@ -23,8 +23,8 @@ omelet.egg('omelet.ui.rectangle', function(data, refs) {
         lastT = rect[1]; // top
         lastW = rect[2]; // width
         lastH = rect[3]; // height
-        lastR = lastL + lastW; // right
-        lastB = lastT + lastH; // bottom
+        var lastR = lastL + lastW; // right
+        var lastB = lastT + lastH; // bottom
         lastPoly = [[lastL, lastT], [lastR, lastT], [lastR, lastB], [lastL, lastB]];
         return lastPoly;
     };
@@ -37,17 +37,9 @@ omelet.egg('omelet.ui.rectangle', function(data, refs) {
         var context = lastSnap.getIdentityContext();
         if (shadowDraw) context.translate(this.shadowDistance, this.shadowDistance);
 
-        context.beginPath();
-        context.moveTo(lastL, lastT);
-        context.lineTo(lastR , lastT);
-        context.lineTo(lastR, lastB);
-        context.lineTo(lastL, lastB);
-        context.lineTo(lastL, lastT);
-        context.closePath();
-
         if (shadowDraw) {
             context.fillStyle = this.shadowColor;
-            context.fill();
+            context.fillRect(lastL, lastT, lastW, lastH);
         } else if (this.fillStyle) {
             if (this.fillStyle.constructor === String) {
                 context.fillStyle = this.fillStyle;
@@ -73,12 +65,12 @@ omelet.egg('omelet.ui.rectangle', function(data, refs) {
                 context.fillStyle = gradientCache.gradient;
             }
 
-            context.fill();
+            context.fillRect(lastL, lastT, lastW, lastH);
         }
         if (!shadowDraw && this.strokeStyle) {
             context.lineWidth = this.strokeWidth;
             context.strokeStyle = this.strokeStyle;
-            context.stroke();
+            context.strokeRect(lastL, lastT, lastW, lastH);
         }
 
         if (this.hitTarget) return lastPoly;
