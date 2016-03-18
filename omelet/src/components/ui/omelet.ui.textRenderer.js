@@ -120,7 +120,7 @@
             }
 
             var y = (textHeight - measuredHeight + cacheData.lineHeight) / 2;
-            var x = cacheData.align == 'left' ? 0 : cacheData.align == 'right' ? cacheData.width : textWidth / 2;
+            var x = cacheData.align == 'left' ? 0 : cacheData.align == 'right' ? textWidth : textWidth / 2;
             lines.forEach(function (line) {
                 workContext.fillText(line, x, y, textWidth);
                 y += cacheData.lineHeight;
