@@ -33,11 +33,17 @@ omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
             var centerX = rect[0] + (.5 * rect[2]);
             lastL = centerX;
             lastR = centerX;
-            lastPoly = [[centerX, lastT], [centerX + lastRadius, centerY], [centerX, lastB], [centerX - lastRadius, centerY]];
         } else {
             lastL = rect[0] + lastRadius;
             lastR = lastL + lastW;
-            lastPoly = [[lastL, lastT], [lastR, lastT], [lastR + lastRadius, centerY], [lastR, lastB], [lastL, lastB], [lastL - lastRadius, centerY]];
+        }
+
+        lastPoly = [];
+        for (var a = Math.PI / 2; a >= Math.PI / -2; a -= Math.PI / 5) {
+            lastPoly.push([lastR + (lastRadius * Math.cos(a)), centerY - (lastRadius * Math.sin(a))]);
+        }
+        for (var a = Math.PI / -2; a >= -3 * Math.PI / 2; a -= Math.PI / 5) {
+            lastPoly.push([lastL + (lastRadius * Math.cos(a)), centerY - (lastRadius * Math.sin(a))]);
         }
 
         return lastPoly;

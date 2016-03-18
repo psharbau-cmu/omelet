@@ -190,19 +190,87 @@
         });
 
         // build shortcut functions if "abstractions" are present
-        if (transform) this.transform = function(wrappedContext) { return transform.transform(wrappedContext); };
+        if (transform){
+            this.transform = function(wrappedContext) {
+                try {
+                    return transform.transform(wrappedContext);
+                } catch (err) {
+                    console.error(err);
+                }
+            };
+        }
         if (preDraw && draw) {
-            this.preDraw = function(snapShot) { return preDraw.preDraw(snapShot); };
-            this.draw = function() { return draw.draw(); };
+            this.preDraw = function(snapShot) {
+                try {
+                    return preDraw.preDraw(snapShot);
+                } catch (err) {
+                    console.error(err);
+                }
+            };
+            this.draw = function() {
+                try {
+                    return draw.draw();
+                } catch (err) {
+                    console.error(err);
+                }
+            };
         } else if (preDraw || draw) {
             console.log("Error realizing component.  Component must define both preDraw and draw, or neither.");
         }
-        if (updateList.length > 0) this.update = function(deltaTime) { updateList.forEach(function(thing) { thing.update(deltaTime); }); };
-        if (mouseEnterList.length > 0) this.mouseEnter = function() { mouseEnterList.forEach(function(thing) { thing.mouseEnter(); }); };
-        if (mouseExitList.length > 0) this.mouseExit = function() { mouseExitList.forEach(function(thing) { thing.mouseExit(); }); };
-        if (mouseUpList.length > 0) this.mouseUp = function() { mouseUpList.forEach(function(thing) { thing.mouseUp(); }); };
-        if (mouseDownList.length > 0) this.mouseDown = function() { mouseDownList.forEach(function(thing) { thing.mouseDown(); }); };
-        if (mouseClickList.length > 0) this.mouseClick = function() { mouseClickList.forEach(function(thing) { thing.mouseClick(); }); };
+        if (updateList.length > 0) this.update = function(deltaTime) {
+            updateList.forEach(function(thing) {
+                try {
+                    thing.update(deltaTime);
+                } catch (err) {
+                    console.error(err);
+                }
+            });
+        };
+        if (mouseEnterList.length > 0) this.mouseEnter = function() {
+            mouseEnterList.forEach(function(thing) {
+                try {
+                    thing.mouseEnter();
+                } catch (err) {
+                    console.error(err);
+                }
+            });
+        };
+        if (mouseExitList.length > 0) this.mouseExit = function() {
+            mouseExitList.forEach(function(thing) {
+                try {
+                    thing.mouseExit();
+                } catch (err) {
+                    console.error(err);
+                }
+            });
+        };
+        if (mouseUpList.length > 0) this.mouseUp = function() {
+            mouseUpList.forEach(function(thing) {
+                try {
+                    thing.mouseUp();
+                } catch (err) {
+                    console.error(err);
+                }
+            });
+        };
+        if (mouseDownList.length > 0) this.mouseDown = function() {
+            mouseDownList.forEach(function(thing) {
+                try {
+                    thing.mouseDown();
+                } catch (err) {
+                    console.error(err);
+                }
+            });
+        };
+        if (mouseClickList.length > 0) this.mouseClick = function() {
+            mouseClickList.forEach(function(thing) {
+                try {
+                    thing.mouseClick();
+                } catch (err) {
+                    console.error(err);
+                }
+            });
+        };
 
         if (this.hasChildren) {
             this.children.forEach(function(child) {
