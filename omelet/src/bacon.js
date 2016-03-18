@@ -31,30 +31,36 @@
             // listen to mouse
             canvasElement.addEventListener('mousedown', function (evt) {
                 mouseDown = true;
+                evt.preventDefault();
             });
             canvasElement.addEventListener('mouseup', function (evt) {
                 mouseDown = false;
+                evt.preventDefault();
             });
             canvasElement.addEventListener('mousemove', function (evt) {
                 var rect = canvasElement.getBoundingClientRect();
                 mousePosition = [evt.clientX - rect.left, evt.clientY - rect.top];
+                evt.preventDefault();
             });
             canvasElement.addEventListener('touchstart', function(evt) {
                 mouseDown = true;
                 var rect = canvasElement.getBoundingClientRect();
                 var touch = evt.touches[0];
                 if (touch) mousePosition = [touch.clientX - rect.left, touch.clientY - rect.top];
+                evt.preventDefault();
             });
             canvasElement.addEventListener('touchend', function(evt) {
                 mouseDown = false;
                 var rect = canvasElement.getBoundingClientRect();
                 var touch = evt.touches[0];
                 if (touch) mousePosition = [touch.clientX - rect.left, touch.clientY - rect.top];
+                evt.preventDefault();
             });
             canvasElement.addEventListener('touchmove', function(evt) {
                 var rect = canvasElement.getBoundingClientRect();
                 var touch = evt.touches[0];
                 if (touch) mousePosition = [touch.clientX - rect.left, touch.clientY - rect.top];
+                evt.preventDefault();
             });
 
 
