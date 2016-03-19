@@ -51,15 +51,15 @@
             if (!realized) return;
             var scene = this;
             realized.forEach(function(entity) {
-                var place = entity.key || entity.name;
-                if (!place || scene.the[place]) {
-                    place = nextRandomKey.toString();
-                    nextRandomKey += 1; // pretty evenly distributed over time
-                }
-                scene.the[place] = entity;
+                entity.components.forEach(function(componentName) {
+                    if (scene.the[componentName]) {
+                        console.log("Error adding component to the, the already contains a component of type: " + componentName);
+                    } else {
+                        scene.the[componentName] = entity[componentName];
+                    }
+                });
             });
 
-            var scene = this;
             if (initialized) realized.forEach(function(entity) {
                 callReady(entity, scene);
             });
@@ -113,9 +113,15 @@
         };
 
         this.update = function(deltaTime) {
-            for (var entityKey in this.the) {
-                var entity = this.the[entityKey];
-                callUpdate(entity, deltaTime);
+            for (var componentKey in this.the) {
+                var component = this.the[componentKey];
+                if (component.update && component.update.constructor === Function) {
+                    try {
+                        component.update(deltaTime);
+                    } catch (err) {
+                        console.error(err);
+                    }
+                }
             }
 
             this.hierarchy.forEach(function(entity) {
