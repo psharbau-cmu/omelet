@@ -1,6 +1,6 @@
 omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
     this.fillStyle = data.fillStyle;
-    this.strokeStyle = data.strokeStyle;
+    this.strokeColor = data.strokeColor;
     this.strokeWidth = data.strokeWidth;
     this.hitTarget = data.hitTarget;
     this.shadowDistance = data.shadowDistance;
@@ -97,9 +97,9 @@ omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
 
             context.fill();
         }
-        if (!shadowDraw && this.strokeStyle) {
+        if (!shadowDraw && this.strokeColor) {
             context.lineWidth = this.strokeWidth;
-            context.strokeStyle = this.strokeStyle;
+            context.strokeColor = this.strokeColor;
             context.stroke();
         }
 
@@ -107,7 +107,7 @@ omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
     };
 }).defaults({
     fillStyle:null,
-    strokeStyle:null,
+    strokeColor:null,
     strokeWidth:1,
     layer:'default',
     orderInLayer:0,

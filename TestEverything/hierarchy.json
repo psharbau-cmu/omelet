@@ -16,7 +16,7 @@
       "data": {
         "orderInLayer": 10,
         "fillStyle": "#9c132d",
-        "strokeStyle": "#ffffff",
+        "strokeColor": "#ffffff",
         "strokeWidth":2,
         "shadowDistance":3
       }
@@ -78,7 +78,7 @@
         "omelet.ui.pillRectangle":{
           "data":{
             "fillStyle":{"top":"#4e4e4e", "bottom":"#181818"},
-            "strokeStyle":"#ffffff",
+            "strokeColor":"#ffffff",
             "orderInLayer":8,
             "shadowDistance":3
           }

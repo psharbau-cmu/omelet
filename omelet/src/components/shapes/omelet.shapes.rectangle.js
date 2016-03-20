@@ -1,6 +1,6 @@
 omelet.egg('omelet.shapes.rectangle', function(data, refs) {
-    this.fillStyle = data.fillStyle;
-    this.strokeStyle = data.strokeStyle;
+    this.fillStyle = data.fillColor;
+    this.strokeColor = data.strokeColor;
     this.width = data.width;
     this.height = data.height;
 
@@ -36,16 +36,16 @@ omelet.egg('omelet.shapes.rectangle', function(data, refs) {
             context.fillRect(-1 * halfWidth, -1 * halfHeight, this.width, this.height);
         }
 
-        if (this.strokeStyle) {
-            context.strokeStyle = this.strokeStyle;
+        if (this.strokeColor) {
+            context.strokeColor = this.strokeColor;
             context.strokeRect(-1 * halfWidth, -1 * halfHeight, this.width, this.height);
         }
 
         return lastPoly;
     };
 }).defaults({
-    fillStyle:null,
-    strokeStyle:null,
+    fillColor:null,
+    strokeColor:null,
     width: 15,
     height:15,
     layer:'default',

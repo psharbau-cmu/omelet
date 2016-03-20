@@ -1,6 +1,6 @@
 omelet.egg('omelet.ui.rectangle', function(data, refs) {
     this.fillStyle = data.fillStyle;
-    this.strokeStyle = data.strokeStyle;
+    this.strokeColor = data.strokeColor;
     this.strokeWidth = data.strokeWidth;
     this.cornerRadius = data.cornerRadius;
     this.hitTarget = data.hitTarget;
@@ -9,7 +9,7 @@ omelet.egg('omelet.ui.rectangle', function(data, refs) {
 
     var lastSnap = null;
     var lastPoly = null;
-    var lastL, lastT, lastW, lastH;
+    var lastL, lastT, lastW, lastH, lastR, lastB;
     var gradientCache;
 
     this.ready = function(scene, entity) {
@@ -23,8 +23,8 @@ omelet.egg('omelet.ui.rectangle', function(data, refs) {
         lastT = rect[1]; // top
         lastW = rect[2]; // width
         lastH = rect[3]; // height
-        var lastR = lastL + lastW; // right
-        var lastB = lastT + lastH; // bottom
+        lastR = lastL + lastW; // right
+        lastB = lastT + lastH; // bottom
         lastPoly = [[lastL, lastT], [lastR, lastT], [lastR, lastB], [lastL, lastB]];
         return lastPoly;
     };
@@ -67,9 +67,9 @@ omelet.egg('omelet.ui.rectangle', function(data, refs) {
 
             context.fillRect(lastL, lastT, lastW, lastH);
         }
-        if (!shadowDraw && this.strokeStyle) {
+        if (!shadowDraw && this.strokeColor) {
             context.lineWidth = this.strokeWidth;
-            context.strokeStyle = this.strokeStyle;
+            context.strokeColor = this.strokeColor;
             context.strokeRect(lastL, lastT, lastW, lastH);
         }
 
@@ -78,7 +78,7 @@ omelet.egg('omelet.ui.rectangle', function(data, refs) {
 
 }).defaults({
     fillStyle:null,
-    strokeStyle:null,
+    strokeColor:null,
     strokeWidth:1,
     layer:'default',
     orderInLayer:0,

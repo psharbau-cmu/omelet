@@ -1,6 +1,6 @@
 omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
     this.fillStyle = data.fillStyle;
-    this.strokeStyle = data.strokeStyle;
+    this.strokeColor = data.strokeColor;
     this.strokeWidth = data.strokeWidth;
     this.cornerRadius = data.cornerRadius;
     this.hitTarget = data.hitTarget;
@@ -83,9 +83,9 @@ omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
 
             context.fill();
         }
-        if (!shadowDraw && this.strokeStyle) {
+        if (!shadowDraw && this.strokeColor) {
             context.lineWidth = this.strokeWidth;
-            context.strokeStyle = this.strokeStyle;
+            context.strokeColor = this.strokeColor;
             context.stroke();
         }
 
@@ -94,7 +94,7 @@ omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
 
 }).defaults({
     fillStyle:null,
-    strokeStyle:null,
+    strokeColor:null,
     strokeWidth:1,
     cornerRadius:10,
     layer:'default',
