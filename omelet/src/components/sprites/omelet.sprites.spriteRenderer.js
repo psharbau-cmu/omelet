@@ -1,4 +1,4 @@
-omelet.egg('omelet.sprites.spriteRenderer', function(data, refs) {
+window.omelet.egg('omelet.sprites.spriteRenderer', function(data, refs) {
     this.spriteName = data.spriteName;
 
     var lastSnap = null;

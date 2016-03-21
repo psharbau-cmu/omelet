@@ -1,4 +1,4 @@
-omelet.egg('omelet.sprites.spriteSheet', function(data, refs) {
+window.omelet.egg('omelet.sprites.spriteSheet', function(data, refs) {
     this.image = new Image();
     this.sprites = data.sprites;
     this.loaded = false;

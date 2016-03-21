@@ -1,4 +1,4 @@
-omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
+window.omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
     this.fillStyle = data.fillStyle;
     this.strokeColor = data.strokeColor;
     this.strokeWidth = data.strokeWidth;

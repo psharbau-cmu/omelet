@@ -1,4 +1,4 @@
-omelet.egg('omelet.shapes.polygon', function(data, refs) {
+window.omelet.egg('omelet.shapes.polygon', function(data, refs) {
     this.points = data.points;
     this.fillColor = data.fillColor;
     this.strokeColor = data.strokeColor;

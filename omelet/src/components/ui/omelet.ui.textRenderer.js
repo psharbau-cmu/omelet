@@ -3,7 +3,7 @@
     var workCanvas = document.createElement('canvas');
     var workContext = workCanvas.getContext('2d');
 
-    omelet.egg('omelet.ui.textRenderer', function (data, refs) {
+    window.omelet.egg('omelet.ui.textRenderer', function (data, refs) {
         this.text = data.text;
         this.color = data.color;
         this.font = data.font;

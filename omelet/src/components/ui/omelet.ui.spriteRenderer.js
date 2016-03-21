@@ -1,4 +1,4 @@
-omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
+window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
     this.spriteName = data.spriteName;
     this.maintainAspect = data.maintainAspect;
     this.hitTarget = data.hitTarget;

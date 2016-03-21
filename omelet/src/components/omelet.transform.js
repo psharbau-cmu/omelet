@@ -1,4 +1,4 @@
-omelet.egg('omelet.transform', function(data, refs) {
+window.omelet.egg('omelet.transform', function(data, refs) {
     this.x = data.x;
     this.y = data.y;
     this.angle = data.angle;

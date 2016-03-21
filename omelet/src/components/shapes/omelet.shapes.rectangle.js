@@ -1,4 +1,4 @@
-omelet.egg('omelet.shapes.rectangle', function(data, refs) {
+window.omelet.egg('omelet.shapes.rectangle', function(data, refs) {
     this.fillStyle = data.fillColor;
     this.strokeColor = data.strokeColor;
     this.width = data.width;

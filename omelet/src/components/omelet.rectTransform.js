@@ -1,4 +1,4 @@
-omelet.egg('omelet.rectTransform', function(data, refs) {
+window.omelet.egg('omelet.rectTransform', function(data, refs) {
     this.left = data.left;  // \
     this.top = data.top;    //  \       this code
     this.right = data.right; //  \_
