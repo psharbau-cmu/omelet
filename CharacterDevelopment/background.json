@@ -1,16 +1,1 @@
-[
-  {
-    "omelet.rectTransform":{
-      "data":{
-        "left":0, "top":0, "right":1, "bottom":1,
-        "offsetLeft": -2, "offsetTop":-2, "offsetRight":-2, "offsetBottom":-2
-      }
-    },
-    "omelet.ui.rectangle":{
-      "data":{
-        "fillStyle":{"top":"#663333", "bottom":"#000000"},
-        "layer":"back", "orderInLayer":1
-      }
-    }
-  }
-]
+[]

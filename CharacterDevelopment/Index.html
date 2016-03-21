@@ -5,7 +5,7 @@
     <title>Index</title>
     <style type="text/css">
         * { margin:0; padding:0; }
-        html, body { width:100%; height:100%; }
+        html, body { width:100%; height:100%; background-color:#000000;}
         canvas { display:block; }
     </style>
     <script type="text/javascript" src="..\\omelet\\out\\omelet.min.js"></script>
@@ -31,6 +31,10 @@
     </script>
     <script type="text/javascript">
         var scene = omelet.createEmptyScene();
+        scene.setLayers({
+            "back":0,
+            "character":1
+        });
 
         loadString('./background.json', function(err, data) {
             if (err) {

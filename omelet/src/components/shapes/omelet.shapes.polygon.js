@@ -4,6 +4,7 @@ omelet.egg('omelet.shapes.polygon', function(data, refs) {
     this.strokeColor = data.strokeColor;
     this.width = data.width;
     this.height = data.height;
+    this.globalCompositeOperation = data.globalCompositeOperation;
 
     var convexPointsCache = null;
     var lastSnap = null;
@@ -25,6 +26,7 @@ omelet.egg('omelet.shapes.polygon', function(data, refs) {
             lastPoly.push(snapShot.transformPoint(point[0], point[1]));
         });
 
+        if (this.globalCompositeOperation) context.globalCompositeOperation = 'source-over';
         return lastPoly;
     };
 
@@ -32,6 +34,7 @@ omelet.egg('omelet.shapes.polygon', function(data, refs) {
         if (!lastSnap) return;
 
         var context = lastSnap.getContext();
+        if (this.globalCompositeOperation) context.globalCompositeOperation = this.globalCompositeOperation;
 
         var position = this.points[0];
         context.beginPath();
@@ -48,19 +51,19 @@ omelet.egg('omelet.shapes.polygon', function(data, refs) {
 
 
         if (this.fillColor) {
-            context.fillColor = this.fillColor;
+            context.fillStyle = this.fillColor;
             context.fill();
         }
 
         if (this.strokeColor) {
-            context.strokeColor = this.strokeColor;
+            context.strokeStyle = this.strokeColor;
             context.stroke();
         }
 
         return lastPoly;
     };
 
-    var buildCache = function(points) {
+     var buildCache = function(points) {
         points.cacheKey = Math.random() * Number.MAX_VALUE;
         var cache = {
             cacheKey: points.cacheKey,
@@ -91,21 +94,20 @@ omelet.egg('omelet.shapes.polygon', function(data, refs) {
             }
         });
 
-        var leftHull = getHalfHull(leftPoints, [leftPoint, rightPoint], 'L');
-        var rightHull = getHalfHull(rightPoints, [leftPoint, rightPoint], 'R');
+        var leftHull = getHalfHull(leftPoints, leftPoint, rightPoint, 'L');
+        var rightHull = getHalfHull(rightPoints, leftPoint, rightPoint, 'R');
 
         for (var i = rightHull.length - 2; i > 0; i -= 1) {
             leftHull.push(rightHull[i]);
         }
 
         cache.points = leftHull;
+        return cache;
     };
 
-    var getHalfHull = function(points, hull, side) {
-        if (points.length < 1) return hull;
+    var getHalfHull = function(points, startPoint, endPoint, side) {
+        if (points.length < 1) return [startPoint, endPoint];
 
-        var startPoint = hull[0];
-        var endPoint = hull[hull.length - 1];
         var maxPoint = null;
         var maxDist = Number.MIN_VALUE;
         points.forEach(function(point) {
@@ -127,8 +129,8 @@ omelet.egg('omelet.shapes.polygon', function(data, refs) {
             }
         });
 
-        var aHull = getHalfHull(aPoints, [startPoint, maxPoint], side);
-        var bHull = getHalfHull(bPoints, [maxPoint, endPoint], side);
+        var aHull = getHalfHull(aPoints, startPoint, maxPoint, side);
+        var bHull = getHalfHull(bPoints, maxPoint, endPoint, side);
 
         for (var i = 1; i < bHull.length; i += 1) {
             aHull.push(bHull[i]);
@@ -157,5 +159,6 @@ omelet.egg('omelet.shapes.polygon', function(data, refs) {
     strokeWidth:1,
     layer:'default',
     orderInLayer:0,
-    hitTarget:false
+    hitTarget:false,
+    globalCompositionOperation:null
 });

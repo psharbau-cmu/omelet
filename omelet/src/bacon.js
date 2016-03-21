@@ -20,6 +20,7 @@
             var mouseDownSent = false;
             var mouseEntity = null;
             var mouseClickPosition = null;
+            var mouseClick = false;
             var started = false;
             var lastTime = 0;
             // get these references so that assigning the properties directly on the scene will break the game
@@ -38,6 +39,12 @@
                 evt.preventDefault();
             });
             canvasElement.addEventListener('mousemove', function (evt) {
+                var rect = canvasElement.getBoundingClientRect();
+                mousePosition = [evt.clientX - rect.left, evt.clientY - rect.top];
+                evt.preventDefault();
+            });
+            canvasElement.addEventListener('click', function(evt) {
+                mouseClick = true;
                 var rect = canvasElement.getBoundingClientRect();
                 mousePosition = [evt.clientX - rect.left, evt.clientY - rect.top];
                 evt.preventDefault();
@@ -122,6 +129,9 @@
                             if (mouseDown && mouseEntity.mouseDown) mouseEntity.mouseDown();
                             else if (!mouseDown && mouseEntity.mouseUp) mouseEntity.mouseUp();
                             mouseDownSent = mouseDown;
+                        } else if (mouseClick) {
+                            if (mouseEntity.mouseClick) mouseEntity.mouseClick();
+                            mouseClick = false;
                         }
 
                         return;
@@ -129,6 +139,7 @@
                 }
 
                 if (mouseEntity && mouseEntity.mouseExit) mouseEntity.mouseExit();
+                mouseClick = false;
                 mouseEntity = null;
                 mouseDownSent = mouseDown;
             };

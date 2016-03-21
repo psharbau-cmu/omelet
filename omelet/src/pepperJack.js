@@ -12,6 +12,7 @@
     });
 
     var testHalf = function(a, b) {
+        if (!a || !b) return false;
         var i, j;
         var minA, maxA, minB, maxB;
         var aLength = a.length;

@@ -3,6 +3,7 @@ omelet.egg('omelet.shapes.rectangle', function(data, refs) {
     this.strokeColor = data.strokeColor;
     this.width = data.width;
     this.height = data.height;
+    this.globalCompositeOperation = data.globalCompositeOperation;
 
     var halfWidth = 0;
     var halfHeight = 0;
@@ -30,6 +31,7 @@ omelet.egg('omelet.shapes.rectangle', function(data, refs) {
         if (!lastSnap) return;
 
         var context = lastSnap.getContext();
+        if (this.globalCompositeOperation) context.globalCompositeOperation = this.globalCompositeOperation;
 
         if (this.fillStyle) {
             context.fillStyle = this.fillStyle;
@@ -41,6 +43,8 @@ omelet.egg('omelet.shapes.rectangle', function(data, refs) {
             context.strokeRect(-1 * halfWidth, -1 * halfHeight, this.width, this.height);
         }
 
+        if (this.globalCompositeOperation) context.globalCompositeOperation = 'source-over';
+
         return lastPoly;
     };
 }).defaults({
@@ -49,5 +53,6 @@ omelet.egg('omelet.shapes.rectangle', function(data, refs) {
     width: 15,
     height:15,
     layer:'default',
-    orderInLayer:0
+    orderInLayer:0,
+    globalCompositionOperation:null
 });
