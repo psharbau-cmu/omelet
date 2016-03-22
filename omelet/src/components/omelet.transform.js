@@ -27,4 +27,8 @@ window.omelet.egg('omelet.transform', function(data, refs) {
     x:0,
     y:0,
     angle:0
+}).describe({
+    x:{type:'number'},
+    y:{type:'number'},
+    angle:{type:'number'}
 });

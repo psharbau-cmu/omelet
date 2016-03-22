@@ -20,7 +20,8 @@ window.omelet.salt('getJSONSchema', function(state) {
                             'type':'array',
                             'items':{'$ref':'#/definitions/Entity'}
                         }
-                    }
+                    },
+                    'additionalProperties':false
                 }
             }
         };
@@ -32,12 +33,14 @@ window.omelet.salt('getJSONSchema', function(state) {
                 'type':'object',
                 'properties':{
                     'data':{'type':'object', 'properties':{}},
-                    'refs':{'type':'object', 'required':[], 'properties':{}}
-                }
+                    'refs':{'type':'object', 'required':[], 'properties':{}, 'additionalProperties':false}
+                },
+                'additionalProperties':false
             };
 
             if (meta && meta.propertyDefinitions) {
                 propertyObj.properties.data.properties = meta.propertyDefinitions;
+                propertyObj.properties.data.additionalProperties = false;
             }
 
             if (meta && meta.references) {

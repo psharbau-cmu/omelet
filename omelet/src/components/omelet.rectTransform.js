@@ -57,4 +57,17 @@ window.omelet.egg('omelet.rectTransform', function(data, refs) {
     minHeightPixels:0,
     maxWidthPercent:2,
     maxHeightPercent:2
+}).describe({
+    left:{type:'number'},
+    top:{type:'number'},
+    right:{type:'number'},
+    bottom:{type:'number'},
+    offsetLeft:{type:'number'},
+    offsetTop:{type:'number'},
+    offsetRight:{type:'number'},
+    offsetBottom:{type:'number'},
+    minWidthPixels:{type:'number'},
+    minHeightPixels:{type:'number'},
+    maxWidthPercent:{type:'number'},
+    maxHeightPercent:{type:'number'}
 });
