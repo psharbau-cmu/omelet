@@ -1,6 +1,8 @@
 var fs = require('fs');
 var uglifyjs = require('uglify-js');
 
+var forEditor = true;
+
 var files = [
     '.\\src\\omelet.js',        // An omelet is salted with
     '.\\src\\eggs.js',          //  eggs,
@@ -16,6 +18,9 @@ var directories = [             // ...and also all this other stuff you might wa
     '.\\src\\components\\ui\\',
     '.\\src\\components\\shapes\\',
     '.\\src\\components\\sprites\\'];
+var editorFiles = [
+    '.\\src\\foodCritic.js'
+];
 
 var regex = new RegExp('(omelet.)(ui.|shapes.|sprites.)?[^.]*(.js)');
 
@@ -32,6 +37,7 @@ var checkdir = function(dir, callback) {
 };
 
 var finish = function() {
+    if (forEditor) editorFiles.forEach(function(file) { files.push(file); });
     console.log(files);
     var result = uglifyjs.minify(files, {outSourceMap:'omelet.min.js.map'});
 

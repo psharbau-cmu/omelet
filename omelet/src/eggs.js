@@ -3,6 +3,7 @@
         var referenceNeeds = null;
         var defaultValues = null;
         var requirements = null;
+        var propertyDefs = null;
 
         // check constructor inputs and call constructor
         this.create = function(data, refs, self) {
@@ -64,6 +65,22 @@
             if (!dataDefaults || dataDefaults.constructor !== Object) console.log('Error setting defaults.  Must be non-null object with name -> default values.');
             defaultValues = defaultValues || dataDefaults;
             return this;
+        };
+
+        // describe properties and allowed values with json schema
+        this.describe = function(propertyDefinitions) {
+            if (!propertyDefinitions || propertyDefinitions.constructor !== Object) console.log('Error describing properties.  Must be a non-null object representing data properties in json schema format.');
+            propertyDefs = propertyDefs || propertyDefinitions;
+            return this;
+        };
+
+        this.getMetaData = function() {
+            return {
+                defaults:defaultValues,
+                requires:requirements,
+                references:referenceNeeds,
+                propertyDefinitions:propertyDefs
+            };
         };
     };
 

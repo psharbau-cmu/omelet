@@ -6,21 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df50e6ed-e5cd-44f2-85d9-d9c17f47b78b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/omelet/src/foodCritic.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/flipIt.js" afterPath="$PROJECT_DIR$/omelet/flipIt.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/out/omelet.min.js" afterPath="$PROJECT_DIR$/omelet/out/omelet.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/out/omelet.min.js.map" afterPath="$PROJECT_DIR$/omelet/out/omelet.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/omelet.rectTransform.js" afterPath="$PROJECT_DIR$/omelet/src/components/omelet.rectTransform.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/omelet.transform.js" afterPath="$PROJECT_DIR$/omelet/src/components/omelet.transform.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.polygon.js" afterPath="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.polygon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.rectangle.js" afterPath="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.rectangle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteRenderer.js" afterPath="$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteRenderer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteSheet.js" afterPath="$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteSheet.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.circle.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.circle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.rectangle.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.rectangle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/eggs.js" afterPath="$PROJECT_DIR$/omelet/src/eggs.js" />
     </list>
     <ignored path="Transforms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,102 +36,22 @@
     <favorites_list name="Transforms" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="omelet.shapes.polygon.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.polygon.js">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="foodCritic.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/omelet/src/foodCritic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+            <state relative-caret-position="1100">
+              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="omelet.shapes.rectangle.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.rectangle.js">
+      <file leaf-file-name="flipIt.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/omelet/flipIt.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="omelet.ui.circle.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.circle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="omelet.ui.pillRectangle.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="omelet.ui.rectangle.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.rectangle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="omelet.ui.roundedRectangle.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="omelet.ui.spriteRenderer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="omelet.ui.textRenderer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="omelet.sprites.spriteRenderer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteRenderer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="omelet.sprites.spriteSheet.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteSheet.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+            <state relative-caret-position="150">
+              <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -157,7 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Dafen2d/Tests/TextPlacement.html" />
         <option value="$PROJECT_DIR$/omelet-2d/flipIt.js" />
         <option value="$USER_HOME$/Downloads/Murray/index.html" />
         <option value="$PROJECT_DIR$/omelet-2d/src/omelet.js" />
@@ -179,8 +94,6 @@
         <option value="$PROJECT_DIR$/Old/Dafen2d/Components/dafen2d.transform.js" />
         <option value="$PROJECT_DIR$/Old/Dafen2d/Components/UI/dafen2d.ui.roundedRect.js" />
         <option value="$PROJECT_DIR$/omelet/src/oregano.js" />
-        <option value="$PROJECT_DIR$/omelet/flipIt.js" />
-        <option value="$PROJECT_DIR$/omelet/src/eggs.js" />
         <option value="$PROJECT_DIR$/omelet/src/onion.js" />
         <option value="$PROJECT_DIR$/Old/Dafen2d/dafen2d.wrapCanvas.js" />
         <option value="$PROJECT_DIR$/TestEverything/test.mouseEvents.js" />
@@ -198,16 +111,19 @@
         <option value="$PROJECT_DIR$/omelet/src/bacon.js" />
         <option value="$PROJECT_DIR$/omelet/src/components/omelet.rectTransform.js" />
         <option value="$PROJECT_DIR$/omelet/src/components/omelet.transform.js" />
-        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.circle.js" />
-        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js" />
-        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.rectangle.js" />
-        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js" />
-        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js" />
         <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js" />
         <option value="$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteRenderer.js" />
         <option value="$PROJECT_DIR$/omelet/src/components/sprites/omelet.sprites.spriteSheet.js" />
         <option value="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.polygon.js" />
         <option value="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.rectangle.js" />
+        <option value="$PROJECT_DIR$/omelet/src/eggs.js" />
+        <option value="$PROJECT_DIR$/omelet/src/foodCritic.js" />
+        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js" />
+        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.circle.js" />
+        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js" />
+        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.rectangle.js" />
+        <option value="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js" />
+        <option value="$PROJECT_DIR$/omelet/flipIt.js" />
       </list>
     </option>
   </component>
@@ -267,7 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -391,64 +306,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="omelet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omelet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shapes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="CharacterDevelopment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -580,12 +444,22 @@
       <workItem from="1458570171124" duration="308000" />
       <workItem from="1458573773208" duration="165000" />
       <workItem from="1458574792334" duration="203000" />
-      <workItem from="1458575102113" duration="762000" />
+      <workItem from="1458575102113" duration="1499000" />
+      <workItem from="1458582093412" duration="103000" />
+      <workItem from="1458582250152" duration="39000" />
+      <workItem from="1458582345519" duration="10000" />
+      <workItem from="1458582366771" duration="49000" />
+      <workItem from="1458583017557" duration="19000" />
+      <workItem from="1458589226780" duration="544000" />
+      <workItem from="1458591818880" duration="1647000" />
+      <workItem from="1458644341176" duration="1938000" />
+      <workItem from="1458651249546" duration="908000" />
+      <workItem from="1458655724852" duration="245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1438000" />
+    <option name="totallyTimeSpent" value="7677000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -600,11 +474,11 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22916667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22916667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3386412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3386412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3237792" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -648,13 +522,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CharacterDevelopment/background.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestEverything/Index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -766,13 +633,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/omelet/out/omelet.min.js.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestEverything/Omelet.png">
@@ -806,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestEverything/hierarchy.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestEverything/assets.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -838,7 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -853,15 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="737">
           <caret line="306" column="7" selection-start-line="306" selection-start-column="7" selection-end-line="306" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/eggs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-819">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -869,15 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2853">
           <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/omelet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -885,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1379">
           <caret line="74" column="41" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -893,7 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1009">
           <caret line="120" column="4" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-77">
           <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,7 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -917,15 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-825">
           <caret line="141" column="35" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/flipIt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -933,7 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -941,55 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.circle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.rectangle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -997,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1013,14 +789,91 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.rectangle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+        <state relative-caret-position="88">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/eggs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/omelet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.rectangle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.circle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestEverything/hierarchy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/foodCritic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/flipIt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
           <folding />
         </state>
       </provider>

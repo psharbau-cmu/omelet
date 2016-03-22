@@ -1,6 +1,7 @@
 window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
     this.spriteName = data.spriteName;
     this.maintainAspect = data.maintainAspect;
+    this.alignment = data.alignment;
     this.hitTarget = data.hitTarget;
 
     var lastLeft, lastTop, lastWidth, lastHeight;
@@ -39,11 +40,45 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
             }
 
             if (tempWidth < lastWidth) {
-                lastLeft += (lastWidth - tempWidth) / 2;
-                lastWidth = tempWidth;
+                switch (this.alignment) {
+                    case 'top-left':
+                    case 'left':
+                    case 'bottom-left':
+                        lastWidth = tempWidth;
+                        break;
+                    case 'top':
+                    case'center':
+                    case 'bottom':
+                        lastLeft += (lastWidth - tempWidth) / 2;
+                        lastWidth = tempWidth;
+                        break;
+                    case 'top-right':
+                    case 'right':
+                    case 'bottom-right':
+                        lastLeft = lastWidth - tempWidth;
+                        lastWidth = tempWidth;
+                        break;
+                }
             } else if (tempHeight < lastHeight) {
-                lastTop += (lastHeight - tempHeight) / 2;
-                lastHeight = tempHeight;
+                switch (this.alignment) {
+                    case 'top-left':
+                    case 'top':
+                    case 'top-right':
+                        lastHeight = tempHeight;
+                        break;
+                    case 'left':
+                    case 'center':
+                    case 'right':
+                        lastTop += (lastHeight - tempHeight) / 2;
+                        lastHeight = tempHeight;
+                        break;
+                    case 'bottom-left':
+                    case 'bottom':
+                    case 'bottom-right':
+                        lastTop = lastHeight - tempHeight;
+                        lastHeight = tempHeight;
+                        break;
+                }
             }
         }
 
@@ -63,6 +98,7 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
 }).defaults({
     spriteName:'Default',
     maintainAspect:false,
+    alignment:'center',
     hitTarget:false,
     layer:'default',
     orderInLayer:0

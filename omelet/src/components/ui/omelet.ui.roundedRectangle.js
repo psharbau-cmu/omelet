@@ -85,7 +85,7 @@ window.omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
         }
         if (!shadowDraw && this.strokeColor) {
             context.lineWidth = this.strokeWidth;
-            context.strokeColor = this.strokeColor;
+            context.strokeStyle = this.strokeColor;
             context.stroke();
         }
 
