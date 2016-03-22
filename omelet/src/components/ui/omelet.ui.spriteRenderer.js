@@ -104,4 +104,11 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
     orderInLayer:0
 }).references({
     spriteSheet:'omelet.sprites.spriteSheet'
+}).describe({
+    spriteName:{type:'string'},
+    maintainAspect:{type:'boolean'},
+    alignment:{enum:['top-left', 'top', 'top-right', 'left', 'center', 'right', 'bottom-left', 'bottom', 'bottom-right']},
+    layer:{type:'string'},
+    orderInLayer:{type:'integer'},
+    hitTarget:{type:'boolean'}
 });

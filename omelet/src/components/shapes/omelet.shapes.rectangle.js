@@ -1,6 +1,7 @@
 window.omelet.egg('omelet.shapes.rectangle', function(data, refs) {
     this.fillStyle = data.fillColor;
     this.strokeColor = data.strokeColor;
+    this.strokeWidth = data.strokeWidth;
     this.width = data.width;
     this.height = data.height;
     this.globalCompositeOperation = data.globalCompositeOperation;
@@ -40,6 +41,7 @@ window.omelet.egg('omelet.shapes.rectangle', function(data, refs) {
 
         if (this.strokeColor) {
             context.strokeColor = this.strokeColor;
+            context.lineWidth = this.strokeWidth;
             context.strokeRect(-1 * halfWidth, -1 * halfHeight, this.width, this.height);
         }
 
@@ -50,9 +52,19 @@ window.omelet.egg('omelet.shapes.rectangle', function(data, refs) {
 }).defaults({
     fillColor:null,
     strokeColor:null,
+    strokeWidth:1,
     width: 15,
     height:15,
     layer:'default',
     orderInLayer:0,
     globalCompositionOperation:null
+}).describe({
+    fillColor:{type:'string'},
+    strokeColor:{type:'string'},
+    strokeWidth:{type:'number'},
+    width:{type:'number'},
+    height:{type:'number'},
+    globalCompositionOperation:{enum:['source-over', 'source-atop', 'source-in', 'source-out', 'destination-over', 'destination-atop', 'destination-in', 'destination-out', 'lighter', 'copy', 'xor']},
+    layer:{type:'string'},
+    orderInLayer:{type:'integer'}
 });

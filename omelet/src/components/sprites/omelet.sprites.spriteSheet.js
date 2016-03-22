@@ -21,4 +21,23 @@ window.omelet.egg('omelet.sprites.spriteSheet', function(data, refs) {
             pivotY:200
         }
     }
+}).describe({
+    src:{type:'string'},
+    sprites:{
+        type:'object',
+        patternProperties:{
+            '.*':{
+                type:'object',
+                required:['x', 'y', 'width', 'height', 'pivotX', 'pivotY'],
+                properties: {
+                    'x':{type:'number'},
+                    'y':{type:'number'},
+                    'width':{type:'number'},
+                    'height':{type:'number'},
+                    'pivotX':{type:'number'},
+                    'pivotY':{type:'number'}
+                }
+            }
+        }
+    }
 });

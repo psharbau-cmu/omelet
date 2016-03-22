@@ -2,8 +2,7 @@ window.omelet.egg('omelet.shapes.polygon', function(data, refs) {
     this.points = data.points;
     this.fillColor = data.fillColor;
     this.strokeColor = data.strokeColor;
-    this.width = data.width;
-    this.height = data.height;
+    this.strokeWidth = data.strokeWidth;
     this.globalCompositeOperation = data.globalCompositeOperation;
 
     var convexPointsCache = null;
@@ -57,6 +56,7 @@ window.omelet.egg('omelet.shapes.polygon', function(data, refs) {
 
         if (this.strokeColor) {
             context.strokeStyle = this.strokeColor;
+            context.lineWidth = this.strokeWidth;
             context.stroke();
         }
 
@@ -159,6 +159,24 @@ window.omelet.egg('omelet.shapes.polygon', function(data, refs) {
     strokeWidth:1,
     layer:'default',
     orderInLayer:0,
-    hitTarget:false,
     globalCompositionOperation:null
+}).describe({
+    points:{
+        type:'array',
+        items:{
+            type:'array',
+            items:{
+                type:'number',
+                minItems:2,
+                maxItems:2
+            },
+            minItems:2
+        }
+    },
+    fillColor:{type:'string'},
+    strokeColor:{type:'string'},
+    strokeWidth:{type:'number'},
+    globalCompositionOperation:{enum:['source-over', 'source-atop', 'source-in', 'source-out', 'destination-over', 'destination-atop', 'destination-in', 'destination-out', 'lighter', 'copy', 'xor']},
+    layer:{type:'string'},
+    orderInLayer:{type:'integer'}
 });

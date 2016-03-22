@@ -38,4 +38,8 @@ window.omelet.egg('omelet.sprites.spriteRenderer', function(data, refs) {
     orderInLayer:0
 }).references({
     spriteSheet:'omelet.sprites.spriteSheet'
+}).describe({
+    spriteName:{type:'string'},
+    layer:{type:'string'},
+    orderInLayer:{type:'integer'}
 });

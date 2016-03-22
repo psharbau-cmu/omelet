@@ -85,4 +85,19 @@ window.omelet.egg('omelet.ui.rectangle', function(data, refs) {
     hitTarget:false,
     shadowDistance:0,
     shadowColor:"rgba(0, 0, 0, .3)"
+}).describe({
+    fillStyle:{
+        oneOf:[
+            { type:'string'},
+            { type:'object', properties:{'top':{type:'string', 'bottom':{type:'string'}}}, required:['top', 'bottom']},
+            { type:'object', properties:{'left':{type:'string', 'right':{type:'string'}}}, required:['left', 'right']}
+        ]
+    },
+    strokeColor:{type:'string'},
+    strokeWidth:{type:'number'},
+    layer:{type:'string'},
+    orderInLayer:{type:'integer'},
+    shadowDistance:{type:'number'},
+    shadowColor:{type:'string'},
+    hitTarget:{type:'boolean'}
 });

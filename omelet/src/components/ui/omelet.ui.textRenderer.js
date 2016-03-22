@@ -145,5 +145,15 @@
         layer: 'default',
         orderInLayer: 0,
         wrapText: true
+    }).describe({
+        text:{type:'string'},
+        color: {type:'string'},
+        font: {type:'string'},
+        lineHeight: {type:'number'},
+        align: {enum:['left', 'center', 'right']},
+        verticalAlign:{ enum:[ 'top', 'center', 'bottom']},
+        wrapText:{type:'boolean'},
+        layer:{type:'string'},
+        orderInLayer:{type:'integer'}
     });
 })();
