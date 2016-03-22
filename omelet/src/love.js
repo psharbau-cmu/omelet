@@ -27,10 +27,15 @@
             }
         };
 
-        this.addAssets = function(assetList) {
-            var realized = state.realize(assetList, this);
+        this.addData = function(stringData) {
+            var dataObj = state.realize(stringData, this) || {};
+            if (dataObj.assets) addAssets(dataObj.assets, this);
+            if (dataObj.the) addToThe(dataObj.the, this);
+            if (dataObj.hierarchy) addToHierarchy(dataObj.hierarchy, this);
+        };
+
+        var addAssets = function(realized, scene) {
             if (!realized) return;
-            var scene = this;
             realized.forEach(function(entity) {
                 var place = entity.key || entity.name;
                 if (!place || scene.assets[place]) {
@@ -46,10 +51,8 @@
             });
         };
 
-        this.addToThe = function(theList) {
-            var realized = state.realize(theList, this);
+        var addToThe = function(realized, scene) {
             if (!realized) return;
-            var scene = this;
             realized.forEach(function(entity) {
                 entity.components.forEach(function(componentName) {
                     if (scene.the[componentName]) {
@@ -65,15 +68,12 @@
             });
         };
 
-        this.addToHierarchy = function(hierarchyList) {
-            var realized = state.realize(hierarchyList, this);
+        var addToHierarchy = function(realized, scene) {
             if (!realized) return;
-            var scene = this;
             realized.forEach(function(entity) {
                 scene.hierarchy.push(entity);
             });
 
-            var scene = this;
             if (initialized) realized.forEach(function(entity) {
                 callReady(entity, scene);
             });

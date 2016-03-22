@@ -286,11 +286,33 @@
             } else if (toBeRealized.constructor === String) {
                 try {
                     var parsed = JSON.parse(toBeRealized);
-                    if (parsed.constructor !== Array) {
-                        console.log("Error realizing data, input must be JSON representation of array.");
+                    if (parsed.constructor !== Object) {
+                        console.log("Error realizing data, input must be JSON representation of an object.");
                     } else {
-                        return processThings(parsed, state.eggs, scene);
+                        if (parsed.assets) {
+                            if (parsed.assets.constructor !== Array) {
+                                console.log("Error realizing data, assets must be a JSON array of entities.");
+                            } else {
+                                parsed.assets = processThings(parsed.assets, state.eggs, scene);
+                            }
+                        }
+                        if (parsed.the) {
+                            if (parsed.the.constructor !== Array) {
+                                console.log("Error realizing data, the must be a JSON array of entities.");
+                            } else {
+                                parsed.the = processThings(parsed.the, state.eggs, scene);
+                            }
+                        }
+                        if (parsed.hierarchy) {
+                            if (parsed.hierarchy.constructor !== Array) {
+                                console.log("Error realizing data, hierarchy must be a JSON array of entities.");
+                            } else {
+                                parsed.hierarchy = processThings(parsed.hierarchy, state.eggs, scene);
+                            }
+                        }
                     }
+
+                    return parsed;
                 } catch (err) {
                     console.log("Error realizing data.  JSON parse failed: " + err);
                 }

@@ -19,7 +19,6 @@
             var mouseDown = false;
             var mouseDownSent = false;
             var mouseEntity = null;
-            var mouseClickPosition = null;
             var mouseClick = false;
             var started = false;
             var lastTime = 0;
@@ -111,25 +110,18 @@
                     var y = mousePosition[1];
                     if (state.testPointInPolygon(x, y, boxSet.box)) {
                         if (mouseEntity != boxSet.entity) {
-                            mouseClickPosition = null;
                             if (mouseEntity && mouseEntity.mouseExit) mouseEntity.mouseExit();
                             mouseEntity = boxSet.entity;
                             if (mouseEntity.mouseEnter) mouseEntity.mouseEnter();
                         }
 
                         if (mouseDownSent != mouseDown) {
-                            if (mouseDown) {
-                                mouseClickPosition = mousePosition.slice();
-                            } else {
-                                if (mouseClickPosition && Math.sqrt(Math.pow(mouseClickPosition[0] - mousePosition[0], 2) + Math.pow(mouseClickPosition[1] - mousePosition[1], 2)) < 20) {
-                                    if (mouseEntity.mouseClick) mouseEntity.mouseClick();
-                                }
-                                mouseClickPosition = null;
-                            }
                             if (mouseDown && mouseEntity.mouseDown) mouseEntity.mouseDown();
                             else if (!mouseDown && mouseEntity.mouseUp) mouseEntity.mouseUp();
                             mouseDownSent = mouseDown;
-                        } else if (mouseClick) {
+                        }
+
+                        if (mouseClick) {
                             if (mouseEntity.mouseClick) mouseEntity.mouseClick();
                             mouseClick = false;
                         }

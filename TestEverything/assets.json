@@ -1,4 +1,5 @@
-[
+{
+"assets":[
   {
     "key":"OmeletLogo",
     "omelet.sprites.spriteSheet": {
@@ -26,3 +27,4 @@
     }
   }
 ]
+}

@@ -1,4 +1,5 @@
-[
+{
+"hierarchy":[
   {
     "omelet.rectTransform":{
       "data":{
@@ -18,7 +19,8 @@
         "fillStyle": "#9c132d",
         "strokeColor": "#ffffff",
         "strokeWidth":2,
-        "shadowDistance":3
+        "shadowDistance":3,
+        "hitTarget":true
       }
     },
     "test.mouseEvents":"default"
@@ -80,7 +82,8 @@
             "fillStyle":{"top":"#4e4e4e", "bottom":"#181818"},
             "strokeColor":"#ffffff",
             "orderInLayer":8,
-            "shadowDistance":3
+            "shadowDistance":3,
+            "hitTarget":true
           }
         },
         "test.mouseEvents":"default",
@@ -152,3 +155,4 @@
     "test.mouseEvents":"default"
   }
 ]
+}

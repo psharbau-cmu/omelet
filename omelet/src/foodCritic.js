@@ -4,12 +4,18 @@ window.omelet.salt('getJSONSchema', function(state) {
             '$schema':'http://json-schema.org/draft-04/schema#',
             'title':'OmeletEntityList',
             'description':'Schema for a list of omelet entities using loaded eggs.',
-            'type':'array',
-            'items':{'$ref':'#/definitions/Entity'},
+            'type':'object',
+            'properties':{
+                'assets':{'type':'array', 'items':{'$ref':'#/definitions/Entity'}},
+                'the':{'type':'array', 'items':{'$ref':'#/definitions/Entity'}},
+                'hierarchy':{'type':'array', 'items':{'$ref':'#/definitions/Entity'}}
+            },
             'definitions':{
                 'Entity':{
                     'type':'object',
                     'properties':{
+                        'key':{'type':'string'},
+                        'name':{'type':'string'},
                         'children':{
                             'type':'array',
                             'items':{'$ref':'#/definitions/Entity'}

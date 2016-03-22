@@ -37,10 +37,10 @@
             if (err) {
                 console.log("Error loading assets from the web: " + err);
             } else {
-                scene.addAssets(data);
+                scene.addData(data);
                 loadString('./hierarchy.json', function(err, data) {
                     if (err) console.log("Error loading hierarchy from the web: " + err);
-                    else scene.addToHierarchy(data);
+                    else scene.addData(data);
                 });
             }
         });

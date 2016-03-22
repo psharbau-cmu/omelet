@@ -40,10 +40,10 @@
             if (err) {
                 console.log(err);
             } else {
-                scene.addToHierarchy(data);
+                scene.addData(data);
                 loadString('./guy1.json', function(err, data) {
                     if (err) console.log(err);
-                    else scene.addToHierarchy(data);
+                    else scene.addData(data);
                 });
             }
         });
