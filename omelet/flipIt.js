@@ -18,11 +18,15 @@ var directories = [             // ...and also all this other stuff you might wa
     '.\\src\\components\\ui\\',
     '.\\src\\components\\shapes\\',
     '.\\src\\components\\sprites\\'];
-var editorFiles = [
-    '.\\src\\foodCritic.js'
+var editorDirectories = [
+    '.\\src\\editor\\'
 ];
 
-var regex = new RegExp('(omelet.)(ui.|shapes.|sprites.)?[^.]*(.js)');
+if (forEditor) {
+    editorDirectories.forEach(function(dir) {directories.push(dir); });
+}
+
+var regex = new RegExp('.*(.js)');
 
 var ifMatchAdd = function(dir, file) {
     if (file && file.match && file.match(regex)) files.push(dir + file);
@@ -37,7 +41,6 @@ var checkdir = function(dir, callback) {
 };
 
 var finish = function() {
-    if (forEditor) editorFiles.forEach(function(file) { files.push(file); });
     console.log(files);
     var result = uglifyjs.minify(files, {outSourceMap:'omelet.min.js.map'});
 

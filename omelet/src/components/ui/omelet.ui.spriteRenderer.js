@@ -39,47 +39,40 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
                 tempWidth = tempHeight * aspect;
             }
 
-            if (tempWidth < lastWidth) {
-                switch (this.alignment) {
-                    case 'top-left':
-                    case 'left':
-                    case 'bottom-left':
-                        lastWidth = tempWidth;
-                        break;
-                    case 'top':
-                    case'center':
-                    case 'bottom':
-                        lastLeft += (lastWidth - tempWidth) / 2;
-                        lastWidth = tempWidth;
-                        break;
-                    case 'top-right':
-                    case 'right':
-                    case 'bottom-right':
-                        lastLeft = lastWidth - tempWidth;
-                        lastWidth = tempWidth;
-                        break;
-                }
-            } else if (tempHeight < lastHeight) {
-                switch (this.alignment) {
-                    case 'top-left':
-                    case 'top':
-                    case 'top-right':
-                        lastHeight = tempHeight;
-                        break;
-                    case 'left':
-                    case 'center':
-                    case 'right':
-                        lastTop += (lastHeight - tempHeight) / 2;
-                        lastHeight = tempHeight;
-                        break;
-                    case 'bottom-left':
-                    case 'bottom':
-                    case 'bottom-right':
-                        lastTop = lastHeight - tempHeight;
-                        lastHeight = tempHeight;
-                        break;
-                }
+            switch (this.alignment) {
+                case 'top-left':
+                    break;
+                case 'top':
+                    lastLeft += (lastWidth - tempWidth) / 2;
+                    break;
+                case 'top-right':
+                    lastLeft += (lastWidth - tempWidth);
+                    break;
+                case 'left':
+                    lastTop += (lastHeight - tempHeight) / 2;
+                    break;
+                case 'center':
+                    lastLeft += (lastWidth - tempWidth) / 2;
+                    lastTop += (lastHeight - tempHeight) / 2;
+                    break;
+                case 'right':
+                    lastLeft += (lastWidth - tempWidth);
+                    lastTop += (lastHeight - tempHeight) / 2;
+                    break;
+                case 'bottom-left':
+                    lastTop += (lastHeight - tempHeight);
+                    break;
+                case 'bottom':
+                    lastLeft += (lastWidth - tempWidth) / 2;
+                    lastTop += (lastHeight - tempHeight);
+                case 'bottom-right':
+                    lastLeft += (lastWidth - tempWidth);
+                    lastTop += (lastHeight - tempHeight);
+                    break;
             }
+
+            lastWidth = tempWidth;
+            lastHeight = tempHeight;
         }
 
         var right = lastLeft + lastWidth;
