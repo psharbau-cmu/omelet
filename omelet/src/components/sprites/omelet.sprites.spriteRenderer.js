@@ -7,7 +7,7 @@ window.omelet.egg('omelet.sprites.spriteRenderer', function(data, refs) {
 
     this.ready = function(scene, entity) {
         entity.screenSort = [scene.layers[data.layer] || 0, data.orderInLayer];
-        spriteSheet = refs.spriteSheet['omelet.sprites.spriteSheet'];
+        spriteSheet = refs.spriteSheet;
     };
 
     this.preDraw = function(snapShot) {

@@ -29,6 +29,8 @@
                     } else if (!refs[p][referenceNeeds[p]]) {
                         console.log('Referenced entity missing needed component: ' + name + ' references an entity for ' + p + ' that needs a ' + referenceNeeds[p]);
                         return;
+                    } else {
+                        refs[p] = refs[p][referenceNeeds[p]];
                     }
                 }
             }
