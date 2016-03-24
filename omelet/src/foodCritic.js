@@ -44,6 +44,7 @@ window.omelet.salt('getJSONSchema', function(state) {
             }
 
             if (meta && meta.references) {
+                propertyObj.required = ['refs'];
                 for (var r in meta.references) {
                     propertyObj.properties.refs.required.push(r);
                     propertyObj.properties.refs.properties[r] = {'type':'string'};

@@ -1,8 +1,23 @@
 (function() {
 
-    var processThings = function(arrayOfThings, eggs, scene) {
+    var processThings = function(arrayOfThings, eggs, scene, otherAssets) {
         var topLevelEntities = [];
         var keyToEntityMap = {};
+
+        var addToKeyMap = function(entity, givenKey) {
+            if (givenKey) keyToEntityMap[givenKey] = entity;
+            else if (entity.key.length > 0) keyToEntityMap[entity.key] = entity;
+
+            if (entity.hasChildren) entity.children.forEach(addToKeyMap);
+        };
+
+        if (scene) {
+            for (var key in scene.assets) {
+                addToKeyMap(scene.assets[key], key);
+            }
+            scene.hierarchy.forEach(function(entity) {addToKeyMap(entity, null) });
+        }
+        if (otherAssets) otherAssets.forEach(function(entity) {addToKeyMap(entity, null) });
 
         arrayOfThings.forEach(function(thing) {
            if (thing) {
@@ -12,15 +27,13 @@
         });
 
         topLevelEntities.forEach(function(entity) {
-            if (scene) {
-                entity.realize(keyToEntityMap, eggs, scene.assets, scene.the);
-            } else {
-                entity.realize(keyToEntityMap, eggs);
-            }
+            entity.realize(keyToEntityMap, eggs);
         });
 
         return topLevelEntities;
     };
+
+
 
     var runtimeOnlyProperties = {
         components      :true,
@@ -110,7 +123,7 @@
         return true;
     };
 
-    OmeletEntity.prototype.realize = function(keyMap, eggs, assets, the) {
+    OmeletEntity.prototype.realize = function(keyMap, eggs) {
         if (!keyMap || !eggs || keyMap.constructor !== Object || eggs.constructor !== Object) {
             console.log('Error realizing entity.  Key map or egg carton is falsy or not an Object.');
             return;
@@ -145,10 +158,6 @@
                         console.log("Error realizing component.  Referenced value is not a string.");
                     } else if (keyMap[refedKey]) {
                         refs[ref] = keyMap[refedKey];
-                    } else if (assets && assets[refedKey]) {
-                        refs[ref] = assets[refedKey];
-                    } else if (the && the[refedKey]) {
-                        refs[ref] = the[refedKey];
                     } else {
                         console.log("Error realizing component.  An entity with name: " + this.name + " references an entity for: " + ref + " with missing key: " + refedKey);
                     }
@@ -274,7 +283,7 @@
 
         if (this.hasChildren) {
             this.children.forEach(function(child) {
-                child.realize(keyMap, eggs, assets, the);
+                child.realize(keyMap, eggs);
             });
         }
     };
@@ -300,14 +309,14 @@
                             if (parsed.the.constructor !== Array) {
                                 console.log("Error realizing data, the must be a JSON array of entities.");
                             } else {
-                                parsed.the = processThings(parsed.the, state.eggs, scene);
+                                parsed.the = processThings(parsed.the, state.eggs, scene, parsed.assets);
                             }
                         }
                         if (parsed.hierarchy) {
                             if (parsed.hierarchy.constructor !== Array) {
                                 console.log("Error realizing data, hierarchy must be a JSON array of entities.");
                             } else {
-                                parsed.hierarchy = processThings(parsed.hierarchy, state.eggs, scene);
+                                parsed.hierarchy = processThings(parsed.hierarchy, state.eggs, scene, parsed.assets);
                             }
                         }
                     }

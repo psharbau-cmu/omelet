@@ -18,6 +18,7 @@
             var mousePosition = [-10, -10];
             var mouseDown = false;
             var mouseDownSent = false;
+            var mouseClickPosition = null;
             var mouseEntity = null;
             var mouseClick = false;
             var started = false;
@@ -62,6 +63,13 @@
                 if (touch) mousePosition = [touch.clientX - rect.left, touch.clientY - rect.top];
                 evt.preventDefault();
             });
+            canvasElement.addEventListener('touchcancel', function(evt) {
+                mouseDown = false;
+                var rect = canvasElement.getBoundingClientRect();
+                var touch = evt.touches[0];
+                if (touch) mousePosition = [touch.clientX - rect.left, touch.clientY - rect.top];
+                evt.preventDefault();
+            });
             canvasElement.addEventListener('touchmove', function(evt) {
                 var rect = canvasElement.getBoundingClientRect();
                 var touch = evt.touches[0];
@@ -70,7 +78,8 @@
             });
 
 
-            sceneObj.Context = context;
+            sceneObj.context = context;
+            sceneObj.canvas = canvasElement;
 
             var transformAndPreDraw = function (entity) {
                 // save transform
@@ -112,38 +121,49 @@
                         if (mouseEntity != boxSet.entity) {
                             if (mouseEntity && mouseEntity.mouseExit) mouseEntity.mouseExit();
                             mouseEntity = boxSet.entity;
+                            mouseClickPosition = null;
                             if (mouseEntity.mouseEnter) mouseEntity.mouseEnter();
                         }
 
+                        if (!mouseDownSent && mouseClick) {
+                            if (mouseEntity.mouseClick) mouseEntity.mouseClick();
+                        }
+
                         if (mouseDownSent != mouseDown) {
+                            if (mouseDown) mouseClickPosition = mousePosition.slice();
+
                             if (mouseDown && mouseEntity.mouseDown) mouseEntity.mouseDown();
                             else if (!mouseDown && mouseEntity.mouseUp) mouseEntity.mouseUp();
+
+                            if (!mouseDown &&
+                                    mouseClickPosition &&
+                                    Math.sqrt(Math.pow(mouseClickPosition[0] - mousePosition[0], 2) + Math.pow(mouseClickPosition[1] - mousePosition[1], 2)) < 25) {
+                                if (mouseEntity.mouseClick) mouseEntity.mouseClick();
+                            }
+
                             mouseDownSent = mouseDown;
                         }
 
-                        if (mouseClick) {
-                            if (mouseEntity.mouseClick) mouseEntity.mouseClick();
-                            mouseClick = false;
-                        }
-
+                        mouseClick = false;
                         return;
                     }
                 }
 
                 if (mouseEntity && mouseEntity.mouseExit) mouseEntity.mouseExit();
                 mouseClick = false;
+                mouseClickPosition = null;
                 mouseEntity = null;
                 mouseDownSent = mouseDown;
             };
 
-            var gameLoop = function (skipUpdate) {
+            var gameLoop = function (doUpdate) {
                 // check size, update poly
                 width = canvasElement.width;
                 height = canvasElement.height;
                 screenPoly = [[0, 0], [width, 0], [width, height], [0, height]];
 
                 // update
-                if (!skipUpdate) {
+                if (doUpdate) {
                     var now = new Date().getTime();
                     var deltaTime = (now - (lastTime || now)) / 1000;
                     if (deltaTime > 1) deltaTime = 0.016;
@@ -198,7 +218,7 @@
                 },
                 doFrameSkipUpdate: function() {
                     started = false;
-                    gameLoop(true);
+                    gameLoop(false);
                 }
             };
         };

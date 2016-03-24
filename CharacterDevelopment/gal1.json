@@ -1,0 +1,48 @@
+{
+  "assets":[
+    {
+      "key":"darkSheet",
+      "omelet.sprites.spriteSheet":{
+        "data":{
+          "src":"CharacterDark.png",
+          "sprites":{
+            "gal":{
+              "x":0, "y":0, "width":270, "height":540, "pivotX":50, "pivotY":530
+            }
+          }
+        }
+      }
+    }
+  ],
+  "hierarchy":[
+    {
+      "omelet.transform":{
+        "data":{
+          "x":0, "y":250
+        }
+      },
+      "omelet.sprites.spriteRenderer":{
+        "data":{
+          "spriteName":"gal"
+        },
+        "refs":{
+          "spriteSheet":"darkSheet"
+        }
+      }
+    },
+    {
+      "omelet.transform":{
+        "data":{
+          "x":0, "y":-300
+        }
+      },
+      "omelet.shapes.polygon":{
+        "data":{
+          "points":[[-100, 0], [100, 0], [300, 700], [-300, 700]],
+          "color":"#ffffcc",
+          "orderInLayer":2
+        }
+      }
+    }
+  ]
+}
