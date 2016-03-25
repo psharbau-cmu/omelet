@@ -167,6 +167,7 @@
             // create runtime egg
             var createdEgg = eggs[component].create(data, refs, entity) || {};
             entity[component] = createdEgg;
+            if (createdEgg.constructor === Array) createdEgg = createdEgg[0];
 
             // check egg for "abstractions"
             if (createdEgg.transform && createdEgg.transform.constructor === Function) {
@@ -204,7 +205,7 @@
                 try {
                     return transform.transform(wrappedContext);
                 } catch (err) {
-                    console.error(err);
+                    console.error("Error in transform: " + err);
                 }
             };
         }
@@ -213,14 +214,14 @@
                 try {
                     return preDraw.preDraw(snapShot);
                 } catch (err) {
-                    console.error(err);
+                    console.error("Error in preDraw: " +err);
                 }
             };
             this.draw = function() {
                 try {
                     return draw.draw();
                 } catch (err) {
-                    console.error(err);
+                    console.error("Error in draw: " +err);
                 }
             };
         } else if (preDraw || draw) {
@@ -231,7 +232,7 @@
                 try {
                     thing.update(deltaTime);
                 } catch (err) {
-                    console.error(err);
+                    console.error("Error in update: " +err);
                 }
             });
         };
@@ -240,7 +241,7 @@
                 try {
                     thing.mouseEnter();
                 } catch (err) {
-                    console.error(err);
+                    console.error("Error in mouseEnter: " +err);
                 }
             });
         };
@@ -249,7 +250,7 @@
                 try {
                     thing.mouseExit();
                 } catch (err) {
-                    console.error(err);
+                    console.error("Error in mouseExit: " +err);
                 }
             });
         };
@@ -258,7 +259,7 @@
                 try {
                     thing.mouseUp();
                 } catch (err) {
-                    console.error(err);
+                    console.error("Error in mouseUp: " +err);
                 }
             });
         };
@@ -267,7 +268,7 @@
                 try {
                     thing.mouseDown();
                 } catch (err) {
-                    console.error(err);
+                    console.error("Error in mouseDown: " +err);
                 }
             });
         };
@@ -276,7 +277,7 @@
                 try {
                     thing.mouseClick();
                 } catch (err) {
-                    console.error(err);
+                    console.error("Error in mouseClick: " + err);
                 }
             });
         };

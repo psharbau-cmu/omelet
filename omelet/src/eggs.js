@@ -14,7 +14,7 @@
 
             if (requirements) {
                 requirements.forEach(function(requirement) {
-                    if (!self[requirement]) {
+                    if (!self.hasOwnProperty(requirement)) {
                         console.log('Entity missing required component: ' + name + ' needs ' + requirement);
                         return;
                     }
@@ -29,8 +29,6 @@
                     } else if (!refs[p][referenceNeeds[p]]) {
                         console.log('Referenced entity missing needed component: ' + name + ' references an entity for ' + p + ' that needs a ' + referenceNeeds[p]);
                         return;
-                    } else {
-                        refs[p] = refs[p][referenceNeeds[p]];
                     }
                 }
             }
@@ -42,7 +40,7 @@
             }
 
             try {
-                return new constructor(data, refs);
+                return referenceNeeds ? [new constructor(data, refs), referenceNeeds , refs] : new constructor(data, refs);
             } catch (err) {
                 console.log("Error calling constructor for type: " + name + " error: " + err);
             }

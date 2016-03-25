@@ -158,6 +158,22 @@
         var callReady = function(entity, scene) {
             entity.components.forEach(function(componentKey) {
                 var component = entity[componentKey];
+
+                if (component.constructor === Array) {
+                    var instance = component[0];
+                    var needs = component[1];
+                    var refsObj = component[2];
+
+                    for (var need in needs) {
+                        var satisfier = refsObj[need][needs[need]];
+                        if (satisfier.constructor === Array) satisfier = satisfier[0];
+                        refsObj[need] = satisfier;
+                    }
+
+                    entity[componentKey] = instance;
+                    component = instance;
+                }
+
                 if (component.ready && component.ready.constructor === Function) {
                     component.ready(scene, entity);
                 }
