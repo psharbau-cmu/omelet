@@ -36,6 +36,17 @@
           }
         }
       },
+      "omelet.puppet.sequence": {
+        "data": {
+          "sequences": {
+            "shoot":[
+              { "atTime":0, "position":"shoot", "duration":0.2, "ease":"ease-out", "easeExp":2},
+              { "atTime":0.5, "position":"shoot-recoil", "duration":0.1, "ease":"ease-in", "easeExp":2},
+              { "atTime":1, "position":"anti-default", "duration":1, "ease":"ease-in-out", "easeExp":2}
+            ]
+          }
+        }
+      },
       "omelet.transform": { "data": { "x": 0, "y":0 } },
       "children": [
         {
