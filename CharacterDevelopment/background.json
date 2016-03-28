@@ -1,1 +1,529 @@
-{}
+{
+  "hierarchy": [
+    {
+      "key":"tile0",
+      "omelet.transform": { "data": { "x":-4200, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile1",
+      "omelet.transform": { "data": { "x":-3800, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile2",
+      "omelet.transform": { "data": { "x":-3400, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile3",
+      "omelet.transform": { "data": { "x":-3000, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile4",
+      "omelet.transform": { "data": { "x":-2600, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile5",
+      "omelet.transform": { "data": { "x":-2200, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile6",
+      "omelet.transform": { "data": { "x":-1800, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile7",
+      "omelet.transform": { "data": { "x":-1400, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile8",
+      "omelet.transform": { "data": { "x":-1000, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile9",
+      "omelet.transform": { "data": { "x":-600, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile10",
+      "omelet.transform": { "data": { "x":-200, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile11",
+      "omelet.transform": { "data": { "x":200, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile12",
+      "omelet.transform": { "data": { "x":600, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile13",
+      "omelet.transform": { "data": { "x":1000, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile14",
+      "omelet.transform": { "data": { "x":1400, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile15",
+      "omelet.transform": { "data": { "x":1800, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile16",
+      "omelet.transform": { "data": { "x":2200, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile17",
+      "omelet.transform": { "data": { "x":2600, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile18",
+      "omelet.transform": { "data": { "x":3000, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile19",
+      "omelet.transform": { "data": { "x":3400, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key":"tile20",
+      "omelet.transform": { "data": { "x":3800, "y": 0 } },
+      "omelet.shapes.rectangle": {
+        "data": {
+          "width":391, "height":86,
+          "fillColor":"#aaaaaa", "strokeColor":"#cccccc", "strokeWidth":2,
+          "layer":"back", "orderInLayer":0
+        }
+      },
+      "children": [
+        {
+          "duel.flicker":{},
+          "omelet.shapes.polygon":{
+            "data":{
+              "points":[[-100, -600], [100, -600], [600, 200], [-600, 200]],
+              "fillColor":"#222211",
+              "layer": "lights",
+              "orderInLayer":2,
+              "globalCompositeOperation":"lighter"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

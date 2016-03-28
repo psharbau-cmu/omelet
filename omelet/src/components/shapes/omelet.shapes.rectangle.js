@@ -1,5 +1,5 @@
 window.omelet.egg('omelet.shapes.rectangle', function(data, refs) {
-    this.fillStyle = data.fillColor;
+    this.fillColor = data.fillColor;
     this.strokeColor = data.strokeColor;
     this.strokeWidth = data.strokeWidth;
     this.width = data.width;
@@ -34,8 +34,8 @@ window.omelet.egg('omelet.shapes.rectangle', function(data, refs) {
         var context = lastSnap.getContext();
         if (this.globalCompositeOperation) context.globalCompositeOperation = this.globalCompositeOperation;
 
-        if (this.fillStyle) {
-            context.fillStyle = this.fillStyle;
+        if (this.fillColor) {
+            context.fillStyle = this.fillColor;
             context.fillRect(-1 * halfWidth, -1 * halfHeight, this.width, this.height);
         }
 

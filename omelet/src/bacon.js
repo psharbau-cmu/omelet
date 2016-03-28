@@ -160,6 +160,7 @@
                 // check size, update poly
                 width = canvasElement.width;
                 height = canvasElement.height;
+
                 screenPoly = [[0, 0], [width, 0], [width, height], [0, height]];
 
                 // update
@@ -171,17 +172,20 @@
                     sceneObj.update(deltaTime);
                 }
 
-                // set screen rect
-                wrapper.setRect([0, 0, width, height]);
-
                 // move to center
                 wrapper.save();
                 wrapper.translate(width / 2, height / 2);
 
                 // camera changes
+                wrapper.scale(camera.zoom, camera.zoom);
                 wrapper.translate(-1 * camera.x, -1 * camera.y);
                 if (camera.angle != 0) wrapper.rotate(-1 * camera.angle);
-                wrapper.scale(camera.zoom, camera.zoom);
+
+
+                // set screen rect
+                var realWidth = width / camera.zoom;
+                var realHeight = height / camera.zoom;
+                wrapper.setRect([realWidth / -2, realHeight / -2, realWidth, realHeight]);
 
                 // transform and preDraw steps
                 hierarchy.forEach(transformAndPreDraw);

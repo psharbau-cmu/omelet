@@ -77,13 +77,14 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
 
         var right = lastLeft + lastWidth;
         var bottom = lastTop + lastHeight;
-        lastPoly = [[lastLeft, lastTop], [right, lastTop], [right, bottom], [lastLeft, bottom]];
+        lastPoly = [snapShot.transformPoint(lastLeft, lastTop), snapShot.transformPoint(right, lastTop),
+            snapShot.transformPoint(right, bottom), snapShot.transformPoint(lastLeft, bottom)];
 
         return lastPoly;
     };
 
     this.draw = function() {
-        var context = lastSnap.getIdentityContext();
+        var context = lastSnap.getContext();
         var sprite = spriteSheet.sprites[this.spriteName];
         context.drawImage(spriteSheet.image, sprite.x, sprite.y, sprite.width, sprite.height, lastLeft, lastTop, lastWidth, lastHeight);
         if (this.hitTarget) return lastPoly;

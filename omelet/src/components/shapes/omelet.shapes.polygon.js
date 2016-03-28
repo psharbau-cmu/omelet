@@ -25,7 +25,6 @@ window.omelet.egg('omelet.shapes.polygon', function(data, refs) {
             lastPoly.push(snapShot.transformPoint(point[0], point[1]));
         });
 
-        if (this.globalCompositeOperation) context.globalCompositeOperation = 'source-over';
         return lastPoly;
     };
 
@@ -43,9 +42,6 @@ window.omelet.egg('omelet.shapes.polygon', function(data, refs) {
             position = this.points[i];
             context.lineTo(position[0], position[1]);
         }
-
-        position = this.points[0];
-        context.lineTo(position[0], position[1]);
         context.closePath();
 
 
@@ -60,6 +56,8 @@ window.omelet.egg('omelet.shapes.polygon', function(data, refs) {
             context.stroke();
         }
 
+        if (this.globalCompositeOperation) context.globalCompositeOperation = "source-over";
+
         return lastPoly;
     };
 
@@ -70,7 +68,10 @@ window.omelet.egg('omelet.shapes.polygon', function(data, refs) {
             points:[]
         };
 
-        if (points.length < 3) return cache;
+        if (points.length < 4) {
+            cache.points = points;
+            return cache;
+        }
 
         var leftPoint = [Number.MAX_VALUE];
         var rightPoint = [Number.MIN_VALUE];
@@ -147,9 +148,11 @@ window.omelet.egg('omelet.shapes.polygon', function(data, refs) {
     };
 
     var distanceToPoint = function(point, start, end) {
-        var width = start[0] - end[0];
-        var height = start[1] - end[1];
-        return Math.abs((height * point[0]) - (width * point[1]) + (end[0] * start[1]) - (end[1] * start[0])) / Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+        var width = end[0] - start[0];
+        var height = end[1] - start[1];
+        return Math.abs(
+                (height * point[0]) - (width * point[1]) + (end[0] * start[1]) - (end[1] * start[0])) /
+                Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
     }
 
 }).defaults({
@@ -159,7 +162,7 @@ window.omelet.egg('omelet.shapes.polygon', function(data, refs) {
     strokeWidth:1,
     layer:'default',
     orderInLayer:0,
-    globalCompositionOperation:null
+    globalCompositeOperation:null
 }).describe({
     points:{
         type:'array',
@@ -176,7 +179,7 @@ window.omelet.egg('omelet.shapes.polygon', function(data, refs) {
     fillColor:{type:'string'},
     strokeColor:{type:'string'},
     strokeWidth:{type:'number'},
-    globalCompositionOperation:{enum:['source-over', 'source-atop', 'source-in', 'source-out', 'destination-over', 'destination-atop', 'destination-in', 'destination-out', 'lighter', 'copy', 'xor']},
+    globalCompositeOperation:{enum:['source-over', 'source-atop', 'source-in', 'source-out', 'destination-over', 'destination-atop', 'destination-in', 'destination-out', 'lighter', 'copy', 'xor']},
     layer:{type:'string'},
     orderInLayer:{type:'integer'}
 });

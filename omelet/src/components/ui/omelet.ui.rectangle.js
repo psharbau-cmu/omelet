@@ -25,7 +25,12 @@ window.omelet.egg('omelet.ui.rectangle', function(data, refs) {
         lastH = rect[3]; // height
         lastR = lastL + lastW; // right
         lastB = lastT + lastH; // bottom
-        lastPoly = [[lastL, lastT], [lastR, lastT], [lastR, lastB], [lastL, lastB]];
+
+        lastPoly = [];
+        lastPoly.push(snapShot.transformPoint(lastL, lastT));
+        lastPoly.push(snapShot.transformPoint(lastR, lastT));
+        lastPoly.push(snapShot.transformPoint(lastR, lastB));
+        lastPoly.push(snapShot.transformPoint(lastL, lastB));
         return lastPoly;
     };
 
@@ -34,7 +39,7 @@ window.omelet.egg('omelet.ui.rectangle', function(data, refs) {
 
         if (!shadowDraw && this.shadowDistance != 0) this.draw(true);
 
-        var context = lastSnap.getIdentityContext();
+        var context = lastSnap.getContext();
         if (shadowDraw) context.translate(this.shadowDistance, this.shadowDistance);
 
         if (shadowDraw) {

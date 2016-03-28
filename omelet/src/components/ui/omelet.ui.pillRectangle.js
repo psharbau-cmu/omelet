@@ -40,10 +40,10 @@ window.omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
 
         lastPoly = [];
         for (var a = Math.PI / 2; a >= Math.PI / -2; a -= Math.PI / 5) {
-            lastPoly.push([lastR + (lastRadius * Math.cos(a)), centerY - (lastRadius * Math.sin(a))]);
+            lastPoly.push(snapShot.transformPoint(lastR + (lastRadius * Math.cos(a)), centerY - (lastRadius * Math.sin(a))));
         }
         for (var a = Math.PI / -2; a >= -3 * Math.PI / 2; a -= Math.PI / 5) {
-            lastPoly.push([lastL + (lastRadius * Math.cos(a)), centerY - (lastRadius * Math.sin(a))]);
+            lastPoly.push(snapShot.transformPoint(lastL + (lastRadius * Math.cos(a)), centerY - (lastRadius * Math.sin(a))));
         }
 
         return lastPoly;
@@ -54,7 +54,7 @@ window.omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
 
         if (!shadowDraw && this.shadowDistance != 0) this.draw(true);
 
-        var context = lastSnap.getIdentityContext();
+        var context = lastSnap.getContext();
         if (shadowDraw) context.translate(this.shadowDistance, this.shadowDistance);
 
         context.beginPath();

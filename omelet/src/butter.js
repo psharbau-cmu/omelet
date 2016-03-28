@@ -289,6 +289,24 @@
         }
     };
 
+    OmeletEntity.prototype.getChildByName = function(name, component) {
+        if (!name || !this.hasChildren) return;
+
+        var returnThing = null;
+
+        var searchForEntity = function(entity) {
+            if (returnThing) return;
+
+            if (entity.name == name) returnThing = entity;
+            else if (entity.hasChildren) entity.children.forEach(searchForEntity);
+        };
+
+        this.children.forEach(searchForEntity);
+
+        if (returnThing && component) return returnThing[component];
+        else return returnThing;
+    };
+
     window.omelet.salt(null, function(state) {
         state.realize = function(toBeRealized, scene) {
             if (!toBeRealized) {

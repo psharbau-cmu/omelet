@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JsonSchemaMappingsProjectConfiguration">
+    <state>
+      <map>
+        <entry key="omelet">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="omelet" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="CharacterDevelopment\background.json" />
+                  </Item>
+                  <Item>
+                    <option name="path" value="CharacterDevelopment\gal2.json" />
+                  </Item>
+                </list>
+              </option>
+              <option name="relativePathToSchema" value="CharacterDevelopment\omelet.json" />
+            </SchemaInfo>
+          </value>
+        </entry>
+      </map>
+    </state>
+  </component>
+</project>

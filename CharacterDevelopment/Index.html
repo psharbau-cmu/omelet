@@ -9,6 +9,7 @@
         canvas { display:block; }
     </style>
     <script type="text/javascript" src="..\\omelet\\out\\omelet.min.js"></script>
+    <script type="text/javascript" src="duel.flicker.js"></script>
     <script type="text/javascript">
         var loadString = function(path, callback)
         {
@@ -33,15 +34,20 @@
         var scene = omelet.createEmptyScene();
         scene.setLayers({
             "back":0,
-            "character":1
+            "character":1,
+            "lights":2
         });
+
+        scene.camera.x = -200;
+        scene.camera.y = -250;
+        //scene.camera.zoom = 0.2;
 
         loadString('./background.json', function(err, data) {
             if (err) {
                 console.log(err);
             } else {
                 scene.addData(data);
-                loadString('./gal1.json', function(err, data) {
+                loadString('./gal2.json', function(err, data) {
                     if (err) console.log(err);
                     else scene.addData(data);
                 });

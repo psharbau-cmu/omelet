@@ -37,7 +37,7 @@ window.omelet.egg('omelet.ui.circle', function(data, refs) {
 
         lastPoly = [];
         for (var a = 0; a < 2 * Math.PI; a += Math.PI / 5) {
-            lastPoly.push([centerX + (lastRadius * Math.cos(a)), centerY + (lastRadius * Math.sin(a))]);
+            lastPoly.push(snapShot.transformPoint(centerX + (lastRadius * Math.cos(a)), centerY + (lastRadius * Math.sin(a))));
         }
 
         return lastPoly;
@@ -48,7 +48,7 @@ window.omelet.egg('omelet.ui.circle', function(data, refs) {
 
         if (!shadowDraw && this.shadowDistance != 0) this.draw(true);
 
-        var context = lastSnap.getIdentityContext();
+        var context = lastSnap.getContext();
 
         var x = shadowDraw ? centerX + this.shadowDistance : centerX;
         var y = shadowDraw ? centerY + this.shadowDistance : centerY;

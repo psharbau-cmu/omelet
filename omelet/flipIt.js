@@ -17,7 +17,8 @@ var directories = [             // ...and also all this other stuff you might wa
     '.\\src\\components\\',
     '.\\src\\components\\ui\\',
     '.\\src\\components\\shapes\\',
-    '.\\src\\components\\sprites\\'];
+    '.\\src\\components\\sprites\\',
+    '.\\src\\components\\puppet\\'];
 var editorDirectories = [
     '.\\src\\editor\\'
 ];

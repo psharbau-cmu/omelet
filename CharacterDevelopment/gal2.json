@@ -1,0 +1,79 @@
+{
+  "hierarchy":[
+    {
+      "omelet.puppet.poses": {
+        "data": {
+          "defaultPose": "default",
+          "poses": {
+            "default":{
+              "body":{"x":0, "y": -200},
+              "head":{"x":0, "y":-130},
+              "rightUpperArm":{"angle":-0.1},
+              "rightLowerArm":{"angle":-0.1}
+            },
+            "anti-default": {
+              "body":{"y":-195},
+              "head":{"y":-132},
+              "rightUpperArm":{"angle":0.1},
+              "rightLowerArm":{"angle":0.1}
+            }
+          }
+        }
+      },
+      "omelet.transform": { "data": { "x": -200, "y":0 } },
+      "children": [
+        {
+          "name": "body", "omelet.transform": {},
+          "omelet.shapes.polygon": {
+            "data": {
+              "points": [[-50, 20], [-40, -100], [40, -100], [40, 20]],
+              "fillColor": "#664466", "layer": "character", "orderInLayer":1
+            }
+          },
+          "children": [
+            {
+              "name": "head", "omelet.transform":{},
+              "omelet.shapes.circle": {
+                "data": {
+                  "radius":40, "fillColor": "#884444",
+                  "layer": "character", "orderInLayer":2
+                }
+              },
+              "children": [
+                {
+                  "omelet.transform":{"data":{"x": 40, "y":0}},
+                  "omelet.shapes.polygon": {
+                    "data": {
+                      "points":[[10, 5], [-5, 4], [-5, -15]],
+                      "fillColor": "#884444",
+                      "layer": "character", "orderInLayer":3
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "rightUpperArm", "omelet.transform": {"data":{"x":0, "y":-70}},
+              "omelet.shapes.polygon":{
+                "data": {
+                  "points":[[-20, -10], [10, -10], [8, 50], [-10, 60]],
+                  "fillColor": "#aa99aa", "layer": "character", "orderInLayer":2
+                }
+              },
+              "children": [
+                {
+                  "name": "rightLowerArm", "omelet.transform":{"data":{"x":-1, "y":55}},
+                  "omelet.shapes.polygon":{
+                    "data": {
+                      "points":[[-6, -4], [6, -4], [3, 40], [-3, 40]],
+                      "fillColor": "#aa99aa", "layer": "character", "orderInLayer":3
+                    }
+                  }
+                }]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -35,7 +35,7 @@
             var right = left + width;
             var bottom = top + height;
 
-            return [[left, top], [right, top], [right, bottom], [left, bottom]];
+            return [snapShot.transformPoint(left, top), snapShot.transformPoint(right, top), snapShot.transformPoint(right, bottom), snapShot.transformPoint(left, bottom)];
         };
 
         this.draw = function () {
@@ -67,7 +67,7 @@
             }
 
 
-            var context = lastSnap.getIdentityContext();
+            var context = lastSnap.getContext();
             context.drawImage(workImage, left, top);
         };
 

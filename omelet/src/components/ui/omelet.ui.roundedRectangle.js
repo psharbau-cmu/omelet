@@ -25,7 +25,10 @@ window.omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
         lastH = rect[3]; // height
         lastR = lastL + lastW; // right
         lastB = lastT + lastH; // bottom
-        lastPoly = [[lastL, lastT], [lastR, lastT], [lastR, lastB], [lastL, lastB]];
+        lastPoly = [snapShot.transformPoint(lastL, lastT),
+            snapShot.transformPoint(lastR, lastT),
+            snapShot.transformPoint(lastR, lastB),
+            snapShot.transformPoint(lastL, lastB)];
         return lastPoly;
     };
 
@@ -38,7 +41,7 @@ window.omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
         if (radius > .5 * lastW) radius = .5 * lastW;
         if (radius > .5 * lastH) radius = .5 * lastH;
 
-        var context = lastSnap.getIdentityContext();
+        var context = lastSnap.getContext();
         if (shadowDraw) context.translate(this.shadowDistance, this.shadowDistance);
 
         context.beginPath();
