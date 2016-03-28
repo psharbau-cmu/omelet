@@ -1,5 +1,5 @@
 window.omelet.egg('omelet.puppet.poses', function(data, refs) {
-    var poses = null;
+    this.poses = data.poses;
     var parts = {};
     var children = null;
 
@@ -7,13 +7,12 @@ window.omelet.egg('omelet.puppet.poses', function(data, refs) {
 
     this.ready = function(scene, entity) {
         children = entity;
-        poses = data.poses;
         if (data.defaultPose) this.setPose(data.defaultPose);
     };
 
     this.setPose = function(poseName) {
         transition = null;
-        var pose = poses[poseName];
+        var pose = this.poses[poseName];
         if (!pose) {
             console.warn("No data for a pose named: " + poseName);
         }
@@ -40,7 +39,7 @@ window.omelet.egg('omelet.puppet.poses', function(data, refs) {
 
     this.transition = function(poseName, duration, ease, easeExp) {
         if (!poseName) return;
-        var pose = poses[poseName];
+        var pose = this.poses[poseName];
         if (!pose) return;
 
         var transitions = [];

@@ -6,32 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df50e6ed-e5cd-44f2-85d9-d9c17f47b78b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CharacterDevelopment/Tiles.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsonSchemas.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CharacterDevelopment/buildSchema.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CharacterDevelopment/duel.flicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CharacterDevelopment/gal2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CharacterDevelopment/omelet.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/omelet/src/components/puppet/omelet.puppet.poses.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.circle.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterDevelopment/guy1.json" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CharacterDevelopment/PoseBuilder.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CharacterDevelopment/Index.html" afterPath="$PROJECT_DIR$/CharacterDevelopment/Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CharacterDevelopment/background.json" afterPath="$PROJECT_DIR$/CharacterDevelopment/background.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CharacterDevelopment/gal1.json" afterPath="$PROJECT_DIR$/CharacterDevelopment/gal1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/flipIt.js" afterPath="$PROJECT_DIR$/omelet/flipIt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CharacterDevelopment/gal2.json" afterPath="$PROJECT_DIR$/CharacterDevelopment/gal2.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/out/omelet.min.js" afterPath="$PROJECT_DIR$/omelet/out/omelet.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/out/omelet.min.js.map" afterPath="$PROJECT_DIR$/omelet/out/omelet.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/bacon.js" afterPath="$PROJECT_DIR$/omelet/src/bacon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/butter.js" afterPath="$PROJECT_DIR$/omelet/src/butter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.polygon.js" afterPath="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.polygon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.rectangle.js" afterPath="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.rectangle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.circle.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.circle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.pillRectangle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.rectangle.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.rectangle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.roundedRectangle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.spriteRenderer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js" afterPath="$PROJECT_DIR$/omelet/src/components/ui/omelet.ui.textRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/omelet/src/components/puppet/omelet.puppet.poses.js" afterPath="$PROJECT_DIR$/omelet/src/components/puppet/omelet.puppet.poses.js" />
     </list>
     <ignored path="Transforms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,31 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="omelet.shapes.polygon.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.polygon.js">
+      <file leaf-file-name="PoseBuilder.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CharacterDevelopment/PoseBuilder.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+            <state relative-caret-position="521">
+              <caret line="117" column="10" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CharacterDevelopment/Index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gal2.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gal2.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CharacterDevelopment/gal2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+            <state relative-caret-position="455">
+              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -87,9 +57,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Egg" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -99,7 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TestThings/TestThing2.js" />
         <option value="$PROJECT_DIR$/TestThings/TestThingThree.js" />
         <option value="$PROJECT_DIR$/TestThings/TestThing1.js" />
         <option value="$PROJECT_DIR$/TestThings/CanvasPage.html" />
@@ -147,9 +116,10 @@
         <option value="$PROJECT_DIR$/omelet/src/butter.js" />
         <option value="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.circle.js" />
         <option value="$PROJECT_DIR$/CharacterDevelopment/Index.html" />
-        <option value="$PROJECT_DIR$/omelet/src/components/puppet/omelet.puppet.poses.js" />
         <option value="$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.polygon.js" />
+        <option value="$PROJECT_DIR$/omelet/src/components/puppet/omelet.puppet.poses.js" />
         <option value="$PROJECT_DIR$/CharacterDevelopment/gal2.json" />
+        <option value="$PROJECT_DIR$/CharacterDevelopment/PoseBuilder.html" />
       </list>
     </option>
   </component>
@@ -267,120 +237,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="omelet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omelet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omelet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omelet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shapes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="omelet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="CharacterDevelopment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -402,19 +258,19 @@
     <property name="nodejs_interpreter_path" value="C:\Program Files\nodejs\node" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\omelet\src\components\shapes" />
-      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\CharacterDevelopment" />
-      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\omelet\src\components\ui" />
-      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\TestEverything" />
-      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\TestThings" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\omelet\src\editor" />
       <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\Old" />
       <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\Duel" />
       <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\Dafen2d\TestGame" />
       <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\DragonGame" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\omelet\src\components\shapes" />
+      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\CharacterDevelopment" />
+      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\omelet\src\components\ui" />
+      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\TestEverything" />
+      <recent name="C:\Users\psharbaugh\WebstormProjects\Transforms\TestThings" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.flipIt.js">
@@ -558,12 +414,12 @@
       <workItem from="1459177133094" duration="586000" />
       <workItem from="1459177727696" duration="1404000" />
       <workItem from="1459185331270" duration="111000" />
-      <workItem from="1459187554294" duration="1861000" />
+      <workItem from="1459187554294" duration="5438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41834000" />
+    <option name="totallyTimeSpent" value="45411000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -626,13 +482,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/omelet/flipIt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestEverything/Index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -945,32 +794,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CharacterDevelopment/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omelet/src/components/puppet/omelet.puppet.poses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2530">
-          <caret line="115" column="45" selection-start-line="115" selection-start-column="45" selection-end-line="115" selection-end-column="45" />
+        <state relative-caret-position="-484">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/omelet/src/components/shapes/omelet.shapes.polygon.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
+        <state relative-caret-position="-308">
           <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omelet/src/components/puppet/omelet.puppet.poses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CharacterDevelopment/gal2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+        <state relative-caret-position="455">
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CharacterDevelopment/PoseBuilder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="117" column="10" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
           <folding />
         </state>
       </provider>

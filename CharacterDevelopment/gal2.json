@@ -6,21 +6,37 @@
           "defaultPose": "default",
           "poses": {
             "default":{
-              "body":{"x":0, "y": -200},
-              "head":{"x":0, "y":-130},
+              "body":{"x":0, "y": -200, "angle":0},
+              "head":{"x":0, "y":-130, "angle":0},
               "rightUpperArm":{"angle":-0.1},
-              "rightLowerArm":{"angle":-0.1}
+              "rightLowerArm":{"angle":-0.1},
+              "rightHand":{"angle":-0.1}
             },
             "anti-default": {
-              "body":{"y":-195},
-              "head":{"y":-132},
+              "body":{"x":0,"y":-195, "angle":0},
+              "head":{"x":0, "y":-132, "angle":0},
               "rightUpperArm":{"angle":0.1},
-              "rightLowerArm":{"angle":0.1}
+              "rightLowerArm":{"angle":0.1},
+              "rightHand":{"angle":0.1}
+            },
+            "shoot": {
+              "body":{"x":0, "y": -210, "angle":0.3},
+              "head":{"x":-10, "y":-130, "angle":-0.25},
+              "rightUpperArm":{"angle":-1.3},
+              "rightLowerArm":{"angle":-0.9},
+              "rightHand":{"angle":0.7}
+            },
+            "shoot-recoil": {
+              "body":{"x":0, "y": -205, "angle":0.2},
+              "head":{"x":-6, "y":-130, "angle":-0.1},
+              "rightUpperArm":{"angle":-1.1},
+              "rightLowerArm":{"angle":-1.1},
+              "rightHand":{"angle":0.2}
             }
           }
         }
       },
-      "omelet.transform": { "data": { "x": -200, "y":0 } },
+      "omelet.transform": { "data": { "x": 0, "y":0 } },
       "children": [
         {
           "name": "body", "omelet.transform": {},
@@ -68,8 +84,20 @@
                       "points":[[-6, -4], [6, -4], [3, 40], [-3, 40]],
                       "fillColor": "#aa99aa", "layer": "character", "orderInLayer":3
                     }
-                  }
-                }]
+                  },
+                  "children": [
+                    {
+                      "name":"rightHand", "omelet.transform":{"data":{"x": 0, "y": 38}},
+                      "omelet.shapes.polygon":{
+                        "data": {
+                          "points":[[-3, 0], [3, 0], [8, 15], [-8, 15]],
+                          "fillColor": "#aa99aa", "layer": "character", "orderInLayer":5
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
