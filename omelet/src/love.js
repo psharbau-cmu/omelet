@@ -130,7 +130,7 @@
         };
 
         var removeFromList = function(listOfEntities, entity) {
-            for (var i = 0; i < list.length; i++) {
+            for (var i = 0; i < listOfEntities.length; i++) {
                 if (listOfEntities[i] === entity) {
                     listOfEntities.splice(i, 1);
                     return true;
