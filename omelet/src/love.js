@@ -7,7 +7,8 @@
             x:0,
             y:0,
             angle:0,
-            zoom:1
+            zoom:1,
+            rotate90:false
         };
         this.assets = {};
         this.layers = {};

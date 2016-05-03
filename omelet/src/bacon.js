@@ -179,13 +179,14 @@
                 // camera changes
                 wrapper.scale(camera.zoom, camera.zoom);
                 wrapper.translate(-1 * camera.x, -1 * camera.y);
+                if (camera.rotate90) wrapper.rotate(Math.PI / 2);
                 if (camera.angle != 0) wrapper.rotate(-1 * camera.angle);
-
 
                 // set screen rect
                 var realWidth = width / camera.zoom;
                 var realHeight = height / camera.zoom;
-                wrapper.setRect([realWidth / -2, realHeight / -2, realWidth, realHeight]);
+                if (camera.rotate90) wrapper.setRect([realHeight / -2, realWidth / -2, realHeight, realWidth]);
+                else wrapper.setRect([realWidth / -2, realHeight / -2, realWidth, realHeight]);
 
                 // transform and preDraw steps
                 hierarchy.forEach(transformAndPreDraw);
