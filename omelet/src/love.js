@@ -130,6 +130,23 @@
             });
         };
 
+        this.findEntityForKey = function(key) {
+            if (this.assets.hasOwnProperty(key)) return this.assets[key];
+            if (this.the.hasOwnProperty(key)) return this.the[key];
+            var searchListForKey = function(listOfEntities) {
+                for (var i = 0; i < listOfEntities.length; i++) {
+                    var thisEntity = listOfEntities[i];
+                    if (thisEntity.key === key) return thisEntity;
+                    if (thisEntity.hasChildren) {
+                        var found = searchListForKey(thisEntity.children);
+                        if (found) return found;
+                    }
+                }
+            };
+
+            return searchListForKey(this.hierarchy);
+        };
+
         var removeFromList = function(listOfEntities, entity) {
             for (var i = 0; i < listOfEntities.length; i++) {
                 if (listOfEntities[i] === entity) {
