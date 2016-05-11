@@ -1,12 +1,15 @@
 window.omelet.egg('omelet.transform', function(data, refs) {
     this.x = data.x;
     this.y = data.y;
+    this.xScale = data.xScale;
+    this.yScale = data.yScale;
     this.angle = data.angle;
 
     var snapShot = null;
 
     this.transform = function(wrapper) {
         wrapper.translate(this.x, this.y);
+        wrapper.scale(this.xScale, this.yScale);
         wrapper.rotate(this.angle);
         snapShot = wrapper.getSnapshot();
         return snapShot;
@@ -22,13 +25,16 @@ window.omelet.egg('omelet.transform', function(data, refs) {
         this.x = point[0];
         this.y = point[1];
     };
-
 }).defaults({
     x:0,
     y:0,
-    angle:0
+    angle:0,
+    xScale:1,
+    yScale:1
 }).describe({
     x:{type:'number'},
     y:{type:'number'},
-    angle:{type:'number'}
+    angle:{type:'number'},
+    xScale:{type:'number'},
+    yScale:{type:'number'}
 });
