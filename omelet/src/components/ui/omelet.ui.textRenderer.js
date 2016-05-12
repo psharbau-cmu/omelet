@@ -32,6 +32,7 @@
             top = rect[1];
             width = rect[2];
             height = rect[3];
+            if (width <= 0 || height <= 0 || this.text == "") return;
             var right = left + width;
             var bottom = top + height;
 
