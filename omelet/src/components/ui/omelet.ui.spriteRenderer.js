@@ -3,6 +3,7 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
     this.maintainAspect = data.maintainAspect;
     this.alignment = data.alignment;
     this.hitTarget = data.hitTarget;
+    this.globalCompositeOperation = data.globalCompositeOperation;
 
     var lastLeft, lastTop, lastWidth, lastHeight;
     var lastSnap, lastPoly, spriteSheet;
@@ -85,9 +86,13 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
 
     this.draw = function() {
         var context = lastSnap.getContext();
+        if (this.globalCompositionOperation) context.globalCompositeOperation = this.globalCompositeOperation;
+
         var sprite = spriteSheet.sprites[this.spriteName];
         context.drawImage(spriteSheet.image, sprite.x, sprite.y, sprite.width, sprite.height, lastLeft, lastTop, lastWidth, lastHeight);
         if (this.hitTarget) return lastPoly;
+
+        if (this.globalCompositionOperation) context.globalCompositeOperation = 'source-over';
     };
 }).defaults({
     spriteName:'Default',
@@ -95,7 +100,8 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
     alignment:'center',
     hitTarget:false,
     layer:'default',
-    orderInLayer:0
+    orderInLayer:0,
+    globalCompositionOperation:null
 }).references({
     spriteSheet:'omelet.sprites.spriteSheet'
 }).describe({
@@ -104,5 +110,6 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
     alignment:{enum:['top-left', 'top', 'top-right', 'left', 'center', 'right', 'bottom-left', 'bottom', 'bottom-right']},
     layer:{type:'string'},
     orderInLayer:{type:'integer'},
-    hitTarget:{type:'boolean'}
+    hitTarget:{type:'boolean'},
+    globalCompositionOperation:{type:'string'}
 });

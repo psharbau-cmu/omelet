@@ -5,6 +5,7 @@ window.omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
     this.hitTarget = data.hitTarget;
     this.shadowDistance = data.shadowDistance;
     this.shadowColor = data.shadowColor;
+    this.globalCompositeOperation = data.globalCompositeOperation;
 
     var lastSnap = null;
     var lastPoly = null;
@@ -55,6 +56,7 @@ window.omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
         if (!shadowDraw && this.shadowDistance != 0) this.draw(true);
 
         var context = lastSnap.getContext();
+        if (this.globalCompositionOperation) context.globalCompositeOperation = this.globalCompositeOperation;
         if (shadowDraw) context.translate(this.shadowDistance, this.shadowDistance);
 
         context.beginPath();
@@ -103,6 +105,7 @@ window.omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
             context.stroke();
         }
 
+        if (this.globalCompositionOperation) context.globalCompositeOperation = 'source-over';
         if (this.hitTarget) return lastPoly;
     };
 }).defaults({
@@ -113,7 +116,8 @@ window.omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
     orderInLayer:0,
     hitTarget:false,
     shadowDistance:0,
-    shadowColor:"rgba(0, 0, 0, .3)"
+    shadowColor:"rgba(0, 0, 0, .3)",
+    globalCompositionOperation:null
 }).describe({
     fillStyle:{
         oneOf:[
@@ -128,5 +132,6 @@ window.omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
     orderInLayer:{type:'integer'},
     shadowDistance:{type:'number'},
     shadowColor:{type:'string'},
-    hitTarget:{type:'boolean'}
+    hitTarget:{type:'boolean'},
+    globalCompositionOperation:{type:'string'}
 });

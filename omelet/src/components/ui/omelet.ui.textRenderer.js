@@ -11,6 +11,7 @@
         this.align = data.align;
         this.verticalAlign = data.verticalAlign;
         this.wrapText = data.wrapText;
+        this.globalCompositeOperation = data.globalCompositeOperation;
 
         var lastSnap = null;
         var left = 0;
@@ -69,7 +70,9 @@
 
 
             var context = lastSnap.getContext();
+            if (this.globalCompositionOperation) context.globalCompositeOperation = this.globalCompositeOperation;
             context.drawImage(workImage, left, top);
+            if (this.globalCompositionOperation) context.globalCompositeOperation = 'source-over';
         };
 
 
@@ -145,7 +148,8 @@
         verticalAlign: 'center',
         layer: 'default',
         orderInLayer: 0,
-        wrapText: true
+        wrapText: true,
+        globalCompositionOperation:null
     }).describe({
         text:{type:'string'},
         color: {type:'string'},
@@ -155,6 +159,7 @@
         verticalAlign:{ enum:[ 'top', 'center', 'bottom']},
         wrapText:{type:'boolean'},
         layer:{type:'string'},
-        orderInLayer:{type:'integer'}
+        orderInLayer:{type:'integer'},
+        globalCompositionOperation:{type:'string'}
     });
 })();
