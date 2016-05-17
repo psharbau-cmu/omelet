@@ -50,7 +50,7 @@ window.omelet.egg('omelet.ui.circle', function(data, refs) {
         if (!shadowDraw && this.shadowDistance != 0) this.draw(true);
 
         var context = lastSnap.getContext();
-        if (this.globalCompositionOperation) context.globalCompositeOperation = this.globalCompositeOperation;
+        if (this.globalCompositeOperation) context.globalCompositeOperation = this.globalCompositeOperation;
 
         var x = shadowDraw ? centerX + this.shadowDistance : centerX;
         var y = shadowDraw ? centerY + this.shadowDistance : centerY;
@@ -71,7 +71,7 @@ window.omelet.egg('omelet.ui.circle', function(data, refs) {
             context.stroke();
         }
 
-        if (this.globalCompositionOperation) context.globalCompositeOperation = 'source-over';
+        if (this.globalCompositeOperation) context.globalCompositeOperation = 'source-over';
         if (this.hitTarget) return lastPoly;
     };
 }).defaults({

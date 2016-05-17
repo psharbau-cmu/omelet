@@ -86,13 +86,13 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
 
     this.draw = function() {
         var context = lastSnap.getContext();
-        if (this.globalCompositionOperation) context.globalCompositeOperation = this.globalCompositeOperation;
+        if (this.globalCompositeOperation) context.globalCompositeOperation = this.globalCompositeOperation;
 
         var sprite = spriteSheet.sprites[this.spriteName];
         context.drawImage(spriteSheet.image, sprite.x, sprite.y, sprite.width, sprite.height, lastLeft, lastTop, lastWidth, lastHeight);
         if (this.hitTarget) return lastPoly;
 
-        if (this.globalCompositionOperation) context.globalCompositeOperation = 'source-over';
+        if (this.globalCompositeOperation) context.globalCompositeOperation = 'source-over';
     };
 }).defaults({
     spriteName:'Default',

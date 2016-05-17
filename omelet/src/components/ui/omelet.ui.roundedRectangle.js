@@ -43,7 +43,7 @@ window.omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
         if (radius > .5 * lastH) radius = .5 * lastH;
 
         var context = lastSnap.getContext();
-        if (this.globalCompositionOperation) context.globalCompositeOperation = this.globalCompositeOperation;
+        if (this.globalCompositeOperation) context.globalCompositeOperation = this.globalCompositeOperation;
         if (shadowDraw) context.translate(this.shadowDistance, this.shadowDistance);
 
         context.beginPath();
@@ -94,7 +94,7 @@ window.omelet.egg('omelet.ui.roundedRectangle', function(data, refs) {
             context.stroke();
         }
 
-        if (this.globalCompositionOperation) context.globalCompositeOperation = 'source-over';
+        if (this.globalCompositeOperation) context.globalCompositeOperation = 'source-over';
         if (this.hitTarget) return lastPoly;
     };
 

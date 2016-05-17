@@ -56,7 +56,7 @@ window.omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
         if (!shadowDraw && this.shadowDistance != 0) this.draw(true);
 
         var context = lastSnap.getContext();
-        if (this.globalCompositionOperation) context.globalCompositeOperation = this.globalCompositeOperation;
+        if (this.globalCompositeOperation) context.globalCompositeOperation = this.globalCompositeOperation;
         if (shadowDraw) context.translate(this.shadowDistance, this.shadowDistance);
 
         context.beginPath();
@@ -105,7 +105,7 @@ window.omelet.egg('omelet.ui.pillRectangle', function(data, refs) {
             context.stroke();
         }
 
-        if (this.globalCompositionOperation) context.globalCompositeOperation = 'source-over';
+        if (this.globalCompositeOperation) context.globalCompositeOperation = 'source-over';
         if (this.hitTarget) return lastPoly;
     };
 }).defaults({

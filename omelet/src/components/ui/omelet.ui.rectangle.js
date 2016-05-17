@@ -41,7 +41,7 @@ window.omelet.egg('omelet.ui.rectangle', function(data, refs) {
         if (!shadowDraw && this.shadowDistance != 0) this.draw(true);
 
         var context = lastSnap.getContext();
-        if (this.globalCompositionOperation) context.globalCompositeOperation = this.globalCompositeOperation;
+        if (this.globalCompositeOperation) context.globalCompositeOperation = this.globalCompositeOperation;
         if (shadowDraw) context.translate(this.shadowDistance, this.shadowDistance);
 
         if (shadowDraw) {
@@ -80,7 +80,7 @@ window.omelet.egg('omelet.ui.rectangle', function(data, refs) {
             context.strokeRect(lastL, lastT, lastW, lastH);
         }
 
-        if (this.globalCompositionOperation) context.globalCompositeOperation = 'source-over';
+        if (this.globalCompositeOperation) context.globalCompositeOperation = 'source-over';
         if (this.hitTarget) return lastPoly;
     };
 

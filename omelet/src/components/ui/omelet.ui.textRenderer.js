@@ -70,9 +70,9 @@
 
 
             var context = lastSnap.getContext();
-            if (this.globalCompositionOperation) context.globalCompositeOperation = this.globalCompositeOperation;
+            if (this.globalCompositeOperation) context.globalCompositeOperation = this.globalCompositeOperation;
             context.drawImage(workImage, left, top);
-            if (this.globalCompositionOperation) context.globalCompositeOperation = 'source-over';
+            if (this.globalCompositeOperation) context.globalCompositeOperation = 'source-over';
         };
 
 
