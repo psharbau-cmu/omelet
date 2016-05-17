@@ -93,7 +93,7 @@ window.omelet.egg('omelet.ui.rectangle', function(data, refs) {
     hitTarget:false,
     shadowDistance:0,
     shadowColor:"rgba(0, 0, 0, .3)",
-    globalCompositionOperation:null
+    globalCompositeOperation:null
 }).describe({
     fillStyle:{
         oneOf:[
@@ -109,5 +109,5 @@ window.omelet.egg('omelet.ui.rectangle', function(data, refs) {
     shadowDistance:{type:'number'},
     shadowColor:{type:'string'},
     hitTarget:{type:'boolean'},
-    globalCompositionOperation:{type:'string'}
+    globalCompositeOperation:{type:'string'}
 });

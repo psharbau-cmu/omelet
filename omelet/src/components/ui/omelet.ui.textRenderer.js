@@ -149,7 +149,7 @@
         layer: 'default',
         orderInLayer: 0,
         wrapText: true,
-        globalCompositionOperation:null
+        globalCompositeOperation:null
     }).describe({
         text:{type:'string'},
         color: {type:'string'},
@@ -160,6 +160,6 @@
         wrapText:{type:'boolean'},
         layer:{type:'string'},
         orderInLayer:{type:'integer'},
-        globalCompositionOperation:{type:'string'}
+        globalCompositeOperation:{type:'string'}
     });
 })();

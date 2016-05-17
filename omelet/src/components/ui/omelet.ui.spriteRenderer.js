@@ -101,7 +101,7 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
     hitTarget:false,
     layer:'default',
     orderInLayer:0,
-    globalCompositionOperation:null
+    globalCompositeOperation:null
 }).references({
     spriteSheet:'omelet.sprites.spriteSheet'
 }).describe({
@@ -111,5 +111,5 @@ window.omelet.egg('omelet.ui.spriteRenderer', function(data, refs) {
     layer:{type:'string'},
     orderInLayer:{type:'integer'},
     hitTarget:{type:'boolean'},
-    globalCompositionOperation:{type:'string'}
+    globalCompositeOperation:{type:'string'}
 });
