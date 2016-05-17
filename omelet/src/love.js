@@ -48,6 +48,7 @@
 
             var scene = this;
             if (initialized) realized.forEach(function(entity) {
+                callPreReady(entity, scene);
                 callReady(entity, scene);
             });
         };
@@ -65,6 +66,7 @@
             });
 
             if (initialized) realized.forEach(function(entity) {
+                callPreReady(entity, scene);
                 callReady(entity, scene);
             });
         };
@@ -76,6 +78,7 @@
             });
 
             if (initialized) realized.forEach(function(entity) {
+                callPreReady(entity, scene);
                 callReady(entity, scene);
             });
         };
@@ -102,13 +105,16 @@
             if (initialized) return;
             initialized = true;
             for (var p in this.assets) {
+                callPreReady(this.assets[p], scene);
                 callReady(this.assets[p], this);
             }
             for (var p in this.the) {
+                callPreReady(this.the[p], scene);
                 callReady(this.the[p], this);
             }
             var scene = this;
             this.hierarchy.forEach(function(entity) {
+                callPreReady(entity, scene);
                 callReady(entity, scene);
             });
         };
@@ -173,7 +179,7 @@
             });
         };
 
-        var callReady = function(entity, scene) {
+        var callPreReady = function(entity, scene) {
             entity.components.forEach(function(componentKey) {
                 var component = entity[componentKey];
 
@@ -189,8 +195,17 @@
                     }
 
                     entity[componentKey] = instance;
-                    component = instance;
                 }
+            });
+
+            if (entity.hasChildren) entity.children.forEach(function(child) {
+                callPreReady(child, scene);
+            });
+        };
+
+        var callReady = function(entity, scene) {
+            entity.components.forEach(function(componentKey) {
+                var component = entity[componentKey];
 
                 if (component.ready && component.ready.constructor === Function) {
                     component.ready(scene, entity);
