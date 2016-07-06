@@ -100,7 +100,7 @@
                 var line = '';
                 var wordPosition = 0;
                 while (wordPosition < words.length) {
-                    var testLine = line + ' ' + words[wordPosition];
+                    var testLine = wordPosition === 0 ? words[0] : line + ' ' + words[wordPosition];
                     var measuredLength = workContext.measureText(testLine);
                     if (measuredLength.width > textWidth) {
                         if (line != '') lines.push(line);

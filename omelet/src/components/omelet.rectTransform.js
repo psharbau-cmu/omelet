@@ -42,6 +42,8 @@ window.omelet.egg('omelet.rectTransform', function(data, refs) {
         }
 
         rect = [rect[0] + x, rect[1] + y, w, h];
+        this.actualWidth = w;
+        this.actualHeight = h;
         wrapper.setRect(rect);
     };
 }).defaults({
