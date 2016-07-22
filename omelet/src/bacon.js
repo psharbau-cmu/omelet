@@ -55,27 +55,27 @@
                 mouseDown = true;
                 var rect = canvasElement.getBoundingClientRect();
                 var touch = evt.touches[0];
-                mousePosition = [displayRatio * (evt.clientX - rect.left), displayRatio * (evt.clientY - rect.top)];
+                if (touch) mousePosition = [displayRatio* (touch.clientX - rect.left), displayRatio * (touch.clientY - rect.top)];
                 evt.preventDefault();
             });
             canvasElement.addEventListener('touchend', function(evt) {
                 mouseDown = false;
                 var rect = canvasElement.getBoundingClientRect();
                 var touch = evt.touches[0];
-                mousePosition = [displayRatio * (evt.clientX - rect.left), displayRatio * (evt.clientY - rect.top)];
+                if (touch) mousePosition = [displayRatio* (touch.clientX - rect.left), displayRatio * (touch.clientY - rect.top)];
                 evt.preventDefault();
             });
             canvasElement.addEventListener('touchcancel', function(evt) {
                 mouseDown = false;
                 var rect = canvasElement.getBoundingClientRect();
                 var touch = evt.touches[0];
-                mousePosition = [displayRatio * (evt.clientX - rect.left), displayRatio * (evt.clientY - rect.top)];
+                if (touch) mousePosition = [displayRatio* (touch.clientX - rect.left), displayRatio * (touch.clientY - rect.top)];
                 evt.preventDefault();
             });
             canvasElement.addEventListener('touchmove', function(evt) {
                 var rect = canvasElement.getBoundingClientRect();
                 var touch = evt.touches[0];
-                mousePosition = [displayRatio * (evt.clientX - rect.left), displayRatio * (evt.clientY - rect.top)];
+                if (touch) mousePosition = [displayRatio* (touch.clientX - rect.left), displayRatio * (touch.clientY - rect.top)];
                 evt.preventDefault();
             });
 
